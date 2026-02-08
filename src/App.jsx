@@ -76,7 +76,7 @@ function App() {
         {activeSection === 'home' && (
           <section className="hero fade-in">
             <div className="profile-image-container">
-              <img src="/profile.png" alt="Md Sarowar Alam" className="profile-image" />
+              <img src="profile.png" alt="Md Sarowar Alam" className="profile-image" />
             </div>
             <div className="hero-content">
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
@@ -233,7 +233,7 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ Architecture & Data Flow</h4>
-                      <img src="/cloud-monitoring.png" alt="Multi-Cloud Monitoring System Architecture" className="project-diagram" />
+                      <img src="cloud-monitoring.png" alt="Multi-Cloud Monitoring System Architecture" className="project-diagram" />
                     </div>
                     <div className="detail-section">
                       <h4>🔧 Technical Challenges Solved</h4>
@@ -310,7 +310,7 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ Deployment Flow Diagram</h4>
-                      <img src="/hotfix-flow.png" alt="Hotfix Deployment Pipeline Architecture" className="project-diagram" />
+                      <img src="hotfix-flow.png" alt="Hotfix Deployment Pipeline Architecture" className="project-diagram" />
                     </div>
                   </div>
                 )}
@@ -385,7 +385,7 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ High-Level Flow Diagram</h4>
-                      <img src="/ecs-deployment-flow.png" alt="ECS Deployment Pipeline Architecture" className="project-diagram" />
+                      <img src="ecs-deployment-flow.png" alt="ECS Deployment Pipeline Architecture" className="project-diagram" />
                     </div>
                     <div className="detail-section">
                       <h4>🎨 Architecture Pattern</h4>
@@ -727,7 +727,7 @@ function App() {
             <p className="section-subtitle">Professional certifications demonstrating expertise in cloud technologies and DevOps practices</p>
             <div className="certifications-grid">
               <div className="certification-card">
-                <img src="/cka-badge.png" alt="CKA Certification" className="cert-badge-img" />
+                <img src="cka-badge.png" alt="CKA Certification" className="cert-badge-img" />
                 <div className="cert-details">
                   <h3>CKA: Certified Kubernetes Administrator</h3>
                   <p className="cert-issuer">Issued by The Linux Foundation</p>
@@ -762,7 +762,7 @@ function App() {
                 </div>
               </div>
               <div className="certification-card">
-                <img src="/generative-ai-badge.png" alt="AWS Generative AI Badge" className="cert-badge-img" />
+                <img src="generative-ai-badge.png" alt="AWS Generative AI Badge" className="cert-badge-img" />
                 <div className="cert-details">
                   <h3>AWS Educate Introduction to Generative AI - Training Badge</h3>
                   <p className="cert-issuer">Issued by Amazon Web Services Training and Certification</p>
@@ -795,7 +795,7 @@ function App() {
               <div className="contact-info">
                 <div className="contact-item hogarth-highlight">
                   <img 
-                    src="/hogarth-logo.avif" 
+                    src="hogarth-logo.avif" 
                     alt="Hogarth Logo" 
                     className="company-logo"
                   />
