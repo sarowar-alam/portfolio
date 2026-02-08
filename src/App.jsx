@@ -143,14 +143,14 @@ function App() {
                   <p className="timeline-date">Jan 2024 - Apr 2025 · 1 year 4 months</p>
                   <p>Designed and implemented scalable, secure, and automated infrastructure solutions across AWS using Terraform, Jenkins, Ansible, Python, and PowerShell.</p>
                   <ul className="timeline-highlights">
-                    <li>🔹 Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
-                    <li>🔹 Automated EC2 provisioning with Jenkins + Terraform + Ansible pipelines</li>
-                    <li>🔹 Developed parameterized Terraform modules and Jenkins pipelines for ECS deployments and AMI operations</li>
-                    <li>🔹 Built private networks using VPC peering and Private Link. Standardized IAM roles with permission boundaries</li>
-                    <li>🔹 Managed RDS (MySQL backups via Lambda), Redshift (auto-patching, IP-bound access)</li>
-                    <li>🔹 Migrated and enhanced Zabbix with advanced triggers for missed jobs, EC2 health, and S3 syncs</li>
-                    <li>🔹 Replaced manual checklists (94 items) with Python automation</li>
-                    <li>🔹 Automated freeware SSL renewals, Route 53 validation, and Windows Certificate Store updates via Jenkins</li>
+                    <li>� Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
+                    <li>🔧 Automated EC2 provisioning with Jenkins + Terraform + Ansible pipelines</li>
+                    <li>🏗️ Developed parameterized Terraform modules and Jenkins pipelines for ECS deployments and AMI operations</li>
+                    <li>🔗 Built private networks using VPC peering and Private Link. Standardized IAM roles with permission boundaries</li>
+                    <li>💾 Managed RDS (MySQL backups via Lambda), Redshift (auto-patching, IP-bound access)</li>
+                    <li>📊 Migrated and enhanced Zabbix with advanced triggers for missed jobs, EC2 health, and S3 syncs</li>
+                    <li>🤖 Replaced manual checklists (94 items) with Python automation</li>
+                    <li>🔐 Automated freeware SSL renewals, Route 53 validation, and Windows Certificate Store updates via Jenkins</li>
                   </ul>
                 </div>
               </div>
@@ -170,13 +170,13 @@ function App() {
                   <h4>Wunderman Thompson | Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Aug 2021 - May 2023 · 1 year 10 months</p>
                   <ul className="timeline-highlights">
-                    <li>Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
-                    <li>Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
-                    <li>Worked with IBM for creating Local VPN server for remote employees</li>
-                    <li>Managed Egnyte storage sync and user/security management</li>
-                    <li>Developed Purchase & Inventory Management system, Invoice and Credit Note system using ASP.NET, VB.NET, SQL Server with AD integration</li>
-                    <li>Built web-based Access Card Management system for employee attendance tracking with Crystal Reports</li>
-                    <li>Created PowerShell scripts for file monitoring alerts on finance file share servers</li>
+                    <li>🖥️ Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
+                    <li>💾 Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
+                    <li>🔗 Worked with IBM for creating Local VPN server for remote employees</li>
+                    <li>☁️ Managed Egnyte storage sync and user/security management</li>
+                    <li>💻 Developed Purchase & Inventory Management system, Invoice and Credit Note system using ASP.NET, VB.NET, SQL Server with AD integration</li>
+                    <li>📊 Built web-based Access Card Management system for employee attendance tracking with Crystal Reports</li>
+                    <li>📁 Created PowerShell scripts for file monitoring alerts on finance file share servers</li>
                   </ul>
                 </div>
               </div>
@@ -233,13 +233,13 @@ function App() {
                   <p className="timeline-date">Jun 2004 - May 2008 · 4 years</p>
                   <p>Designed and developed enterprise software solutions and managed complete IT infrastructure for construction and real estate operations.</p>
                   <ul className="timeline-highlights">
-                    <li>Developed "Budget and Inventory Management System" integrating Labor Cost, Material Cost, Site Overhead with Project Estimation for Navana Construction Ltd. and Navana Real Estate Ltd.</li>
-                    <li>Built network infrastructure with 3 IBM X Series 225 servers, 50+ workstations, 7 networked laser printers, and external print server</li>
-                    <li>Configured Windows Server 2003 Active Directory for user access control and resource management</li>
-                    <li>Implemented Fedora Core-2 proxy server for internet access restrictions and security</li>
-                    <li>Developed "Daily Transaction System" module for Accounts Department managing overall company transactions</li>
-                    <li>Created "Payroll" module generating reports for higher management and employee salary information</li>
-                    <li>Provided comprehensive database management and software development assistance</li>
+                    <li>💼 Developed "Budget and Inventory Management System" integrating Labor Cost, Material Cost, Site Overhead with Project Estimation for Navana Construction Ltd. and Navana Real Estate Ltd.</li>
+                    <li>🌐 Built network infrastructure with 3 IBM X Series 225 servers, 50+ workstations, 7 networked laser printers, and external print server</li>
+                    <li>🔐 Configured Windows Server 2003 Active Directory for user access control and resource management</li>
+                    <li>🛡️ Implemented Fedora Core-2 proxy server for internet access restrictions and security</li>
+                    <li>💰 Developed "Daily Transaction System" module for Accounts Department managing overall company transactions</li>
+                    <li>💵 Created "Payroll" module generating reports for higher management and employee salary information</li>
+                    <li>🗄️ Provided comprehensive database management and software development assistance</li>
                   </ul>
                 </div>
               </div>
