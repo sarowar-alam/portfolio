@@ -1,26 +1,97 @@
 # Dependencies
 node_modules/
+/.pnp
+.pnp.js
 
 # Production build
 dist/
+dist-ssr/
+build/
+
+# Testing
+coverage/
+.nyc_output/
 
 # Environment variables
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env.production
 
-# IDE
-.vscode/
-.idea/
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
-# OS
+# IDE - JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
 
 # Logs
+logs/
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Temp files
+# Editor directories and files
+.vscode-test/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# Temporary files
 *.tmp
+*.temp
 .cache/
+.parcel-cache/
+.vite/
+
+# Debug
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Local development
+.vercel
+.netlify
+.firebase/
+
+# Misc
+*.swp
+*.swo
+*~
+.history
