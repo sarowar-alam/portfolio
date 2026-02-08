@@ -225,6 +225,24 @@ function App() {
                   <p>IT support and helpdesk operations.</p>
                 </div>
               </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Senior Executive MIS</h3>
+                  <h4>Navana Real Estate Ltd. | Dhanmondi, Dhaka, Bangladesh</h4>
+                  <p className="timeline-date">Jun 2004 - May 2008 · 4 years</p>
+                  <p>Designed and developed enterprise software solutions and managed complete IT infrastructure for construction and real estate operations.</p>
+                  <ul className="timeline-highlights">
+                    <li>Developed "Budget and Inventory Management System" integrating Labor Cost, Material Cost, Site Overhead with Project Estimation for Navana Construction Ltd. and Navana Real Estate Ltd.</li>
+                    <li>Built network infrastructure with 3 IBM X Series 225 servers, 50+ workstations, 7 networked laser printers, and external print server</li>
+                    <li>Configured Windows Server 2003 Active Directory for user access control and resource management</li>
+                    <li>Implemented Fedora Core-2 proxy server for internet access restrictions and security</li>
+                    <li>Developed "Daily Transaction System" module for Accounts Department managing overall company transactions</li>
+                    <li>Created "Payroll" module generating reports for higher management and employee salary information</li>
+                    <li>Provided comprehensive database management and software development assistance</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
         )}
