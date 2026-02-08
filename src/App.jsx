@@ -121,45 +121,108 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <h3>Lead DevOps Engineer</h3>
-                  <h4>Hogarth Worldwide | Lead Instructor at Ostad</h4>
-                  <p className="timeline-date">May 2025 - Present</p>
-                  <p>Leading automation frameworks, cloud infrastructure optimization, and teaching AWS, Kubernetes & DevOps. Reduced operational overhead by 80% through intelligent automation.</p>
+                  <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
+                  <p className="timeline-date">May 2025 - Present · 10 months</p>
+                  <p>💼 Designing, implementing, and managing automation frameworks that streamline infrastructure operations, enhance cloud efficiency, and improve reliability across multi-client environments hosted on AWS. Focused on eliminating manual effort through intelligent automation using Jenkins, Terraform, Ansible, and AWS-native services.</p>
+                  <ul className="timeline-highlights">
+                    <li>🧠 Built daily Jenkins pipeline aggregating MongoDB, MySQL, MS SQL backup statuses + S3 sync reports into HTML dashboard — reducing manual effort from 1 hour to 5 minutes</li>
+                    <li>💾 Created monthly end-to-end MS SQL restore automation using Terraform and AWS Glacier → S3 → EC2 workflows, saving 5+ hours per operation</li>
+                    <li>🔐 Automated SSL certificate renewal, ACM updates, and deployment to IIS, Jenkins, Zabbix — converting 2-hour manual task into scheduled automation</li>
+                    <li>🩹 Developed Ansible-based OS patch pipelines (Linux & Windows) with pre/post AMI backups and rollback readiness</li>
+                    <li>💰 Reduced AWS costs by 40-50% through EC2 start/stop scheduling, auto-tagging, orphaned snapshot cleanup</li>
+                    <li>🔁 Enabled one-click deployments for production hotfixes and environment refreshes, cutting release cycles by several hours</li>
+                    <li>✨ Reduced operational overhead by 80% through automated monitoring and reporting</li>
+                  </ul>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <h3>Principal DevOps Engineer</h3>
-                  <h4>Hogarth Worldwide</h4>
-                  <p className="timeline-date">Jan 2024 - Jul 2025</p>
-                  <p>Built ECS zero-task architecture, automated EC2 provisioning, enhanced Zabbix monitoring, and managed AWS RDS & Redshift clusters.</p>
+                  <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
+                  <p className="timeline-date">Jan 2024 - Apr 2025 · 1 year 4 months</p>
+                  <p>Designed and implemented scalable, secure, and automated infrastructure solutions across AWS using Terraform, Jenkins, Ansible, Python, and PowerShell.</p>
+                  <ul className="timeline-highlights">
+                    <li>🔹 Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
+                    <li>🔹 Automated EC2 provisioning with Jenkins + Terraform + Ansible pipelines</li>
+                    <li>🔹 Developed parameterized Terraform modules and Jenkins pipelines for ECS deployments and AMI operations</li>
+                    <li>🔹 Built private networks using VPC peering and Private Link. Standardized IAM roles with permission boundaries</li>
+                    <li>🔹 Managed RDS (MySQL backups via Lambda), Redshift (auto-patching, IP-bound access)</li>
+                    <li>🔹 Migrated and enhanced Zabbix with advanced triggers for missed jobs, EC2 health, and S3 syncs</li>
+                    <li>🔹 Replaced manual checklists (94 items) with Python automation</li>
+                    <li>🔹 Automated freeware SSL renewals, Route 53 validation, and Windows Certificate Store updates via Jenkins</li>
+                  </ul>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <h3>Senior DevOps Engineer</h3>
-                  <h4>Hogarth Worldwide (Wunderman Thompson)</h4>
-                  <p className="timeline-date">Oct 2022 - Jan 2024</p>
-                  <p>Managed AWS infrastructure, CI/CD pipelines, and cloud security implementations.</p>
+                  <h4>Hogarth Worldwide (Wunderman Thompson) | Dhaka, Bangladesh</h4>
+                  <p className="timeline-date">Oct 2022 - Dec 2023 · 1 year 3 months</p>
+                  <p>Managed AWS infrastructure, CI/CD pipelines, IAM configurations, and cloud security implementations across development and production environments.</p>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <h3>Senior IT Manager</h3>
-                  <h4>Wunderman Thompson</h4>
-                  <p className="timeline-date">Aug 2021 - May 2023</p>
-                  <p>Managed 100+ VMware VMs, developed custom systems, and maintained AD infrastructure.</p>
+                  <h3>Senior Information Technology Manager</h3>
+                  <h4>Wunderman Thompson | Dhaka, Bangladesh</h4>
+                  <p className="timeline-date">Aug 2021 - May 2023 · 1 year 10 months</p>
+                  <ul className="timeline-highlights">
+                    <li>Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
+                    <li>Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
+                    <li>Worked with IBM for creating Local VPN server for remote employees</li>
+                    <li>Managed Egnyte storage sync and user/security management</li>
+                    <li>Developed Purchase & Inventory Management system, Invoice and Credit Note system using ASP.NET, VB.NET, SQL Server with AD integration</li>
+                    <li>Built web-based Access Card Management system for employee attendance tracking with Crystal Reports</li>
+                    <li>Created PowerShell scripts for file monitoring alerts on finance file share servers</li>
+                  </ul>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <h3>IT Manager to Network Admin</h3>
-                  <h4>Wunderman Thompson & Navana Real Estate</h4>
-                  <p className="timeline-date">2004 - 2021</p>
-                  <p>17+ years managing enterprise IT infrastructure, networks, virtualization, and custom software development.</p>
+                  <h3>Information Technology Manager</h3>
+                  <h4>Wunderman Thompson | Bangladesh</h4>
+                  <p className="timeline-date">Mar 2016 - Sep 2021 · 5 years 7 months</p>
+                  <p>Comprehensive IT infrastructure management, virtualization, network administration, and custom application development.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Senior System Administrator</h3>
+                  <h4>Wunderman Thompson | Bangladesh</h4>
+                  <p className="timeline-date">Jun 2012 - Feb 2016 · 3 years 9 months</p>
+                  <p>System administration, server management, and infrastructure support.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Senior Network Administrator</h3>
+                  <h4>Wunderman Thompson | Bangladesh</h4>
+                  <p className="timeline-date">Sep 2010 - May 2012 · 1 year 9 months</p>
+                  <p>Network infrastructure management and administration.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Network Administrator</h3>
+                  <h4>Wunderman Thompson | Bangladesh</h4>
+                  <p className="timeline-date">Sep 2009 - Aug 2010 · 1 year</p>
+                  <p>Network configuration, monitoring, and support.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Information Technology Supporter</h3>
+                  <h4>Wunderman Thompson | Bangladesh</h4>
+                  <p className="timeline-date">Jun 2008 - Aug 2009 · 1 year 3 months</p>
+                  <p>IT support and helpdesk operations.</p>
                 </div>
               </div>
             </div>

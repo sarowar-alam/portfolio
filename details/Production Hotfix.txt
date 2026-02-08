@@ -1,0 +1,35 @@
+Portfolio Title:
+Multi-Server Production Hotfix Deployment Automation Pipeline
+
+Project Description:
+Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. This solution eliminated manual deployment errors and reduced deployment time from hours to minutes while ensuring safe rollback capabilities.
+
+Technical Implementation:
+
+Designed Jenkins pipeline orchestration using Groovy with conditional stage execution
+Developed PowerShell automation scripts for remote server management via PSSession
+Integrated AWS S3 for centralized deployment package distribution
+Implemented automated pre-deployment backup system with date-stamped versioning
+Built multi-portal deployment support with selective targeting capabilities
+Created comprehensive input validation and error handling mechanisms
+Key Features:
+
+Multi-Server Orchestration: Parallel deployment to multiple production servers
+Selective Deployment: Choose between binary deployments, configuration updates, or both
+Safety-First Design: Automated backup before any changes with rollback capability
+AWS Integration: Downloads and extracts deployment packages from S3 buckets
+Remote Management: PowerShell remoting with secure credential handling via Jenkins
+Portal-Specific Configs: Maps and deploys environment-specific configuration files
+Technologies Used:
+
+Jenkins Pipeline (Groovy)
+PowerShell 5.1+ with remoting
+AWS S3 CLI
+Windows Server administration
+Git version control
+Impact:
+
+Reduced deployment time by 75%
+Eliminated human error in production deployments
+Enabled rapid hotfix rollout with built-in safety mechanisms
+Standardized deployment process across all environments
