@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #1a1d29;
+  background: #0a0118;
   color: #e2e8f0;
   overflow-x: hidden;
 }
@@ -33,15 +33,15 @@ body {
 .shape {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.15;
-  animation: float 25s infinite ease-in-out;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s infinite ease-in-out;
 }
 
 .shape1 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   top: -200px;
   left: -200px;
   animation-delay: 0s;
@@ -50,7 +50,7 @@ body {
 .shape2 {
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, #3b82f6 0%, #64748B 100%);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   bottom: -250px;
   right: -250px;
   animation-delay: 7s;
@@ -59,7 +59,7 @@ body {
 .shape3 {
   width: 350px;
   height: 350px;
-  background: linear-gradient(135deg, #64748B 0%, #475569 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   top: 50%;
   left: 50%;
   animation-delay: 14s;
@@ -90,12 +90,12 @@ body {
 
 .logo-animated {
   font-size: 28px;
-  background: linear-gradient(90deg, #2563EB, #1e40af, #3b82f6, #2563EB);
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #667eea);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient 4s ease infinite;
+  animation: gradient 3s ease infinite;
   font-weight: bold;
 }
 
@@ -131,7 +131,7 @@ nav button::before {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   transform: translate(-50%, -50%);
   transition: width 0.5s, height 0.5s;
   z-index: -1;
@@ -144,13 +144,13 @@ nav button:hover::before {
 
 nav button:hover {
   color: white;
-  border-color: #2563EB;
+  border-color: #667eea;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
 }
 
 nav button.active {
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   border-color: transparent;
 }
@@ -224,20 +224,20 @@ nav button.active {
 .glowing-text {
   font-size: 56px;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #2563EB 0%, #1e40af 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
   line-height: 1.2;
 }
 
 @keyframes glow {
   from {
-    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
+    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
   }
   to {
-    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
+    filter: drop-shadow(0 0 20px rgba(245, 87, 108, 0.5));
   }
 }
 
@@ -266,7 +266,7 @@ nav button.active {
 }
 
 .skill-bounce {
-  animation: bounce 3s infinite;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -279,14 +279,14 @@ nav button.active {
 }
 
 .skill:hover {
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   transform: translateY(-5px) scale(1.05);
   border-color: transparent;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   border: none;
   color: white;
   font-size: 18px;
@@ -297,14 +297,14 @@ nav button.active {
   align-items: center;
   gap: 10px;
   transition: all 0.3s;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
   position: relative;
   z-index: 10;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
 }
 
 .cta-button .arrow {
@@ -331,7 +331,7 @@ nav button.active {
 .circle1 {
   width: 150px;
   height: 150px;
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   top: 0;
   right: 100px;
   animation-delay: 0s;
@@ -340,7 +340,7 @@ nav button.active {
 .circle2 {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #3b82f6, #64748B);
+  background: linear-gradient(135deg, #f093fb, #f5576c);
   bottom: 50px;
   right: 50px;
   animation-delay: 2s;
@@ -349,7 +349,7 @@ nav button.active {
 .circle3 {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #64748B, #475569);
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
   top: 150px;
   right: 250px;
   animation-delay: 4s;
@@ -369,7 +369,7 @@ nav button.active {
   font-size: 48px;
   text-align: center;
   margin-bottom: 60px;
-  background: linear-gradient(135deg, #2563EB, #64748B);
+  background: linear-gradient(135deg, #667eea, #f093fb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -403,7 +403,7 @@ nav button.active {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #2563EB, #1e40af, #64748B);
+  background: linear-gradient(180deg, #667eea, #764ba2, #f093fb);
 }
 
 .timeline-item {
@@ -419,10 +419,10 @@ nav button.active {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2563EB, #1e40af);
-  border: 3px solid #1a1d29;
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
-  animation: pulse 3s infinite;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: 3px solid #0a0118;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+  animation: pulse 2s infinite;
 }
 
 .timeline-content {
@@ -436,7 +436,7 @@ nav button.active {
 
 .timeline-content:hover {
   transform: translateX(10px);
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
 
@@ -454,13 +454,13 @@ nav button.active {
 }
 
 .timeline-content h3 {
-  color: #2563EB;
+  color: #667eea;
   font-size: 22px;
   margin-bottom: 8px;
 }
 
 .timeline-content h4 {
-  color: #64748B;
+  color: #a78bfa;
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: normal;
@@ -558,7 +558,7 @@ nav button.active {
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
 }
 
@@ -598,7 +598,7 @@ nav button.active {
 
 .tech-tag {
   background: rgba(102, 126, 234, 0.2);
-  color: #64748B;
+  color: #a78bfa;
   padding: 6px 16px;
   border-radius: 15px;
   font-size: 13px;
@@ -607,8 +607,8 @@ nav button.active {
 
 .project-link {
   background: transparent;
-  border: 2px solid #2563EB;
-  color: #2563EB;
+  border: 2px solid #667eea;
+  color: #667eea;
   padding: 10px 24px;
   border-radius: 20px;
   cursor: pointer;
@@ -617,7 +617,7 @@ nav button.active {
 }
 
 .project-link:hover {
-  background: #2563EB;
+  background: #667eea;
   color: white;
   transform: translateX(5px);
 }
@@ -682,7 +682,7 @@ nav button.active {
 
 .github-stats-large img:hover {
   transform: translateY(-5px);
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
 }
 
@@ -707,7 +707,7 @@ nav button.active {
 
 .repo-card:hover {
   transform: translateY(-10px);
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
 }
 
@@ -719,7 +719,7 @@ nav button.active {
 }
 
 .repo-header h3 {
-  color: #2563EB;
+  color: #667eea;
   font-size: 20px;
   margin: 0;
   flex: 1;
@@ -742,7 +742,7 @@ nav button.active {
 
 .repo-link {
   display: inline-block;
-  color: #2563EB;
+  color: #667eea;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
@@ -750,7 +750,7 @@ nav button.active {
 }
 
 .repo-link:hover {
-  color: #3b82f6;
+  color: #f093fb;
   transform: translateX(5px);
 }
 
@@ -782,7 +782,7 @@ nav button.active {
 
 .certification-card:hover {
   transform: translateY(-10px);
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
 }
 
@@ -800,13 +800,13 @@ nav button.active {
 }
 
 .cert-details h3 {
-  color: #2563EB;
+  color: #667eea;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .cert-issuer {
-  color: #64748B;
+  color: #a78bfa;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 8px;
@@ -834,7 +834,7 @@ nav button.active {
 }
 
 .cert-details h3 {
-  color: #2563EB;
+  color: #667eea;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -846,7 +846,7 @@ nav button.active {
 }
 
 .cert-issuer {
-  color: #2563EB !important;
+  color: #667eea !important;
   font-weight: 500;
   margin-bottom: 8px !important;
 }
@@ -870,7 +870,7 @@ nav button.active {
 
 .cert-link {
   display: inline-block;
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   text-decoration: none;
   padding: 12px 30px;
@@ -896,7 +896,7 @@ nav button.active {
   background: rgba(102, 126, 234, 0.15);
   border: 1px solid rgba(102, 126, 234, 0.3);
   border-radius: 20px;
-  color: #2563EB;
+  color: #667eea;
   font-size: 13px;
   font-weight: 500;
   transition: all 0.3s;
@@ -940,7 +940,7 @@ nav button.active {
 
 .contact-item:hover {
   transform: translateX(10px);
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
 
@@ -970,13 +970,13 @@ nav button.active {
 }
 
 .contact-item a {
-  color: #2563EB;
+  color: #667eea;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact-item a:hover {
-  color: #64748B;
+  color: #a78bfa;
   text-decoration: underline;
 }
 
@@ -1043,7 +1043,7 @@ nav button.active {
 
 .form-input:focus, .form-textarea:focus {
   outline: none;
-  border-color: #2563EB;
+  border-color: #667eea;
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
   background: rgba(255, 255, 255, 0.08);
 }
@@ -1054,7 +1054,7 @@ nav button.active {
 }
 
 .submit-button {
-  background: linear-gradient(135deg, #2563EB, #1e40af);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   border: none;
   color: white;
   padding: 16px 32px;
@@ -1406,7 +1406,7 @@ nav button.active {
 }
 
 .detail-section h4 {
-  color: #64748B;
+  color: #a78bfa;
   font-size: 18px;
   margin-bottom: 15px;
 }
@@ -1428,7 +1428,7 @@ nav button.active {
   content: '▸';
   position: absolute;
   left: 0;
-  color: #2563EB;
+  color: #667eea;
   font-size: 16px;
 }
 
