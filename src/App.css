@@ -1211,6 +1211,7 @@ nav button.active {
 
   .project-card {
     padding: 25px 20px;
+    overflow: visible !important;
   }
 
   .project-card h3 {
