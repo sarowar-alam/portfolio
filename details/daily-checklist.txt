@@ -1,0 +1,56 @@
+Project Title
+Enterprise Multi-Cloud Backup Verification & Monitoring System
+
+Project Overview
+Developed a comprehensive automated backup verification system that monitors and validates 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.
+
+Technical Details
+Role: DevOps Engineer / Python Developer
+Duration: Production System (2000+ lines of code)
+Environment: AWS Multi-Account, Hybrid Windows/Linux Infrastructure
+
+Key Responsibilities & Achievements
+Architected and implemented an enterprise-grade backup monitoring solution that validates backup integrity across AWS S3, EC2 AMIs, Windows/Linux servers, and multiple database systems
+Integrated multiple AWS services including S3, EC2, AWS Backup, and SES across multiple AWS accounts (JustFace, VMLYR, Zanity)
+Automated verification of 15+ backup categories including S3 syncs, MongoDB backups, MySQL backups, SQL Server backups, ETL pipelines, and Crystal Reports
+Implemented intelligent backup scheduling logic handling daily, weekly (Saturday), monthly (last Saturday), and yearly backup patterns
+Developed remote server monitoring using Paramiko (SSH) for Linux servers and PowerShell remoting for Windows servers to validate log files and backup completion
+Built dynamic date calculation system supporting 10+ date format patterns with timezone handling (Asia/Dhaka) for international operations
+Technical Stack
+Languages & Core Technologies:
+
+Python 3.x (boto3, paramiko, BeautifulSoup4)
+PowerShell for Windows server integration
+JSON for configuration management
+AWS Services:
+
+EC2, S3, AWS Backup, SES (Simple Email Service)
+Multi-region support (us-west-2, us-east-1)
+Multi-account architecture with session tokens
+Infrastructure:
+
+SSH/Paramiko for Linux remote execution
+Windows PowerShell remoting
+Hybrid cloud environment (AWS + On-premises)
+Key Features Implemented
+S3 Object Validation - Automated detection of latest backup files with size and timestamp verification
+AMI Backup Verification - Cross-references running EC2 instances against completed backup jobs
+Log Pattern Matching - Intelligent log parsing with configurable patterns, date offsets, and match types
+HTML Email Reporting - Color-coded success/failure reports sent via AWS SES to stakeholders
+JSON-Based Configuration - 900+ line configuration file for easy maintenance and scalability
+Multi-Account Support - Handles 4 different AWS accounts with separate credentials
+Error Handling - Comprehensive exception handling for AWS errors, network failures, and authentication issues
+Date Intelligence - Automatically calculates backup windows based on business rules (skips Sundays, special handling for Saturdays)
+Business Impact
+Reduced backup verification time from manual daily checks to automated 15-minute parallel execution
+Increased reliability by catching backup failures within 24 hours
+Improved compliance with automated audit trails and email reporting
+Enhanced visibility for infrastructure team through detailed HTML reports
+Supports disaster recovery planning with comprehensive backup validation
+Technical Challenges Solved
+Coordinated authentication across multiple AWS accounts with temporary session tokens
+Handled mixed Windows/Linux environment with unified Python interface
+Implemented pagination for AWS API calls to handle large resource sets
+Managed complex date calculations for various backup schedules and timezones
+Created reusable configuration system supporting 15+ backup pattern types
+Tags: #Python #AWS #DevOps #Automation #BackupMonitoring #CloudInfrastructure #boto3 #Paramiko #Jenkins

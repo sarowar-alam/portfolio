@@ -1,0 +1,890 @@
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [activeSection, setActiveSection] = useState('home')
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [expandedProject, setExpandedProject] = useState(null)
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = () => {
+    const { name, email, message } = formData
+    if (!name || !email || !message) {
+      alert('Please fill in all fields')
+      return
+    }
+    const mailtoLink = `mailto:sarowar@hotmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
+    window.location.href = mailtoLink
+    setFormData({ name: '', email: '', message: '' })
+  }
+
+  const toggleProject = (projectId) => {
+    setExpandedProject(expandedProject === projectId ? null : projectId)
+  }
+
+  return (
+    <div className="portfolio">
+      {/* Animated Background */}
+      <div className="bg-animation">
+        <div className="shape shape1"></div>
+        <div className="shape shape2"></div>
+        <div className="shape shape3"></div>
+      </div>
+
+      {/* Header */}
+      <header className="header">
+        <h1 className="logo-animated">Md Sarowar Alam</h1>
+        <nav>
+          <button 
+            className={activeSection === 'home' ? 'active' : ''}
+            onClick={() => setActiveSection('home')}
+          >
+            Home
+          </button>
+          <button 
+            className={activeSection === 'projects' ? 'active' : ''}
+            onClick={() => setActiveSection('projects')}
+          >
+            Projects
+          </button>
+          <button 
+            className={activeSection === 'github' ? 'active' : ''}
+            onClick={() => setActiveSection('github')}
+          >
+            GitHub
+          </button>
+          <button 
+            className={activeSection === 'certifications' ? 'active' : ''}
+            onClick={() => setActiveSection('certifications')}
+          >
+            Certifications
+          </button>
+          <button 
+            className={activeSection === 'contact' ? 'active' : ''}
+            onClick={() => setActiveSection('contact')}
+          >
+            Contact
+          </button>
+        </nav>
+      </header>
+
+      {/* Main Content */}
+      <main className="main">
+        {activeSection === 'home' && (
+          <section className="hero fade-in">
+            <div className="profile-image-container">
+              <img src="/profile.png" alt="Md Sarowar Alam" className="profile-image" />
+            </div>
+            <div className="hero-content">
+              <h2 className="glowing-text">Lead DevOps Engineer</h2>
+              <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
+              <div className="skills">
+                <span className="skill skill-bounce">☁️ AWS</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>🏗️ Terraform</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>🔧 Jenkins</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>📦 Ansible</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>🐍 Python</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>💻 PowerShell</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>🐳 Docker</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>☸️ Kubernetes</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>📊 Zabbix</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>🚀 Argo-CD</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>📈 Prometheus</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>📉 Grafana</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>🔐 IAM</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>🌐 CloudFront</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.4s'}}>💾 RDS</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.5s'}}>📊 Redshift</span>
+              </div>
+              <button className="cta-button" onClick={() => setActiveSection('projects')}>
+                <span>View My Work</span>
+                <span className="arrow">→</span>
+              </button>
+            </div>
+            <div className="hero-illustration">
+              <div className="floating-circle circle1"></div>
+              <div className="floating-circle circle2"></div>
+              <div className="floating-circle circle3"></div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'home' && (
+          <section className="experience-section fade-in">
+            <h2 className="section-title">Professional Journey</h2>
+            <div className="timeline">
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Lead DevOps Engineer</h3>
+                  <h4>Hogarth Worldwide | Lead Instructor at Ostad</h4>
+                  <p className="timeline-date">May 2025 - Present</p>
+                  <p>Leading automation frameworks, cloud infrastructure optimization, and teaching AWS, Kubernetes & DevOps. Reduced operational overhead by 80% through intelligent automation.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Principal DevOps Engineer</h3>
+                  <h4>Hogarth Worldwide</h4>
+                  <p className="timeline-date">Jan 2024 - Jul 2025</p>
+                  <p>Built ECS zero-task architecture, automated EC2 provisioning, enhanced Zabbix monitoring, and managed AWS RDS & Redshift clusters.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Senior DevOps Engineer</h3>
+                  <h4>Hogarth Worldwide (Wunderman Thompson)</h4>
+                  <p className="timeline-date">Oct 2022 - Jan 2024</p>
+                  <p>Managed AWS infrastructure, CI/CD pipelines, and cloud security implementations.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>Senior IT Manager</h3>
+                  <h4>Wunderman Thompson</h4>
+                  <p className="timeline-date">Aug 2021 - May 2023</p>
+                  <p>Managed 100+ VMware VMs, developed custom systems, and maintained AD infrastructure.</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>IT Manager to Network Admin</h3>
+                  <h4>Wunderman Thompson & Navana Real Estate</h4>
+                  <p className="timeline-date">2004 - 2021</p>
+                  <p>17+ years managing enterprise IT infrastructure, networks, virtualization, and custom software development.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'projects' && (
+          <section className="projects fade-in">
+            <h2 className="section-title">Key Achievements & Projects</h2>
+            <p className="projects-intro">Automation initiatives that reduced operational overhead by 80% and optimized AWS costs by 40-50%</p>
+            <div className="project-grid">
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-icon">☁️</div>
+                <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
+                <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">AWS Multi-Account</span>
+                  <span className="tech-tag">boto3</span>
+                  <span className="tech-tag">Paramiko</span>
+                  <span className="tech-tag">PowerShell</span>
+                  <span className="tech-tag">Jenkins</span>
+                </div>
+                <button className="project-link" onClick={() => toggleProject('cloud-backup')}>
+                  {expandedProject === 'cloud-backup' ? 'Show Less ↑' : 'View Details →'}
+                </button>
+                {expandedProject === 'cloud-backup' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>📊 Technical Overview</h4>
+                      <ul>
+                        <li><strong>Role:</strong> DevOps Engineer / Python Developer</li>
+                        <li><strong>Code:</strong> 2000+ lines of production code</li>
+                        <li><strong>Environment:</strong> AWS Multi-Account, Hybrid Windows/Linux Infrastructure</li>
+                        <li><strong>Coverage:</strong> 100+ backup entities across 15+ categories</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🎯 Key Responsibilities & Achievements</h4>
+                      <ul>
+                        <li>Architected enterprise-grade backup monitoring validating backup integrity across AWS S3, EC2 AMIs, Windows/Linux servers, and multiple database systems</li>
+                        <li>Integrated AWS services (S3, EC2, AWS Backup, SES) across multiple accounts (JustFace, VMLYR, Zanity)</li>
+                        <li>Automated verification of 15+ backup categories: S3 syncs, MongoDB, MySQL, SQL Server, ETL pipelines, Crystal Reports</li>
+                        <li>Implemented intelligent scheduling logic: daily, weekly (Saturday), monthly (last Saturday), yearly patterns</li>
+                        <li>Developed remote server monitoring using Paramiko (SSH) for Linux and PowerShell remoting for Windows</li>
+                        <li>Built dynamic date calculation system with 10+ format patterns and timezone handling (Asia/Dhaka)</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>💡 Key Features</h4>
+                      <ul>
+                        <li><strong>S3 Object Validation:</strong> Automated detection of latest backup files with size and timestamp verification</li>
+                        <li><strong>AMI Backup Verification:</strong> Cross-references running EC2 instances against completed backup jobs</li>
+                        <li><strong>Log Pattern Matching:</strong> Intelligent log parsing with configurable patterns, date offsets, match types</li>
+                        <li><strong>HTML Email Reporting:</strong> Color-coded success/failure reports via AWS SES to stakeholders</li>
+                        <li><strong>JSON Configuration:</strong> 900+ line configuration file for easy maintenance and scalability</li>
+                        <li><strong>Multi-Account Support:</strong> Handles 4 different AWS accounts with separate credentials</li>
+                        <li><strong>Error Handling:</strong> Comprehensive exception handling for AWS errors, network failures, authentication issues</li>
+                        <li><strong>Date Intelligence:</strong> Auto-calculates backup windows based on business rules (skips Sundays, special handling for Saturdays)</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📈 Business Impact</h4>
+                      <ul>
+                        <li>Reduced backup verification time from manual daily checks to automated 15-minute parallel execution</li>
+                        <li>Increased reliability by catching backup failures within 24 hours</li>
+                        <li>Improved compliance with automated audit trails and email reporting</li>
+                        <li>Enhanced visibility through detailed HTML reports for infrastructure team</li>
+                        <li>Supports disaster recovery planning with comprehensive backup validation</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🏗️ Architecture & Data Flow</h4>
+                      <img src="/cloud-monitoring.png" alt="Multi-Cloud Monitoring System Architecture" className="project-diagram" />
+                    </div>
+                    <div className="detail-section">
+                      <h4>🔧 Technical Challenges Solved</h4>
+                      <ul>
+                        <li>Coordinated authentication across multiple AWS accounts with temporary session tokens</li>
+                        <li>Handled mixed Windows/Linux environment with unified Python interface</li>
+                        <li>Implemented pagination for AWS API calls to handle large resource sets</li>
+                        <li>Managed complex date calculations for various backup schedules and timezones</li>
+                        <li>Created reusable configuration system supporting 15+ backup pattern types</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-icon">🚀</div>
+                <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
+                <p>Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. Eliminated manual deployment errors and reduced deployment time from hours to minutes with safe rollback capabilities.</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Jenkins Pipeline</span>
+                  <span className="tech-tag">Groovy</span>
+                  <span className="tech-tag">PowerShell</span>
+                  <span className="tech-tag">AWS S3</span>
+                  <span className="tech-tag">Windows Server</span>
+                  <span className="tech-tag">CI/CD</span>
+                </div>
+                <button className="project-link" onClick={() => toggleProject('hotfix-pipeline')}>
+                  {expandedProject === 'hotfix-pipeline' ? 'Show Less ↑' : 'View Details →'}
+                </button>
+                {expandedProject === 'hotfix-pipeline' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>📊 Technical Implementation</h4>
+                      <ul>
+                        <li><strong>Jenkins Pipeline Orchestration:</strong> Designed using Groovy with conditional stage execution</li>
+                        <li><strong>PowerShell Automation:</strong> Remote server management via PSSession</li>
+                        <li><strong>AWS S3 Integration:</strong> Centralized deployment package distribution</li>
+                        <li><strong>Automated Backup System:</strong> Pre-deployment backup with date-stamped versioning</li>
+                        <li><strong>Multi-Portal Support:</strong> Deployment with selective targeting capabilities</li>
+                        <li><strong>Error Handling:</strong> Comprehensive input validation and error handling mechanisms</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>💡 Key Features</h4>
+                      <ul>
+                        <li><strong>Multi-Server Orchestration:</strong> Parallel deployment to multiple production servers</li>
+                        <li><strong>Selective Deployment:</strong> Choose between binary deployments, configuration updates, or both</li>
+                        <li><strong>Safety-First Design:</strong> Automated backup before any changes with rollback capability</li>
+                        <li><strong>AWS Integration:</strong> Downloads and extracts deployment packages from S3 buckets</li>
+                        <li><strong>Remote Management:</strong> PowerShell remoting with secure credential handling via Jenkins</li>
+                        <li><strong>Portal-Specific Configs:</strong> Maps and deploys environment-specific configuration files</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📈 Business Impact</h4>
+                      <ul>
+                        <li><strong>75% Reduction</strong> in deployment time (hours to minutes)</li>
+                        <li><strong>Zero Human Errors</strong> in production deployments through automation</li>
+                        <li><strong>Rapid Hotfix Rollout</strong> with built-in safety mechanisms</li>
+                        <li><strong>Standardized Process</strong> across all production environments</li>
+                        <li><strong>Improved Reliability</strong> with automated rollback capabilities</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🛠️ Technology Stack</h4>
+                      <ul>
+                        <li>Jenkins Pipeline (Groovy DSL)</li>
+                        <li>PowerShell 5.1+ with PSRemoting</li>
+                        <li>AWS S3 CLI for package distribution</li>
+                        <li>Windows Server administration</li>
+                        <li>Git version control</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🏗️ Deployment Flow Diagram</h4>
+                      <img src="/hotfix-flow.png" alt="Hotfix Deployment Pipeline Architecture" className="project-diagram" />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-icon">⚙️</div>
+                <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
+                <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">AWS ECS Fargate</span>
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Groovy</span>
+                  <span className="tech-tag">CloudWatch</span>
+                  <span className="tech-tag">SQS</span>
+                  <span className="tech-tag">Trivy</span>
+                  <span className="tech-tag">ALB</span>
+                </div>
+                <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
+                  {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
+                </button>
+                {expandedProject === 'ecs-deployment' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>🎯 Technical Innovation</h4>
+                      <ul>
+                        <li><strong>Single Groovy Pipeline (906 lines):</strong> Orchestrates multi-service deployments with independent failure tracking, security scanning (Trivy), and deployment summaries</li>
+                        <li><strong>Dynamic JSON Configuration (493 lines):</strong> Centralized service definitions serving as single source of truth for 11 microservices with environment-specific settings</li>
+                        <li><strong>Reusable Terraform Modules:</strong> Generic ECS service and autoscaling modules that adapt to each service via dynamic variable injection</li>
+                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines → 1) while improving maintainability—new services can be added in 5 minutes via JSON configuration without code changes</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🏗️ Architecture Highlights</h4>
+                      <ul>
+                        <li><strong>Per-Service State Isolation:</strong> Separate Terraform state files enable parallel deployments and independent lifecycle management</li>
+                        <li><strong>Configuration-Driven:</strong> Single services-config.json defines all service specifications (CPU/memory allocations, autoscaling thresholds, networking, ALB rules)</li>
+                        <li><strong>Dynamic tfvars Generation:</strong> Pipeline extracts service-specific configuration and generates Terraform variables on-the-fly</li>
+                        <li><strong>SQS-Based Autoscaling:</strong> CloudWatch alarms monitor queue depth to trigger step scaling policies per service</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>💡 Technical Stack</h4>
+                      <ul>
+                        <li><strong>Infrastructure:</strong> Terraform (AWS Provider 6.0+), S3 backend for state management</li>
+                        <li><strong>CI/CD:</strong> Jenkins, Groovy Pipeline DSL with approval gates</li>
+                        <li><strong>AWS Services:</strong> ECS Fargate, Application Load Balancer, CloudWatch, SQS, ECR, IAM</li>
+                        <li><strong>Security:</strong> Trivy vulnerability scanning, IAM role assumption, multi-stage approval workflow</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📈 Impact & Results</h4>
+                      <ul>
+                        <li>Manages 11 microservices (API handlers, media generation services, portals) across 2 environments</li>
+                        <li>Independent failure isolation—one service failure doesn't block others</li>
+                        <li>Intelligent deployment—skips services with no infrastructure changes</li>
+                        <li>Production-ready features: circuit breaker rollback, health checks, cost optimization (FARGATE_SPOT)</li>
+                        <li>91% reduction in deployment complexity</li>
+                        <li>New services deployable in 5 minutes via configuration changes only</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🔍 Technical Deep-Dive</h4>
+                      <ul>
+                        <li><strong>State Management Strategy:</strong> Implemented per-service state files to prevent conflicts and enable parallel deployments</li>
+                        <li><strong>Dynamic Variable Injection:</strong> Pipeline parses JSON and generates .tfvars files programmatically for each service</li>
+                        <li><strong>Failure Isolation:</strong> Services processed independently with deployment summary tracking (deployed/skipped/aborted)</li>
+                        <li><strong>Scalability:</strong> Adding new services requires only JSON configuration changes, no pipeline or Terraform modifications</li>
+                        <li><strong>Security Integration:</strong> Trivy scanner gates deployments with approval workflow for vulnerable images</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🏗️ High-Level Flow Diagram</h4>
+                      <img src="/ecs-deployment-flow.png" alt="ECS Deployment Pipeline Architecture" className="project-diagram" />
+                    </div>
+                    <div className="detail-section">
+                      <h4>🎨 Architecture Pattern</h4>
+                      <p>Multi-tenancy infrastructure design where generic Terraform modules are parameterized through JSON configuration, demonstrating enterprise DevOps practices for scalable microservice management. This pattern enables:</p>
+                      <ul>
+                        <li>Consistent infrastructure across all services</li>
+                        <li>Easy service onboarding with minimal configuration</li>
+                        <li>Centralized change management through version-controlled JSON</li>
+                        <li>Independent service lifecycle management</li>
+                        <li>Infrastructure as Code best practices with DRY principles</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">💾</div>
+                <h3>SQL Backup Restore Automation</h3>
+                <p>Monthly end-to-end MS SQL restore using Terraform and AWS Glacier → S3 → EC2 workflows with role-based authentication, saving 6+ hours per operation</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">AWS Glacier</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">PowerShell</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.2s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🔐</div>
+                <h3>SSL Certificate Renewal System</h3>
+                <p>Automated Let's Encrypt certificate renewal, ACM updates, deployment to IIS, Jenkins, Zabbix via Posh-ACME — converting 2-hour manual task to scheduled automation</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Let's Encrypt</span>
+                  <span className="tech-tag">PowerShell</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">ACM</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.3s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🩹</div>
+                <h3>Patch Management Automation</h3>
+                <p>Ansible-based OS patch pipelines for Linux & Windows with pre/post AMI backups, rollback readiness, health checks, and automated HTML reports</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Ansible</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">AWS AMI</span>
+                  <span className="tech-tag">Groovy</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.4s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">💰</div>
+                <h3>Cost & Resource Governance</h3>
+                <p>EC2 start/stop scheduling, CloudWatch-based monitoring, auto-tagging, orphaned snapshot cleanup, and AWS cost comparison reports — reducing waste by 40-50%</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">AWS Lambda</span>
+                  <span className="tech-tag">CloudWatch</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">DocumentDB</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.5s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🚀</div>
+                <h3>ECS Zero Task Architecture</h3>
+                <p>Designed ECS with zero tasks by default, SQS-triggered auto-scaling via Lambda and Step Scaling. Dynamic Terraform modules integrated with Jenkins for N number of services</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">ECS Fargate</span>
+                  <span className="tech-tag">SQS</span>
+                  <span className="tech-tag">Lambda</span>
+                  <span className="tech-tag">Terraform</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.6s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🔁</div>
+                <h3>Environment Refresh & Hotfix</h3>
+                <p>One-click deployments for production hotfixes and environment refreshes (binaries + DBs), cutting release cycles by several hours and minimizing human error</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">Ansible</span>
+                  <span className="tech-tag">CI/CD</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.7s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🌐</div>
+                <h3>CloudFront Access Control</h3>
+                <p>AWS CloudFront function to control access based on HTTP headers (Referer, request-origin). Blocks unauthorized requests with 403 and logs client IPs for audit</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">CloudFront</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">Security</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.8s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">📡</div>
+                <h3>Zabbix Migration & Enhancement</h3>
+                <p>Upgraded Zabbix with comprehensive monitoring for server health, scheduled jobs, DB backups, S3 syncs. Custom triggers for missed tasks and integrated marketplace templates</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Zabbix</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">Monitoring</span>
+                  <span className="tech-tag">Alerting</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '0.9s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🔑</div>
+                <h3>IAM Standardization & Security</h3>
+                <p>Implemented standardized IAM roles with permission boundaries across environments. Created VPC peering, PrivateLink networks, and secure user naming conventions</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">AWS IAM</span>
+                  <span className="tech-tag">VPC</span>
+                  <span className="tech-tag">Security</span>
+                  <span className="tech-tag">Terraform</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '1.0s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🗄️</div>
+                <h3>RDS & Redshift Management</h3>
+                <p>Managed AWS RDS (MySQL backups via Lambda) and Redshift clusters (auto-patching, IP-bound access). Automated non-prod cluster shutdowns for cost optimization</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">RDS</span>
+                  <span className="tech-tag">Redshift</span>
+                  <span className="tech-tag">Lambda</span>
+                  <span className="tech-tag">mysqldump</span>
+                </div>
+              </div>
+              <div className="project-card card-animated" style={{animationDelay: '1.1s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">💼</div>
+                <h3>Custom Enterprise Systems</h3>
+                <p>Developed Purchase & Inventory, Invoice & Credit Note, and Access Card Attendance systems using ASP.NET, SQL Server with AD integration and Crystal Reports</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">ASP.NET</span>
+                  <span className="tech-tag">SQL Server</span>
+                  <span className="tech-tag">Active Directory</span>
+                  <span className="tech-tag">Crystal Reports</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'github' && (
+          <section className="github-section fade-in">
+            <h2 className="section-title">GitHub Projects</h2>
+            <p className="section-subtitle">Open-source repositories and teaching materials for DevOps practices</p>
+            <div className="github-stats-large">
+              <img 
+                src="https://github-readme-stats.vercel.app/api?username=sarowar-alam&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=f093fb&text_color=94a3b8&ring_color=667eea" 
+                alt="GitHub Stats" 
+                loading="lazy"
+                onError={(e) => e.target.style.display = 'none'}
+              />
+              <img 
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=sarowar-alam&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&text_color=94a3b8&langs_count=8" 
+                alt="Top Languages" 
+                loading="lazy"
+                onError={(e) => e.target.style.display = 'none'}
+              />
+            </div>
+            <div className="github-stats">
+              <a href="https://github.com/sarowar-alam" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/github/followers/sarowar-alam?label=Followers&style=for-the-badge&logo=github&color=667eea" alt="GitHub Followers" />
+              </a>
+              <a href="https://github.com/sarowar-alam" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/Repos-16-764ba2?style=for-the-badge&logo=github" alt="GitHub Repos" />
+              </a>
+              <a href="https://github.com/sarowar-alam/sarowar" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/github/stars/sarowar-alam?label=Stars&style=for-the-badge&logo=github&color=f093fb" alt="GitHub Stars" />
+              </a>
+            </div>
+            <div className="github-repos">
+              <div className="repo-card card-animated">
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>🚀 Automation Garage</h3>
+                  <div className="repo-stats">
+                    <span>⭐ 6</span>
+                    <span>🔱 10</span>
+                  </div>
+                </div>
+                <p>Comprehensive automation scripts and Jenkins pipelines for DevOps workflows. Most popular repository!</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Groovy</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Automation</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/sarowar" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.1s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>🏗️ 3-Tier App Terraform Jenkins</h3>
+                  <div className="repo-stats">
+                    <span>⭐ 2</span>
+                    <span>🔱 1</span>
+                  </div>
+                </div>
+                <p>Complete CI/CD pipeline integrating Terraform and Jenkins for automated 3-tier application deployment</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Shell</span>
+                  <span className="tech-tag">AWS</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/3-tier-app-terraform-jenkins" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.2s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>📈 3-Tier Web App Auto Scaling</h3>
+                  <div className="repo-stats">
+                    <span>⭐ 1</span>
+                    <span>🔱 4</span>
+                  </div>
+                </div>
+                <p>Demonstrates AWS Auto Scaling features with complete 3-tier web application architecture</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">AWS</span>
+                  <span className="tech-tag">Auto Scaling</span>
+                  <span className="tech-tag">Shell</span>
+                  <span className="tech-tag">Load Balancer</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/3-tier-web-app-auto-scalling" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.3s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>⚙️ Terraform ECS Autoscaling AWS</h3>
+                  <div className="repo-stats">
+                    <span>🔱 1</span>
+                  </div>
+                </div>
+                <p>Infrastructure as Code for AWS ECS with comprehensive autoscaling configurations</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">AWS ECS</span>
+                  <span className="tech-tag">HCL</span>
+                  <span className="tech-tag">Autoscaling</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/terraform-ecs-autoscaling-aws" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.4s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>🐳 Docker 3-Tier Applications</h3>
+                </div>
+                <p>Multiple implementations of 3-tier applications using Docker and containerization best practices</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Docker</span>
+                  <span className="tech-tag">Containers</span>
+                  <span className="tech-tag">Shell</span>
+                  <span className="tech-tag">Multi-tier</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/3-tier-with-docker" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.5s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>☸️ Kubernetes 3-Tier WebApp</h3>
+                </div>
+                <p>Complete Kubernetes deployment manifests for scalable 3-tier web application architecture</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Kubernetes</span>
+                  <span className="tech-tag">K8s</span>
+                  <span className="tech-tag">Shell</span>
+                  <span className="tech-tag">Orchestration</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/k8s-3tier-webapp" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.6s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>🔐 Automate Certificate Renewal</h3>
+                  <div className="repo-stats">
+                    <span>🔱 1</span>
+                  </div>
+                </div>
+                <p>Automated SSL/TLS certificate renewal system using Let's Encrypt and Python</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">SSL</span>
+                  <span className="tech-tag">Let's Encrypt</span>
+                  <span className="tech-tag">Automation</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.7s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>🚀 ArgoCD GitOps Rolling Deployment</h3>
+                </div>
+                <p>GitOps workflow implementation with ArgoCD for continuous deployment and rolling updates</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">ArgoCD</span>
+                  <span className="tech-tag">GitOps</span>
+                  <span className="tech-tag">Kubernetes</span>
+                  <span className="tech-tag">CI/CD</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/argocd-nginx-git-ops-rolling-deployment" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+            </div>
+            <div className="view-all-repos">
+              <a href="https://github.com/sarowar-alam?tab=repositories" target="_blank" rel="noopener noreferrer" className="cta-button">
+                <span>View All Repositories</span>
+                <span className="arrow">→</span>
+              </a>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'certifications' && (
+          <section className="certifications fade-in">
+            <h2 className="section-title">Certifications & Credentials</h2>
+            <p className="section-subtitle">Professional certifications demonstrating expertise in cloud technologies and DevOps practices</p>
+            <div className="certifications-grid">
+              <div className="certification-card">
+                <img src="/cka-badge.png" alt="CKA Certification" className="cert-badge-img" />
+                <div className="cert-details">
+                  <h3>CKA: Certified Kubernetes Administrator</h3>
+                  <p className="cert-issuer">Issued by The Linux Foundation</p>
+                  <p className="cert-date">Issued: December 30, 2025 | Expires: December 31, 2027</p>
+                  <p>Earners of this designation demonstrated the skills, knowledge and competencies to perform the responsibilities of a Kubernetes Administrator. Earners demonstrated proficiency in Application Lifecycle Management, Installation, Configuration & Validation, Core Concepts, Networking, Scheduling, Security, Cluster Maintenance, Logging / Monitoring, Storage, and Troubleshooting.</p>
+                  <div className="cert-skills">
+                    <span className="skill-tag">API Objects</span>
+                    <span className="skill-tag">Cloud</span>
+                    <span className="skill-tag">Custom Resource Definitions</span>
+                    <span className="skill-tag">Helm</span>
+                    <span className="skill-tag">Ingress</span>
+                    <span className="skill-tag">Kubernetes</span>
+                    <span className="skill-tag">Logging and Troubleshooting</span>
+                    <span className="skill-tag">Open Source Software</span>
+                    <span className="skill-tag">Orchestration</span>
+                    <span className="skill-tag">Scheduling</span>
+                    <span className="skill-tag">Security Policies</span>
+                    <span className="skill-tag">Services</span>
+                    <span className="skill-tag">Site Reliability Engineer</span>
+                    <span className="skill-tag">System Administrator</span>
+                    <span className="skill-tag">Volumes</span>
+                  </div>
+                  <div className="cert-id">Certificate ID: LF-e7zhm1roc3</div>
+                  <a 
+                    href="https://www.credly.com/earner/earned/badge/578dbb91-fdee-4b08-8eae-89a3764008cb" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cert-link"
+                  >
+                    View Credential →
+                  </a>
+                </div>
+              </div>
+              <div className="certification-card">
+                <img src="/generative-ai-badge.png" alt="AWS Generative AI Badge" className="cert-badge-img" />
+                <div className="cert-details">
+                  <h3>AWS Educate Introduction to Generative AI - Training Badge</h3>
+                  <p className="cert-issuer">Issued by Amazon Web Services Training and Certification</p>
+                  <p className="cert-date">Issued: September 25, 2024</p>
+                  <p>Completed the Introduction to Generative Artificial Intelligence training and achieved required scores on the post-course assessment. Demonstrated fundamental understanding in generative AI concepts, AI and ML on AWS foundational knowledge.</p>
+                  <div className="cert-skills">
+                    <span className="skill-tag">AI</span>
+                    <span className="skill-tag">AI and ML on AWS</span>
+                    <span className="skill-tag">AWS Cloud</span>
+                    <span className="skill-tag">Generative AI</span>
+                  </div>
+                  <a 
+                    href="https://www.credly.com/earner/earned/badge/d77ecdf0-68ff-4180-8bec-270179107deb" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cert-link"
+                  >
+                    View Credential →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'contact' && (
+          <section className="contact fade-in">
+            <h2 className="section-title">Get In Touch</h2>
+            <div className="contact-container">
+              <div className="contact-info">
+                <div className="contact-item hogarth-highlight">
+                  <img 
+                    src="/hogarth-logo.avif" 
+                    alt="Hogarth Logo" 
+                    className="company-logo"
+                  />
+                  <div>
+                    <h4>Current Position</h4>
+                    <p>Lead DevOps Engineer</p>
+                    <p className="contact-detail"><a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer">Hogarth Worldwide, Dhaka</a></p>
+                  </div>
+                </div>
+                <div className="contact-item ostad-highlight">
+                  <img 
+                    src="https://play-lh.googleusercontent.com/iharsQKNsMkyC07joRy7wriHZkSdwnDle1Fnd-DQDcXuEXkVOS3pmJMjmsz9i6Eu" 
+                    alt="Ostad Logo" 
+                    className="ostad-logo"
+                  />
+                  <div>
+                    <h4>Lead Instructor at Ostad</h4>
+                    <p><a href="https://ostad.app/course/mastering-devops" target="_blank" rel="noopener noreferrer">Mastering DevOps: From Fundamentals to Advanced Practices</a></p>
+                    <p className="contact-detail">Teaching: AWS, Jenkins, Kubernetes, Ansible, Zabbix, Argo-CD, Prometheus, Grafana</p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">📧</div>
+                  <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:sarowar@hotmail.com">sarowar@hotmail.com</a></p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">💻</div>
+                  <div>
+                    <h4>GitHub</h4>
+                    <p><a href="https://github.com/sarowar-alam" target="_blank" rel="noopener noreferrer">github.com/sarowar-alam</a></p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">🔗</div>
+                  <div>
+                    <h4>LinkedIn</h4>
+                    <p><a href="https://www.linkedin.com/in/sarowar" target="_blank" rel="noopener noreferrer">linkedin.com/in/sarowar</a></p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">📍</div>
+                  <div>
+                    <h4>Location</h4>
+                    <p>Dhaka, Bangladesh</p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">⏰</div>
+                  <div>
+                    <h4>Experience</h4>
+                    <p>20+ Years in IT Infrastructure & DevOps</p>
+                  </div>
+                </div>
+              </div>
+              <div className="contact-form">
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="Your Name" 
+                  className="form-input" 
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Your Email" 
+                  className="form-input" 
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+                <textarea 
+                  name="message"
+                  placeholder="Your Message" 
+                  className="form-textarea"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                ></textarea>
+                <button className="submit-button" onClick={handleSubmit}>Send Message ✨</button>
+              </div>
+            </div>
+          </section>
+        )}
+      </main>
+    </div>
+  )
+}
+
+export default App
