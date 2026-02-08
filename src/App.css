@@ -1068,21 +1068,61 @@ nav button.active {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+
+  .logo-animated {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav button {
+    margin-left: 0;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 40px 15px;
   }
   
   .hero-content {
     text-align: center;
   }
+
+  .profile-image-container {
+    margin-bottom: 30px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
   
   .skills {
     justify-content: center;
   }
+
+  .skill {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
   
   .contact-container {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
   
   .hero-illustration {
@@ -1090,7 +1130,17 @@ nav button.active {
   }
   
   .glowing-text {
-    font-size: 36px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 15px;
   }
 
   .github-stats {
@@ -1100,6 +1150,7 @@ nav button.active {
 
   .github-repos {
     grid-template-columns: 1fr;
+    padding: 10px;
   }
 
   .github-stats-large {
@@ -1108,6 +1159,211 @@ nav button.active {
 
   .github-stats-large img {
     max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  /* Timeline Responsive */
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -20px;
+  }
+
+  .timeline-dot {
+    left: -26px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content {
+    padding: 20px 15px;
+  }
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+
+  .timeline-content h4 {
+    font-size: 14px;
+  }
+
+  .timeline-highlights li {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  /* Project Grid Responsive */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .project-card {
+    padding: 25px 20px;
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .tech-stack {
+    gap: 8px;
+  }
+
+  .tech-tag {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .project-details {
+    padding: 20px 15px;
+  }
+
+  .project-diagram {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  /* Certifications Responsive */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .certification-card {
+    padding: 30px 20px;
+  }
+
+  .cert-badge-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cert-details h3 {
+    font-size: 20px;
+  }
+
+  .skill-tag {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  /* Contact Form Responsive */
+  .contact {
+    padding: 60px 15px;
+  }
+
+  .contact-info {
+    gap: 20px;
+  }
+
+  .contact-item {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .ostad-logo, .company-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form-input, .form-textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .submit-button {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  /* GitHub Section Responsive */
+  .repo-card {
+    padding: 25px 20px;
+  }
+
+  .repo-header h3 {
+    font-size: 18px;
+  }
+
+  .repo-stats {
+    font-size: 13px;
+  }
+
+  /* General Spacing */
+  .main {
+    padding: 0 15px;
+  }
+
+  .experience-section,
+  .projects,
+  .certifications,
+  .github-section {
+    padding: 60px 15px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .logo-animated {
+    font-size: 20px;
+  }
+
+  nav button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .glowing-text {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skill {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .cert-badge-img {
+    width: 120px;
+    height: 120px;
   }
 }
 
