@@ -483,6 +483,88 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-icon">🔐</div>
+                <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
+                <p>Comprehensive automated certificate management system that eliminates manual SSL/TLS certificate renewal and deployment processes across 10+ production servers spanning multiple platforms (Windows IIS, Jenkins CI/CD, Linux monitoring systems) with zero downtime.</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Groovy</span>
+                  <span className="tech-tag">PowerShell</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Posh-ACME</span>
+                  <span className="tech-tag">AWS ACM</span>
+                  <span className="tech-tag">Let's Encrypt</span>
+                  <span className="tech-tag">OpenSSL</span>
+                </div>
+                <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
+                  {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
+                </button>
+                {expandedProject === 'ssl-automation' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>📊 Technical Overview</h4>
+                      <ul>
+                        <li><strong>Role:</strong> DevOps Engineer / Automation Architect</li>
+                        <li><strong>Scope:</strong> 10+ production servers across 4 distinct platforms</li>
+                        <li><strong>Environment:</strong> Hybrid Cloud (AWS + On-Premise Windows/Linux)</li>
+                        <li><strong>Challenge:</strong> Automate SSL certificate renewal across multi-platform infrastructure with zero downtime</li>
+                        <li><strong>Solution:</strong> 6-stage deployment pipeline with multi-cloud integration</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🎯 Key Features & Achievements</h4>
+                      <ul>
+                        <li><strong>Intelligent Certificate Monitoring:</strong> Automated SSL expiry checking with 15-day threshold alerts, pre-emptive renewal workflow triggering</li>
+                        <li><strong>Automated Certificate Provisioning:</strong> Let's Encrypt integration, DNS-based domain validation, automatic backup with rate-limit handling</li>
+                        <li><strong>Multi-Cloud Integration:</strong> AWS ACM synchronization across multiple regions, S3-based secure distribution with time-limited access</li>
+                        <li><strong>Cross-Platform Deployment:</strong> Windows IIS, Jenkins (Windows/Linux), Monitoring Systems with automated service restarts</li>
+                        <li><strong>Security & Compliance:</strong> Encrypted certificate storage, secure credential management, comprehensive audit logging, backup and rollback capabilities</li>
+                        <li><strong>Notification System:</strong> Email alerts with secure download links, failure alerting with diagnostics, pre-signed URLs (7-day expiry)</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>💡 Technical Highlights</h4>
+                      <ul>
+                        <li><strong>Windows IIS Servers:</strong> Certificate store import, HTTPS binding updates, automated cleanup of expired certificates</li>
+                        <li><strong>Jenkins (Windows):</strong> PFX to JKS conversion, keystore deployment, service restart coordination with build queue management</li>
+                        <li><strong>Jenkins (Linux):</strong> SSH-based deployment, permission management, service health verification</li>
+                        <li><strong>Monitoring Systems:</strong> Multi-file certificate deployment (chain, key, fullchain), web server configuration</li>
+                        <li><strong>5 Certificate Formats:</strong> Integrated PFX, CER, KEY, JKS, PEM formats across platforms</li>
+                        <li><strong>Pipeline Architecture:</strong> 6-stage workflow with conditional execution, error handling, parallel deployment, workspace cleanup</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📈 Business Impact</h4>
+                      <ul>
+                        <li>Reduced manual effort from 8 hours per quarter to fully automated</li>
+                        <li>Eliminated certificate expiration incidents (previously 2-3 per year)</li>
+                        <li>Zero-downtime deployments across all platforms</li>
+                        <li>Improved security posture with 90-day certificate rotation</li>
+                        <li>Enhanced compliance with automated audit trails</li>
+                        <li>Cost savings via Let's Encrypt (free certificates)</li>
+                        <li>Achieved 100% automation with zero manual intervention</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🏗️ Architecture & Workflow</h4>
+                      <img src="ssl-certificate-automation.png" alt="SSL Certificate Automation Pipeline Architecture" className="project-diagram" />
+                    </div>
+                    <div className="detail-section">
+                      <h4>🔧 Technical Stack Details</h4>
+                      <ul>
+                        <li><strong>Orchestration:</strong> Jenkins CI/CD with Groovy Pipeline DSL</li>
+                        <li><strong>Windows Automation:</strong> PowerShell with Posh-ACME module</li>
+                        <li><strong>Linux Automation:</strong> Python 3.x with Paramiko (SSH) and Boto3 (AWS SDK)</li>
+                        <li><strong>Certificate Tools:</strong> OpenSSL, Keytool for format conversion</li>
+                        <li><strong>Cloud Services:</strong> AWS EC2, ACM, S3, SES, Route53</li>
+                        <li><strong>Security:</strong> Jenkins credential store, encrypted storage, file permission enforcement</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">💾</div>
@@ -497,18 +579,6 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.2s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">🔐</div>
-                <h3>SSL Certificate Renewal System</h3>
-                <p>Automated Let's Encrypt certificate renewal, ACM updates, deployment to IIS, Jenkins, Zabbix via Posh-ACME — converting 2-hour manual task to scheduled automation</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Let's Encrypt</span>
-                  <span className="tech-tag">PowerShell</span>
-                  <span className="tech-tag">Jenkins</span>
-                  <span className="tech-tag">ACM</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.3s'}}>
-                <div className="card-glow"></div>
                 <div className="project-icon">🩹</div>
                 <h3>Patch Management Automation</h3>
                 <p>Ansible-based OS patch pipelines for Linux & Windows with pre/post AMI backups, rollback readiness, health checks, and automated HTML reports</p>
@@ -519,7 +589,7 @@ function App() {
                   <span className="tech-tag">Groovy</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.4s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.3s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">💰</div>
                 <h3>Cost & Resource Governance</h3>
@@ -531,7 +601,7 @@ function App() {
                   <span className="tech-tag">DocumentDB</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.5s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.4s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">🚀</div>
                 <h3>ECS Zero Task Architecture</h3>
@@ -543,7 +613,7 @@ function App() {
                   <span className="tech-tag">Terraform</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.6s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.5s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">🔁</div>
                 <h3>Environment Refresh & Hotfix</h3>
@@ -555,7 +625,7 @@ function App() {
                   <span className="tech-tag">CI/CD</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.7s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.6s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">🌐</div>
                 <h3>CloudFront Access Control</h3>
@@ -566,7 +636,7 @@ function App() {
                   <span className="tech-tag">Security</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.8s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.7s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">📡</div>
                 <h3>Zabbix Migration & Enhancement</h3>
