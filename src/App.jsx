@@ -159,9 +159,9 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
+                  <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   <h3>Senior DevOps Engineer</h3>
-                  <h4>Hogarth Worldwide (Wunderman Thompson) | Dhaka, Bangladesh</h4>
+                  <h4>Wunderman Thompson | Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Oct 2022 - Dec 2023 · 1 year 3 months</p>
                   <p>Managed AWS infrastructure, CI/CD pipelines, IAM configurations, and cloud security implementations across development and production environments.</p>
                 </div>
@@ -169,8 +169,9 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="VML-logo.png" alt="VML" className="timeline-company-logo" />
                   <h3>Senior Information Technology Manager</h3>
-                  <h4>Wunderman Thompson | Dhaka, Bangladesh</h4>
+                  <h4>VML | Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Aug 2021 - May 2023 · 1 year 10 months</p>
                   <ul className="timeline-highlights">
                     <li>🖥️ Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
@@ -186,6 +187,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   <h3>Information Technology Manager</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
                   <p className="timeline-date">Mar 2016 - Sep 2021 · 5 years 7 months</p>
@@ -195,6 +197,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   <h3>Senior System Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
                   <p className="timeline-date">Jun 2012 - Feb 2016 · 3 years 9 months</p>
@@ -204,6 +207,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   <h3>Senior Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
                   <p className="timeline-date">Sep 2010 - May 2012 · 1 year 9 months</p>
@@ -213,6 +217,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   <h3>Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
                   <p className="timeline-date">Sep 2009 - Aug 2010 · 1 year</p>
@@ -222,6 +227,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   <h3>Information Technology Supporter</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
                   <p className="timeline-date">Jun 2008 - Aug 2009 · 1 year 3 months</p>
@@ -231,6 +237,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="navan-real-estate-logo.png" alt="Navana Real Estate" className="timeline-company-logo" />
                   <h3>Senior Executive MIS</h3>
                   <h4>Navana Real Estate Ltd. | Dhanmondi, Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Jun 2004 - May 2008 · 4 years</p>
