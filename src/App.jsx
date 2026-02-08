@@ -10,7 +10,8 @@ function App() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    if (e) e.preventDefault()
     const { name, email, message } = formData
     if (!name || !email || !message) {
       alert('Please fill in all fields')
@@ -853,7 +854,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="contact-form">
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <input 
                   type="text" 
                   name="name"
@@ -861,6 +862,7 @@ function App() {
                   className="form-input" 
                   value={formData.name}
                   onChange={handleInputChange}
+                  required
                 />
                 <input 
                   type="email" 
@@ -869,6 +871,7 @@ function App() {
                   className="form-input" 
                   value={formData.email}
                   onChange={handleInputChange}
+                  required
                 />
                 <textarea 
                   name="message"
@@ -876,9 +879,10 @@ function App() {
                   className="form-textarea"
                   value={formData.message}
                   onChange={handleInputChange}
+                  required
                 ></textarea>
-                <button className="submit-button" onClick={handleSubmit}>Send Message ✨</button>
-              </div>
+                <button type="submit" className="submit-button">Send Message ✨</button>
+              </form>
             </div>
           </section>
         )}

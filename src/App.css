@@ -1027,11 +1027,20 @@ nav button.active {
   cursor: pointer;
   transition: all 0.3s;
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  font-weight: 600;
 }
 
 .submit-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
 }
 
 /* Responsive */
