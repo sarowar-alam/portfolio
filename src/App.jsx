@@ -120,6 +120,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   <h3>Lead DevOps Engineer</h3>
                   <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
                   <p className="timeline-date">May 2025 - Present · 10 months</p>
@@ -138,6 +139,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   <h3>Principal DevOps Engineer</h3>
                   <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
                   <p className="timeline-date">Jan 2024 - Apr 2025 · 1 year 4 months</p>
@@ -157,6 +159,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
+                  <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   <h3>Senior DevOps Engineer</h3>
                   <h4>Hogarth Worldwide (Wunderman Thompson) | Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Oct 2022 - Dec 2023 · 1 year 3 months</p>
