@@ -976,6 +976,36 @@ function App() {
                   </a>
                 </div>
               </div>
+              <div className="certification-card">
+                <img src="UC-359023df-822b-4991-a850-538cae70c8a9.jpg" alt="HashiCorp Terraform Associate Certificate" className="cert-badge-img" />
+                <div className="cert-details">
+                  <h3>HashiCorp Certified: Terraform Associate 2026</h3>
+                  <p className="cert-issuer">Issued by Udemy</p>
+                  <p className="cert-date">Completed: August 15, 2023</p>
+                  <p>Successfully completed comprehensive HashiCorp Terraform certification training covering 25.5 hours of content with 190 lectures. Mastered infrastructure as code principles, Terraform workflows, state management, modules, and best practices for provisioning and managing cloud infrastructure across multiple providers.</p>
+                  <div className="cert-skills">
+                    <span className="skill-tag">Terraform</span>
+                    <span className="skill-tag">Infrastructure as Code</span>
+                    <span className="skill-tag">HashiCorp</span>
+                    <span className="skill-tag">AWS Provisioning</span>
+                    <span className="skill-tag">Terraform Modules</span>
+                    <span className="skill-tag">State Management</span>
+                    <span className="skill-tag">HCL</span>
+                    <span className="skill-tag">Cloud Automation</span>
+                    <span className="skill-tag">Multi-Cloud</span>
+                    <span className="skill-tag">Resource Management</span>
+                  </div>
+                  <div className="cert-instructor">Instructor: Zeal Vora</div>
+                  <a 
+                    href="https://www.udemy.com/certificate/UC-359023df-822b-4991-a850-538cae70c8a9/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cert-link"
+                  >
+                    View Certificate →
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         )}
