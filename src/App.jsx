@@ -946,6 +946,36 @@ function App() {
                   </a>
                 </div>
               </div>
+              <div className="certification-card">
+                <img src="UC-f54891d7-2d37-43a5-9470-22b38293e7af.jpg" alt="AWS Solutions Architect Associate Certificate" className="cert-badge-img" />
+                <div className="cert-details">
+                  <h3>Ultimate AWS Certified Solutions Architect Associate 2026</h3>
+                  <p className="cert-issuer">Issued by Udemy</p>
+                  <p className="cert-date">Completed: December 12, 2024</p>
+                  <p>Successfully completed comprehensive AWS Solutions Architect training covering 27 hours of content with 398 lectures. Gained expertise in AWS architecture, cloud infrastructure design, services integration, and best practices for building scalable, secure, and highly available systems on AWS.</p>
+                  <div className="cert-skills">
+                    <span className="skill-tag">AWS Solutions Architecture</span>
+                    <span className="skill-tag">Amazon EC2</span>
+                    <span className="skill-tag">Amazon S3</span>
+                    <span className="skill-tag">AWS IAM</span>
+                    <span className="skill-tag">VPC & Networking</span>
+                    <span className="skill-tag">AWS Lambda</span>
+                    <span className="skill-tag">RDS & DynamoDB</span>
+                    <span className="skill-tag">CloudFormation</span>
+                    <span className="skill-tag">High Availability</span>
+                    <span className="skill-tag">Cost Optimization</span>
+                  </div>
+                  <div className="cert-instructor">Instructor: Stephane Maarek | AWS Certified Cloud Practitioner, Solutions Architect, Developer</div>
+                  <a 
+                    href="https://www.udemy.com/certificate/UC-f54891d7-2d37-43a5-9470-22b38293e7af/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cert-link"
+                  >
+                    View Certificate →
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         )}
