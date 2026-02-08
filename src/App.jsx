@@ -693,6 +693,79 @@ function App() {
                   <span className="tech-tag">Active Directory</span>
                   <span className="tech-tag">Crystal Reports</span>
                 </div>
+                <button className="project-link" onClick={() => toggleProject('enterprise-systems')}>
+                  {expandedProject === 'enterprise-systems' ? 'Show Less ↑' : 'View Details →'}
+                </button>
+                {expandedProject === 'enterprise-systems' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>📊 Systems Overview</h4>
+                      <ul>
+                        <li><strong>Role:</strong> Developer / System Administrator</li>
+                        <li><strong>Company:</strong> Wunderman Thompson / VML</li>
+                        <li><strong>Environment:</strong> Windows Server, Active Directory</li>
+                        <li><strong>Period:</strong> 2016-2023</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>💼 Purchase & Inventory Management System</h4>
+                      <ul>
+                        <li>Comprehensive purchase order tracking and inventory control</li>
+                        <li>Real-time stock level monitoring and automated reorder alerts</li>
+                        <li>Vendor management and purchase history tracking</li>
+                        <li>Multi-location inventory tracking with transfer management</li>
+                        <li>Cost analysis and budgeting reports</li>
+                        <li>Active Directory integration for role-based access control</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📄 Invoice & Credit Note System</h4>
+                      <ul>
+                        <li>Automated invoice generation with customizable templates</li>
+                        <li>Credit note processing and tracking for returns/adjustments</li>
+                        <li>Payment tracking and reconciliation</li>
+                        <li>Tax calculation and compliance reporting</li>
+                        <li>Client account management with payment history</li>
+                        <li>Integration with finance department workflows</li>
+                        <li>Crystal Reports for detailed financial statements</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🎫 Access Card Attendance Management System</h4>
+                      <ul>
+                        <li>Web-based employee attendance tracking via access card swipes</li>
+                        <li>Real-time attendance monitoring dashboard</li>
+                        <li>Automated late arrival and early departure alerts</li>
+                        <li>Leave management integration</li>
+                        <li>Monthly attendance reports with Crystal Reports</li>
+                        <li>Department-wise and employee-wise attendance analytics</li>
+                        <li>Export functionality for payroll processing</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🔧 Technical Features</h4>
+                      <ul>
+                        <li><strong>ASP.NET Framework:</strong> Web-based applications with responsive UI</li>
+                        <li><strong>SQL Server:</strong> Robust database design with stored procedures and optimization</li>
+                        <li><strong>Active Directory Integration:</strong> Single sign-on and role-based permissions</li>
+                        <li><strong>Crystal Reports:</strong> Professional reporting with charts, graphs, and export options</li>
+                        <li><strong>Security:</strong> AD authentication, SQL injection prevention, encrypted connections</li>
+                        <li><strong>User Management:</strong> Role-based access with department-level permissions</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📈 Business Impact</h4>
+                      <ul>
+                        <li>Eliminated manual paper-based tracking processes</li>
+                        <li>Reduced inventory discrepancies by 90%</li>
+                        <li>Improved financial accuracy with automated calculations</li>
+                        <li>Streamlined attendance reporting from days to minutes</li>
+                        <li>Enhanced compliance with automated audit trails</li>
+                        <li>Improved decision-making with real-time analytics</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>
