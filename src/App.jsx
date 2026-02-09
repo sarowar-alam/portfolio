@@ -1200,7 +1200,6 @@ function App() {
                   <h3>B.Sc. (Hons.) in Computer Science</h3>
                   <p className="institution">Department of Electrical & Computer Engineering (ECE)<br/><a href="https://www.northsouth.edu/" target="_blank" rel="noopener noreferrer" className="university-link">North South University</a>, Dhaka</p>
                   <div className="education-details">
-                    <span className="graduation-date">📅 Graduated: November 2002</span>
                     <span className="result">📊 120 Credits Completed</span>
                     <span className="grade">🏆 First Class</span>
                   </div>
@@ -1218,9 +1217,7 @@ function App() {
                   <h3>Higher Secondary Certificate (H.S.C.)</h3>
                   <p className="institution">Science Group<br/><a href="https://www.abdurroufcollege.ac.bd/" target="_blank" rel="noopener noreferrer" className="university-link">Birshrestha Munshi Abdur Rouf Public College</a><br/><span className="former-name">(formerly Bangladesh Rifles School & College)</span>, Dhaka</p>
                   <div className="education-details">
-                    <span className="graduation-date">📅 1996</span>
                     <span className="board">🏛️ Board: Dhaka</span>
-                    <span className="result">📊 Marks: 71.0%</span>
                     <span className="grade">🏆 First Division</span>
                   </div>
                 </div>
@@ -1234,9 +1231,7 @@ function App() {
                   <h3>Secondary School Certificate (S.S.C.)</h3>
                   <p className="institution">Science Group<br/><a href="https://www.tghs.edu.bd/" target="_blank" rel="noopener noreferrer" className="university-link">Tejgaon Government Boys High School</a><br/><span className="bengali-name">তেজগাঁও সরকারি উচ্চ বিদ্যালয়</span>, Dhaka</p>
                   <div className="education-details">
-                    <span className="graduation-date">📅 1994</span>
                     <span className="board">🏛️ Board: Dhaka</span>
-                    <span className="result">📊 Marks: 78.3%</span>
                     <span className="grade">🏆 First Division with Star Marks</span>
                     <span className="achievements">⭐ Three Letters</span>
                   </div>
