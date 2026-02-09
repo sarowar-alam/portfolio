@@ -682,7 +682,7 @@ function App() {
                   <span className="tech-tag">mysqldump</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '1.1s'}}>
+              <div className="project-card card-animated featured-project">
                 <div className="card-glow"></div>
                 <div className="project-icon">💼</div>
                 <h3>Custom Enterprise Systems</h3>
