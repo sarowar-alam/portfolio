@@ -1295,14 +1295,14 @@ function App() {
                   </div>
                 </div>
                 <div className="contact-item">
-                  <div className="contact-icon">💻</div>
+                  <img src="GitHub-Logo.svg" alt="GitHub" className="contact-logo" />
                   <div>
                     <h4>GitHub</h4>
                     <p><a href="https://github.com/sarowar-alam" target="_blank" rel="noopener noreferrer">github.com/sarowar-alam</a></p>
                   </div>
                 </div>
                 <div className="contact-item">
-                  <div className="contact-icon">🔗</div>
+                  <img src="linkedin-logo.png" alt="LinkedIn" className="contact-logo" />
                   <div>
                     <h4>LinkedIn</h4>
                     <p><a href="https://www.linkedin.com/in/sarowar" target="_blank" rel="noopener noreferrer">linkedin.com/in/sarowar</a></p>
