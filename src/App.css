@@ -511,6 +511,12 @@ nav button.active {
   margin-bottom: 0;
 }
 
+.timeline-highlights li.indented-item {
+  padding-left: 30px;
+  list-style-type: disc;
+  color: #94a3b8;
+}
+
 .timeline-content p + .timeline-highlights {
   margin-top: 15px;
 }
@@ -1466,6 +1472,10 @@ nav button.active {
   .timeline-highlights li {
     font-size: 13px;
     margin-bottom: 10px;
+  }
+
+  .timeline-highlights li.indented-item {
+    padding-left: 20px;
   }
 
   /* Project Grid Responsive */

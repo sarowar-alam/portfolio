@@ -251,19 +251,19 @@ function App() {
                   <p className="role-overview"><strong>Role Overview:</strong> Led the design, implementation, and maintenance of enterprise software systems and IT infrastructure. Supported cross-departmental operations including Procurement, Estimation, Accounts, Logistics, and HR, while ensuring secure and efficient network services across the organization.</p>
                   <p className="section-header"><strong>Key Contributions & Achievements</strong></p>
                   <ul className="timeline-highlights">
-                    <li><strong>Enterprise Systems Development</strong></li>
-                    <li>Designed and supported an integrated Budget & Inventory Management System covering project estimation, purchasing, consumption tracking, and expenditure control</li>
-                    <li>Contributed to additional internal platforms including Daily Transactions and Payroll systems</li>
-                    <li>Developed modules such as Bank Status and Utility Management System to manage corporate banking activities and deliver management reports for leadership</li>
-                    <li><strong>IT Infrastructure & Network Administration</strong></li>
-                    <li>Managed a corporate LAN serving 85+ desktops, 15 shared laser printers, and an external print server</li>
-                    <li>Administered three servers, including: IBM X Series database server, Windows Server 2003 with Active Directory for authentication, authorization, and centralized policy control, and Fedora Core–based proxy server for regulated internet access</li>
-                    <li>Ensured high availability, resource optimization, and secure access to organizational systems</li>
-                    <li><strong>Security & Access Control</strong></li>
-                    <li>Implemented Group Policy to restrict removable media (CD/DVD, USB, floppy) based on departmental needs</li>
-                    <li>Enforced application access limitations via Active Directory, ensuring users operated only authorized software</li>
-                    <li><strong>Training & Capacity Building</strong></li>
-                    <li>Strengthened computer literacy and operational efficiency by training staff across departments in effective system usage</li>
+                    <li>Enterprise Systems Development</li>
+                    <li className="indented-item">Designed and supported an integrated Budget & Inventory Management System covering project estimation, purchasing, consumption tracking, and expenditure control</li>
+                    <li className="indented-item">Contributed to additional internal platforms including Daily Transactions and Payroll systems</li>
+                    <li className="indented-item">Developed modules such as Bank Status and Utility Management System to manage corporate banking activities and deliver management reports for leadership</li>
+                    <li>IT Infrastructure & Network Administration</li>
+                    <li className="indented-item">Managed a corporate LAN serving 85+ desktops, 15 shared laser printers, and an external print server</li>
+                    <li className="indented-item">Administered three servers, including: IBM X Series database server, Windows Server 2003 with Active Directory for authentication, authorization, and centralized policy control, and Fedora Core–based proxy server for regulated internet access</li>
+                    <li className="indented-item">Ensured high availability, resource optimization, and secure access to organizational systems</li>
+                    <li>Security & Access Control</li>
+                    <li className="indented-item">Implemented Group Policy to restrict removable media (CD/DVD, USB, floppy) based on departmental needs</li>
+                    <li className="indented-item">Enforced application access limitations via Active Directory, ensuring users operated only authorized software</li>
+                    <li>Training & Capacity Building</li>
+                    <li className="indented-item">Strengthened computer literacy and operational efficiency by training staff across departments in effective system usage</li>
                   </ul>
                   <p className="tools-header"><strong>Tools & Technologies</strong></p>
                   <div className="tech-stack" style={{marginTop: '10px'}}>
