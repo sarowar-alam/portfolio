@@ -515,6 +515,29 @@ nav button.active {
   margin-top: 15px;
 }
 
+.role-overview {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.section-header {
+  color: #667eea;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  letter-spacing: 0.3px;
+}
+
+.tools-header {
+  color: #667eea;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 5px 0;
+  letter-spacing: 0.3px;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
