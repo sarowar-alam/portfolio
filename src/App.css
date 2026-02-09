@@ -1092,6 +1092,33 @@ nav button.active {
   transform: translateX(5px);
 }
 
+.university-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.university-link:hover {
+  color: #a78bfa;
+  border-bottom-color: #a78bfa;
+}
+
+.former-name {
+  color: #94a3b8;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.bengali-name {
+  color: #94a3b8;
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  margin-top: 4px;
+}
+
 .contact {
   padding: 80px 20px;
 }
