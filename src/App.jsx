@@ -1295,14 +1295,14 @@ function App() {
                   <div className="contact-icon">📍</div>
                   <div>
                     <h4>Location</h4>
-                    <p>Dhaka, Bangladesh</p>
+                    <p><a href="https://www.google.com/maps/@23.7500658,90.373439,16.75z/data=!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Dhanmondi, Dhaka, Bangladesh</a></p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-icon">⏰</div>
                   <div>
                     <h4>Experience</h4>
-                    <p>20+ Years in IT Infrastructure & DevOps</p>
+                    <p><a href="#" onClick={(e) => { e.preventDefault(); setActiveSection('home'); }} className="experience-link">20+ Years in IT Infrastructure & DevOps</a></p>
                   </div>
                 </div>
               </div>
