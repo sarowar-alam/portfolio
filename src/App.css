@@ -952,6 +952,146 @@ nav button.active {
   transform: translateY(-2px);
 }
 
+/* Education Section */
+.education {
+  padding: 80px 20px;
+}
+
+.education-timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+}
+
+.education-card:hover::before {
+  transform: scaleX(1);
+}
+
+.education-logo {
+  flex: 0 0 150px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.education-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.education-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.education-content h3 {
+  color: #667eea;
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.institution {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.education-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.education-details span {
+  padding: 10px 20px;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 20px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.education-details span:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.grade {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+  color: #fbbf24 !important;
+}
+
+.achievements {
+  background: rgba(139, 92, 246, 0.1) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  color: #a78bfa !important;
+}
+
+.edu-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.edu-link:hover {
+  color: #a78bfa;
+  border-bottom-color: #a78bfa;
+  transform: translateX(5px);
+}
+
 .contact {
   padding: 80px 20px;
 }
@@ -1342,6 +1482,39 @@ nav button.active {
   .skill-tag {
     font-size: 11px;
     padding: 6px 12px;
+  }
+
+  /* Education Responsive */
+  .education-card {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .education-logo {
+    flex: none;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .education-content h3 {
+    font-size: 20px;
+  }
+
+  .institution {
+    font-size: 14px;
+  }
+
+  .education-details {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .education-details span {
+    font-size: 12px;
+    padding: 8px 14px;
   }
 
   /* Contact Form Responsive */

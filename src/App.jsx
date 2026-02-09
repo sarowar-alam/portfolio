@@ -65,6 +65,12 @@ function App() {
             Certifications
           </button>
           <button 
+            className={activeSection === 'education' ? 'active' : ''}
+            onClick={() => setActiveSection('education')}
+          >
+            Education
+          </button>
+          <button 
             className={activeSection === 'contact' ? 'active' : ''}
             onClick={() => setActiveSection('contact')}
           >
@@ -1158,6 +1164,82 @@ function App() {
                   >
                     View Certificate →
                   </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'education' && (
+          <section className="education fade-in">
+            <h2 className="section-title">🎓 Education & Academic Background</h2>
+            <p className="section-subtitle">Academic foundation spanning Computer Science and Telecommunications Engineering</p>
+            <div className="education-timeline">
+              <div className="education-card">
+                <div className="education-logo">
+                  <img src="NorthSouthUniversity-Logo.png" alt="North South University" />
+                </div>
+                <div className="education-content">
+                  <h3>M.Sc. in Electronics & Telecommunication Engineering</h3>
+                  <p className="institution">Department of Computer Science and Engineering<br/>North South University, Dhaka</p>
+                  <div className="education-details">
+                    <span className="result">📊 CGPA: 3.10 (27 Credits Completed)</span>
+                    <span className="grade">🏆 First Class</span>
+                  </div>
+                  <a href="http://www.northsouth.edu/html/grades.html" target="_blank" rel="noopener noreferrer" className="edu-link">
+                    View Grading System →
+                  </a>
+                </div>
+              </div>
+
+              <div className="education-card">
+                <div className="education-logo">
+                  <img src="NorthSouthUniversity-Logo.png" alt="North South University" />
+                </div>
+                <div className="education-content">
+                  <h3>B.Sc. (Hons.) in Computer Science</h3>
+                  <p className="institution">Department of Computer Science and Engineering<br/>North South University, Dhaka</p>
+                  <div className="education-details">
+                    <span className="graduation-date">📅 Graduated: November 2002</span>
+                    <span className="result">📊 CGPA: 3.04 (Scale of 4.0)</span>
+                    <span className="grade">🏆 First Class</span>
+                  </div>
+                  <a href="http://www.northsouth.edu/html/grades.html" target="_blank" rel="noopener noreferrer" className="edu-link">
+                    View Grading System →
+                  </a>
+                </div>
+              </div>
+
+              <div className="education-card">
+                <div className="education-logo">
+                  <img src="bangladesh-rifles-school-college-logo.png" alt="Bangladesh Rifles School & College" />
+                </div>
+                <div className="education-content">
+                  <h3>Higher Secondary Certificate (H.S.C.)</h3>
+                  <p className="institution">Science Group<br/>Bangladesh Rifles School & College, Dhaka</p>
+                  <div className="education-details">
+                    <span className="graduation-date">📅 Passed: 1996</span>
+                    <span className="board">🏛️ Board: Dhaka</span>
+                    <span className="result">📊 Marks: 71.0%</span>
+                    <span className="grade">🏆 First Division</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="education-card">
+                <div className="education-logo">
+                  <img src="HSC-SSC.png" alt="Secondary School Certificate" />
+                </div>
+                <div className="education-content">
+                  <h3>Secondary School Certificate (S.S.C.)</h3>
+                  <p className="institution">Science Group<br/>Tejgaon Govt. Boys' High School, Dhaka</p>
+                  <div className="education-details">
+                    <span className="graduation-date">📅 Passed: 1994</span>
+                    <span className="board">🏛️ Board: Dhaka</span>
+                    <span className="result">📊 Marks: 78.3%</span>
+                    <span className="grade">🏆 First Division with Star Marks</span>
+                    <span className="achievements">⭐ Three Letters</span>
+                  </div>
                 </div>
               </div>
             </div>
