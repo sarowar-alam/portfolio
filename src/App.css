@@ -1203,19 +1203,6 @@ nav button.active {
   animation: pulse 2s infinite;
 }
 
-.contact-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  filter: brightness(1.2);
-  transition: all 0.3s;
-}
-
-.contact-logo:hover {
-  transform: scale(1.1);
-  filter: brightness(1.5);
-}
-
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -1619,7 +1606,7 @@ nav button.active {
     font-size: 14px;
   }
 
-  .ostad-logo, .company-logo, .contact-logo {
+  .ostad-logo, .company-logo {
     width: 40px;
     height: 40px;
   }
