@@ -622,6 +622,23 @@ nav button.active {
   transform: translateX(5px);
 }
 
+/* Project Thumbnails */
+.project-thumbnail {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  display: block;
+}
+
+.project-thumbnail:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
 /* Contact Section */
 .contact {
   padding: 80px 20px;
@@ -1259,6 +1276,11 @@ nav button.active {
   .project-link {
     padding: 10px 20px;
     font-size: 14px;
+  }
+
+  .project-thumbnail {
+    max-width: 100%;
+    margin: 15px 0;
   }
 
   .project-details {

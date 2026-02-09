@@ -276,6 +276,14 @@ function App() {
                   <span className="tech-tag">PowerShell</span>
                   <span className="tech-tag">Jenkins</span>
                 </div>
+                {!expandedProject || expandedProject !== 'cloud-backup' ? (
+                  <img 
+                    src="cloud-monitoring.png" 
+                    alt="Multi-Cloud Monitoring Architecture" 
+                    className="project-thumbnail" 
+                    onClick={() => setZoomedImage('cloud-monitoring.png')}
+                  />
+                ) : null}
                 <button className="project-link" onClick={() => toggleProject('cloud-backup')}>
                   {expandedProject === 'cloud-backup' ? 'Show Less ↑' : 'View Details →'}
                 </button>
@@ -360,6 +368,14 @@ function App() {
                   <span className="tech-tag">Windows Server</span>
                   <span className="tech-tag">CI/CD</span>
                 </div>
+                {!expandedProject || expandedProject !== 'hotfix-pipeline' ? (
+                  <img 
+                    src="hotfix-flow.png" 
+                    alt="Hotfix Pipeline Architecture" 
+                    className="project-thumbnail" 
+                    onClick={() => setZoomedImage('hotfix-flow.png')}
+                  />
+                ) : null}
                 <button className="project-link" onClick={() => toggleProject('hotfix-pipeline')}>
                   {expandedProject === 'hotfix-pipeline' ? 'Show Less ↑' : 'View Details →'}
                 </button>
@@ -435,6 +451,14 @@ function App() {
                   <span className="tech-tag">Trivy</span>
                   <span className="tech-tag">ALB</span>
                 </div>
+                {!expandedProject || expandedProject !== 'ecs-deployment' ? (
+                  <img 
+                    src="ecs-deployment-flow.png" 
+                    alt="ECS Deployment Architecture" 
+                    className="project-thumbnail" 
+                    onClick={() => setZoomedImage('ecs-deployment-flow.png')}
+                  />
+                ) : null}
                 <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
                   {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
                 </button>
@@ -527,6 +551,14 @@ function App() {
                   <span className="tech-tag">Let's Encrypt</span>
                   <span className="tech-tag">OpenSSL</span>
                 </div>
+                {!expandedProject || expandedProject !== 'ssl-automation' ? (
+                  <img 
+                    src="ssl-certificate-automation.png" 
+                    alt="SSL Automation Architecture" 
+                    className="project-thumbnail" 
+                    onClick={() => setZoomedImage('ssl-certificate-automation.png')}
+                  />
+                ) : null}
                 <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
                   {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
                 </button>
