@@ -496,7 +496,7 @@ nav button.active {
   list-style: disc;
   padding-left: 20px;
   margin-top: 15px;
-  color: #cbd5e1;
+  color: white;
 }
 
 .timeline-highlights li {
@@ -515,7 +515,7 @@ nav button.active {
   padding-left: 10px;
   margin-left: 20px;
   list-style-type: disc;
-  color: #94a3b8;
+  color: white;
 }
 
 .timeline-content p + .timeline-highlights {
@@ -523,7 +523,7 @@ nav button.active {
 }
 
 .role-overview {
-  color: #cbd5e1;
+  color: white;
   line-height: 1.7;
   margin: 15px 0;
   font-size: 15px;
