@@ -625,7 +625,7 @@ nav button.active {
 /* Project Thumbnails */
 .project-content-layout {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   width: 100%;
 }
