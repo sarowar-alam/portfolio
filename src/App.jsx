@@ -245,19 +245,34 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <img src="navan-real-estate-logo.png" alt="Navana Real Estate" className="timeline-company-logo" />
-                  <h3>Senior Executive MIS</h3>
-                  <h4>Navana Real Estate Ltd. | Dhanmondi, Dhaka, Bangladesh</h4>
+                  <h3>Senior Executive – MIS</h3>
+                  <h4><a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="company-link">Navana Real Estate & Construction Ltd.</a> | Gulshan-02, Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Jun 2004 - May 2008 · 4 years</p>
-                  <p>Designed and developed enterprise software solutions and managed complete IT infrastructure for construction and real estate operations.</p>
+                  <p>Led the design, implementation, and maintenance of enterprise software systems and IT infrastructure. Supported cross-departmental operations including Procurement, Estimation, Accounts, Logistics, and HR, while ensuring secure and efficient network services across the organization.</p>
                   <ul className="timeline-highlights">
-                    <li>💼 Developed "Budget and Inventory Management System" integrating Labor Cost, Material Cost, Site Overhead with Project Estimation for Navana Construction Ltd. and Navana Real Estate Ltd.</li>
-                    <li>🌐 Built network infrastructure with 3 IBM X Series 225 servers, 50+ workstations, 7 networked laser printers, and external print server</li>
-                    <li>🔐 Configured Windows Server 2003 Active Directory for user access control and resource management</li>
-                    <li>🛡️ Implemented Fedora Core-2 proxy server for internet access restrictions and security</li>
-                    <li>💰 Developed "Daily Transaction System" module for Accounts Department managing overall company transactions</li>
-                    <li>💵 Created "Payroll" module generating reports for higher management and employee salary information</li>
-                    <li>🗄️ Provided comprehensive database management and software development assistance</li>
+                    <li><strong>🏗️ Enterprise Systems Development</strong></li>
+                    <li>💼 Designed and supported an integrated Budget & Inventory Management System covering project estimation, purchasing, consumption tracking, and expenditure control</li>
+                    <li>📊 Contributed to additional internal platforms including Daily Transactions and Payroll systems</li>
+                    <li>🏦 Developed modules such as Bank Status and Utility Management System to manage corporate banking activities and deliver management reports for leadership</li>
+                    <li><strong>🌐 IT Infrastructure & Network Administration</strong></li>
+                    <li>💻 Managed a corporate LAN serving 85+ desktops, 15 shared laser printers, and an external print server</li>
+                    <li>🖥️ Administered three servers: IBM X Series database server, Windows Server 2003 with Active Directory for authentication and centralized policy control, and Fedora Core–based proxy server for regulated internet access</li>
+                    <li>⚡ Ensured high availability, resource optimization, and secure access to organizational systems</li>
+                    <li><strong>🔐 Security & Access Control</strong></li>
+                    <li>🛡️ Implemented Group Policy to restrict removable media (CD/DVD, USB, floppy) based on departmental needs</li>
+                    <li>🔒 Enforced application access limitations via Active Directory, ensuring users operated only authorized software</li>
+                    <li><strong>📚 Training & Capacity Building</strong></li>
+                    <li>👥 Strengthened computer literacy and operational efficiency by training staff across departments in effective system usage</li>
                   </ul>
+                  <div className="tech-stack" style={{marginTop: '15px'}}>
+                    <span className="tech-tag">Windows Server 2003</span>
+                    <span className="tech-tag">Active Directory</span>
+                    <span className="tech-tag">Group Policy</span>
+                    <span className="tech-tag">Fedora Core Linux</span>
+                    <span className="tech-tag">LAN/WAN</span>
+                    <span className="tech-tag">Database Administration</span>
+                    <span className="tech-tag">MIS Reporting</span>
+                  </div>
                 </div>
               </div>
             </div>

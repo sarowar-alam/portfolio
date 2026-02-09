@@ -466,6 +466,19 @@ nav button.active {
   font-weight: normal;
 }
 
+.company-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.company-link:hover {
+  color: #a78bfa;
+  border-bottom-color: #a78bfa;
+}
+
 .timeline-date {
   color: #94a3b8;
   font-size: 14px;
