@@ -265,28 +265,34 @@ function App() {
             <div className="project-grid">
               <div className="project-card card-animated featured-project">
                 <div className="card-glow"></div>
-                <div className="project-icon">☁️</div>
-                <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
-                <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">AWS Multi-Account</span>
-                  <span className="tech-tag">boto3</span>
-                  <span className="tech-tag">Paramiko</span>
-                  <span className="tech-tag">PowerShell</span>
-                  <span className="tech-tag">Jenkins</span>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">☁️</div>
+                    <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
+                    <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">AWS Multi-Account</span>
+                      <span className="tech-tag">boto3</span>
+                      <span className="tech-tag">Paramiko</span>
+                      <span className="tech-tag">PowerShell</span>
+                      <span className="tech-tag">Jenkins</span>
+                    </div>
+                    <button className="project-link" onClick={() => toggleProject('cloud-backup')}>
+                      {expandedProject === 'cloud-backup' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'cloud-backup' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="cloud-monitoring.png" 
+                        alt="Multi-Cloud Monitoring Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('cloud-monitoring.png')}
+                      />
+                    </div>
+                  ) : null}
                 </div>
-                {!expandedProject || expandedProject !== 'cloud-backup' ? (
-                  <img 
-                    src="cloud-monitoring.png" 
-                    alt="Multi-Cloud Monitoring Architecture" 
-                    className="project-thumbnail" 
-                    onClick={() => setZoomedImage('cloud-monitoring.png')}
-                  />
-                ) : null}
-                <button className="project-link" onClick={() => toggleProject('cloud-backup')}>
-                  {expandedProject === 'cloud-backup' ? 'Show Less ↑' : 'View Details →'}
-                </button>
                 {expandedProject === 'cloud-backup' && (
                   <div className="project-details">
                     <div className="detail-section">
@@ -357,28 +363,34 @@ function App() {
               </div>
               <div className="project-card card-animated featured-project">
                 <div className="card-glow"></div>
-                <div className="project-icon">🚀</div>
-                <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
-                <p>Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. Eliminated manual deployment errors and reduced deployment time from hours to minutes with safe rollback capabilities.</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Jenkins Pipeline</span>
-                  <span className="tech-tag">Groovy</span>
-                  <span className="tech-tag">PowerShell</span>
-                  <span className="tech-tag">AWS S3</span>
-                  <span className="tech-tag">Windows Server</span>
-                  <span className="tech-tag">CI/CD</span>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">🚀</div>
+                    <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
+                    <p>Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. Eliminated manual deployment errors and reduced deployment time from hours to minutes with safe rollback capabilities.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Jenkins Pipeline</span>
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">PowerShell</span>
+                      <span className="tech-tag">AWS S3</span>
+                      <span className="tech-tag">Windows Server</span>
+                      <span className="tech-tag">CI/CD</span>
+                    </div>
+                    <button className="project-link" onClick={() => toggleProject('hotfix-pipeline')}>
+                      {expandedProject === 'hotfix-pipeline' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'hotfix-pipeline' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="hotfix-flow.png" 
+                        alt="Hotfix Pipeline Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('hotfix-flow.png')}
+                      />
+                    </div>
+                  ) : null}
                 </div>
-                {!expandedProject || expandedProject !== 'hotfix-pipeline' ? (
-                  <img 
-                    src="hotfix-flow.png" 
-                    alt="Hotfix Pipeline Architecture" 
-                    className="project-thumbnail" 
-                    onClick={() => setZoomedImage('hotfix-flow.png')}
-                  />
-                ) : null}
-                <button className="project-link" onClick={() => toggleProject('hotfix-pipeline')}>
-                  {expandedProject === 'hotfix-pipeline' ? 'Show Less ↑' : 'View Details →'}
-                </button>
                 {expandedProject === 'hotfix-pipeline' && (
                   <div className="project-details">
                     <div className="detail-section">
@@ -438,30 +450,36 @@ function App() {
               </div>
               <div className="project-card card-animated featured-project">
                 <div className="card-glow"></div>
-                <div className="project-icon">⚙️</div>
-                <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
-                <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">AWS ECS Fargate</span>
-                  <span className="tech-tag">Terraform</span>
-                  <span className="tech-tag">Jenkins</span>
-                  <span className="tech-tag">Groovy</span>
-                  <span className="tech-tag">CloudWatch</span>
-                  <span className="tech-tag">SQS</span>
-                  <span className="tech-tag">Trivy</span>
-                  <span className="tech-tag">ALB</span>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">⚙️</div>
+                    <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
+                    <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">AWS ECS Fargate</span>
+                      <span className="tech-tag">Terraform</span>
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">CloudWatch</span>
+                      <span className="tech-tag">SQS</span>
+                      <span className="tech-tag">Trivy</span>
+                      <span className="tech-tag">ALB</span>
+                    </div>
+                    <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
+                      {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ecs-deployment' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="ecs-deployment-flow.png" 
+                        alt="ECS Deployment Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('ecs-deployment-flow.png')}
+                      />
+                    </div>
+                  ) : null}
                 </div>
-                {!expandedProject || expandedProject !== 'ecs-deployment' ? (
-                  <img 
-                    src="ecs-deployment-flow.png" 
-                    alt="ECS Deployment Architecture" 
-                    className="project-thumbnail" 
-                    onClick={() => setZoomedImage('ecs-deployment-flow.png')}
-                  />
-                ) : null}
-                <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
-                  {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
-                </button>
                 {expandedProject === 'ecs-deployment' && (
                   <div className="project-details">
                     <div className="detail-section">
@@ -538,30 +556,36 @@ function App() {
               </div>
               <div className="project-card card-animated featured-project">
                 <div className="card-glow"></div>
-                <div className="project-icon">🔐</div>
-                <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
-                <p>Comprehensive automated certificate management system that eliminates manual SSL/TLS certificate renewal and deployment processes across 10+ production servers spanning multiple platforms (Windows IIS, Jenkins CI/CD, Linux monitoring systems) with zero downtime.</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Groovy</span>
-                  <span className="tech-tag">PowerShell</span>
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">Jenkins</span>
-                  <span className="tech-tag">Posh-ACME</span>
-                  <span className="tech-tag">AWS ACM</span>
-                  <span className="tech-tag">Let's Encrypt</span>
-                  <span className="tech-tag">OpenSSL</span>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">🔐</div>
+                    <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
+                    <p>Comprehensive automated certificate management system that eliminates manual SSL/TLS certificate renewal and deployment processes across 10+ production servers spanning multiple platforms (Windows IIS, Jenkins CI/CD, Linux monitoring systems) with zero downtime.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">PowerShell</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Posh-ACME</span>
+                      <span className="tech-tag">AWS ACM</span>
+                      <span className="tech-tag">Let's Encrypt</span>
+                      <span className="tech-tag">OpenSSL</span>
+                    </div>
+                    <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
+                      {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ssl-automation' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="ssl-certificate-automation.png" 
+                        alt="SSL Automation Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('ssl-certificate-automation.png')}
+                      />
+                    </div>
+                  ) : null}
                 </div>
-                {!expandedProject || expandedProject !== 'ssl-automation' ? (
-                  <img 
-                    src="ssl-certificate-automation.png" 
-                    alt="SSL Automation Architecture" 
-                    className="project-thumbnail" 
-                    onClick={() => setZoomedImage('ssl-certificate-automation.png')}
-                  />
-                ) : null}
-                <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
-                  {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
-                </button>
                 {expandedProject === 'ssl-automation' && (
                   <div className="project-details">
                     <div className="detail-section">
