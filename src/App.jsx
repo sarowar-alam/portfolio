@@ -5,6 +5,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [expandedProject, setExpandedProject] = useState(null)
+  const [zoomedImage, setZoomedImage] = useState(null)
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -325,7 +326,13 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ Architecture & Data Flow</h4>
-                      <img src="cloud-monitoring.png" alt="Multi-Cloud Monitoring System Architecture" className="project-diagram" />
+                      <img 
+                        src="cloud-monitoring.png" 
+                        alt="Multi-Cloud Monitoring System Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('cloud-monitoring.png')}
+                        style={{cursor: 'pointer'}}
+                      />
                     </div>
                     <div className="detail-section">
                       <h4>🔧 Technical Challenges Solved</h4>
@@ -402,7 +409,13 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ Deployment Flow Diagram</h4>
-                      <img src="hotfix-flow.png" alt="Hotfix Deployment Pipeline Architecture" className="project-diagram" />
+                      <img 
+                        src="hotfix-flow.png" 
+                        alt="Hotfix Deployment Pipeline Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('hotfix-flow.png')}
+                        style={{cursor: 'pointer'}}
+                      />
                     </div>
                   </div>
                 )}
@@ -477,7 +490,13 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ High-Level Flow Diagram</h4>
-                      <img src="ecs-deployment-flow.png" alt="ECS Deployment Pipeline Architecture" className="project-diagram" />
+                      <img 
+                        src="ecs-deployment-flow.png" 
+                        alt="ECS Deployment Pipeline Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('ecs-deployment-flow.png')}
+                        style={{cursor: 'pointer'}}
+                      />
                     </div>
                     <div className="detail-section">
                       <h4>🎨 Architecture Pattern</h4>
@@ -559,7 +578,13 @@ function App() {
                     </div>
                     <div className="detail-section">
                       <h4>🏗️ Architecture & Workflow</h4>
-                      <img src="ssl-certificate-automation.png" alt="SSL Certificate Automation Pipeline Architecture" className="project-diagram" />
+                      <img 
+                        src="ssl-certificate-automation.png" 
+                        alt="SSL Certificate Automation Pipeline Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('ssl-certificate-automation.png')}
+                        style={{cursor: 'pointer'}}
+                      />
                     </div>
                     <div className="detail-section">
                       <h4>🔧 Technical Stack Details</h4>
@@ -1181,6 +1206,16 @@ function App() {
           </section>
         )}
       </main>
+
+      {/* Image Zoom Modal */}
+      {zoomedImage && (
+        <div className="image-modal" onClick={() => setZoomedImage(null)}>
+          <div className="modal-content">
+            <span className="modal-close">&times;</span>
+            <img src={zoomedImage} alt="Zoomed Architecture Diagram" className="modal-image" />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
