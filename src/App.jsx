@@ -1,4 +1,4 @@
-import { useState } from 'react'
+ï»¿import { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -141,11 +141,11 @@ function App() {
                     <li className="indented-item"><strong>Innovation:</strong> Single orchestrator pipeline, dynamic tfvars generation, per-service state isolation, vulnerability scanning gates, intelligent skip logic when no change detected.</li>
                     <li className="indented-item"><strong>Impact:</strong> 91% complexity reduction, new services onboarded in minutes, independent failure domains, cleaner governance & maintainability.</li>
                     <li>Automated Database Disaster Recovery Validation</li>
-                    <li className="indented-item"><strong>Project Summary:</strong> A weekly, fully automated system that proves backups can actually be restored — not just stored.</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> A weekly, fully automated system that proves backups can actually be restored  not just stored.</li>
                     <li className="indented-item"><strong>Key Mechanics:</strong> Terraform provisions ephemeral environments, Python transfers latest backups cross-account, PowerShell restores via WinRM, automated comparison between restored and live data, email reporting to stakeholders, automatic teardown to control cost.</li>
                     <li className="indented-item"><strong>Impact:</strong> Verification time reduced from days to ~30 minutes, zero manual involvement, continuous readiness assurance.</li>
                     <li>Enterprise SSL/TLS Certificate Lifecycle Automation</li>
-                    <li className="indented-item"><strong>Project Summary:</strong> Designed a fully automated framework for renewing and deploying certificates across IIS, Jenkins (Windows & Linux), and monitoring platforms — with zero downtime and full auditability.</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> Designed a fully automated framework for renewing and deploying certificates across IIS, Jenkins (Windows & Linux), and monitoring platforms  with zero downtime and full auditability.</li>
                     <li className="indented-item"><strong>What Made It Complex:</strong> Multiple platforms, formats (PFX, JKS, PEM, KEY), cross-region cloud distribution, strict security controls, and the need for seamless service continuity.</li>
                     <li className="indented-item"><strong>Capabilities Delivered:</strong> Automated expiry monitoring and renewal triggers, DNS validation and issuance through Let's Encrypt, conversion & deployment to each platform automatically, pre-change backups and rapid rollback, secure distribution via time-limited access, HTML reporting & failure diagnostics.</li>
                     <li className="indented-item"><strong>Business Results:</strong> Cut quarterly manual work (~8 hours) to fully unattended, eliminated expiration incidents, improved compliance with automated traceability, enabled frequent, secure rotation policies.</li>
@@ -190,7 +190,7 @@ function App() {
                   </a>
                   <h3>Principal DevOps Engineer</h3>
                   <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
-                  <p className="timeline-date">Jan 2024 - Apr 2025 · 1 year 4 months</p>
+                  <p className="timeline-date">Jan 2024 - Apr 2025 Â· 1 year 4 months</p>
                   <p>Designed and implemented scalable, secure, and automated infrastructure solutions across AWS using Terraform, Jenkins, Ansible, Python, and PowerShell.</p>
                   <ul className="timeline-highlights">
                     <li>?? Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
@@ -212,7 +212,7 @@ function App() {
                   </a>
                   <h3>Senior DevOps Engineer</h3>
                   <h4>Wunderman Thompson | Dhaka, Bangladesh</h4>
-                  <p className="timeline-date">Oct 2022 - Dec 2023 · 1 year 3 months</p>
+                  <p className="timeline-date">Oct 2022 - Dec 2023 Â· 1 year 3 months</p>
                   <p>Managed AWS infrastructure, CI/CD pipelines, IAM configurations, and cloud security implementations across development and production environments.</p>
                 </div>
               </div>
@@ -224,7 +224,7 @@ function App() {
                   </a>
                   <h3>Senior Information Technology Manager</h3>
                   <h4>VML | Dhaka, Bangladesh</h4>
-                  <p className="timeline-date">Aug 2021 - May 2023 · 1 year 10 months</p>
+                  <p className="timeline-date">Aug 2021 - May 2023 Â· 1 year 10 months</p>
                   <ul className="timeline-highlights">
                     <li>??? Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
                     <li>?? Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
@@ -244,7 +244,7 @@ function App() {
                   </a>
                   <h3>Information Technology Manager</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
-                  <p className="timeline-date">Mar 2016 - Sep 2021 · 5 years 7 months</p>
+                  <p className="timeline-date">Mar 2016 - Sep 2021 Â· 5 years 7 months</p>
                   <p>Comprehensive IT infrastructure management, virtualization, network administration, and custom application development.</p>
                 </div>
               </div>
@@ -256,7 +256,7 @@ function App() {
                   </a>
                   <h3>Senior System Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
-                  <p className="timeline-date">Jun 2012 - Feb 2016 · 3 years 9 months</p>
+                  <p className="timeline-date">Jun 2012 - Feb 2016 Â· 3 years 9 months</p>
                   <p>System administration, server management, and infrastructure support.</p>
                 </div>
               </div>
@@ -268,7 +268,7 @@ function App() {
                   </a>
                   <h3>Senior Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
-                  <p className="timeline-date">Sep 2010 - May 2012 · 1 year 9 months</p>
+                  <p className="timeline-date">Sep 2010 - May 2012 Â· 1 year 9 months</p>
                   <p>Network infrastructure management and administration.</p>
                 </div>
               </div>
@@ -280,7 +280,7 @@ function App() {
                   </a>
                   <h3>Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
-                  <p className="timeline-date">Sep 2009 - Aug 2010 · 1 year</p>
+                  <p className="timeline-date">Sep 2009 - Aug 2010 Â· 1 year</p>
                   <p>Network configuration, monitoring, and support.</p>
                 </div>
               </div>
@@ -292,7 +292,7 @@ function App() {
                   </a>
                   <h3>Information Technology Supporter</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
-                  <p className="timeline-date">Jun 2008 - Aug 2009 · 1 year 3 months</p>
+                  <p className="timeline-date">Jun 2008 - Aug 2009 Â· 1 year 3 months</p>
                   <p>IT support and helpdesk operations.</p>
                 </div>
               </div>
@@ -302,9 +302,9 @@ function App() {
                   <a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="navan-real-estate-logo.png" alt="Navana Real Estate" className="timeline-company-logo" />
                   </a>
-                  <h3>Senior Executive – MIS</h3>
+                  <h3>Senior Executive  MIS</h3>
                   <h4><a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="company-link">Navana Real Estate & Construction Ltd.</a> | Gulshan-02, Dhaka, Bangladesh</h4>
-                  <p className="timeline-date">Jun 2004 - May 2008 · 4 years</p>
+                  <p className="timeline-date">Jun 2004 - May 2008 Â· 4 years</p>
                   <p className="role-overview"><strong>Role Overview:</strong> Led the design, implementation, and maintenance of enterprise software systems and IT infrastructure. Supported cross-departmental operations including Procurement, Estimation, Accounts, Logistics, and HR, while ensuring secure and efficient network services across the organization.</p>
                   <p className="section-header"><strong>Key Contributions & Achievements</strong></p>
                   <ul className="timeline-highlights">
@@ -314,7 +314,7 @@ function App() {
                     <li className="indented-item">Developed modules such as Bank Status and Utility Management System to manage corporate banking activities and deliver management reports for leadership</li>
                     <li>IT Infrastructure & Network Administration</li>
                     <li className="indented-item">Managed a corporate LAN serving 85+ desktops, 15 shared laser printers, and an external print server</li>
-                    <li className="indented-item">Administered three servers, including: IBM X Series database server, Windows Server 2003 with Active Directory for authentication, authorization, and centralized policy control, and Fedora Core–based proxy server for regulated internet access</li>
+                    <li className="indented-item">Administered three servers, including: IBM X Series database server, Windows Server 2003 with Active Directory for authentication, authorization, and centralized policy control, and Fedora Corebased proxy server for regulated internet access</li>
                     <li className="indented-item">Ensured high availability, resource optimization, and secure access to organizational systems</li>
                     <li>Security & Access Control</li>
                     <li className="indented-item">Implemented Group Policy to restrict removable media (CD/DVD, USB, floppy) based on departmental needs</li>
@@ -568,7 +568,7 @@ function App() {
                         <li><strong>Single Groovy Pipeline (906 lines):</strong> Orchestrates multi-service deployments with independent failure tracking, security scanning (Trivy), and deployment summaries</li>
                         <li><strong>Dynamic JSON Configuration (493 lines):</strong> Centralized service definitions serving as single source of truth for 11 microservices with environment-specific settings</li>
                         <li><strong>Reusable Terraform Modules:</strong> Generic ECS service and autoscaling modules that adapt to each service via dynamic variable injection</li>
-                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines ? 1) while improving maintainability—new services can be added in 5 minutes via JSON configuration without code changes</li>
+                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines ? 1) while improving maintainabilitynew services can be added in 5 minutes via JSON configuration without code changes</li>
                       </ul>
                     </div>
                     <div className="detail-section">
@@ -593,8 +593,8 @@ function App() {
                       <h4>?? Impact & Results</h4>
                       <ul>
                         <li>Manages 11 microservices (API handlers, media generation services, portals) across 2 environments</li>
-                        <li>Independent failure isolation—one service failure doesn't block others</li>
-                        <li>Intelligent deployment—skips services with no infrastructure changes</li>
+                        <li>Independent failure isolationone service failure doesn't block others</li>
+                        <li>Intelligent deploymentskips services with no infrastructure changes</li>
                         <li>Production-ready features: circuit breaker rollback, health checks, cost optimization (FARGATE_SPOT)</li>
                         <li>91% reduction in deployment complexity</li>
                         <li>New services deployable in 5 minutes via configuration changes only</li>
@@ -880,7 +880,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-icon">??</div>
                 <h3>Cost & Resource Governance</h3>
-                <p>EC2 start/stop scheduling, CloudWatch-based monitoring, auto-tagging, orphaned snapshot cleanup, and AWS cost comparison reports — reducing waste by 40-50%</p>
+                <p>EC2 start/stop scheduling, CloudWatch-based monitoring, auto-tagging, orphaned snapshot cleanup, and AWS cost comparison reports  reducing waste by 40-50%</p>
                 <div className="tech-stack">
                   <span className="tech-tag">AWS Lambda</span>
                   <span className="tech-tag">CloudWatch</span>
