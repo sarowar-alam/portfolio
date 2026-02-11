@@ -772,7 +772,18 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>🖼️ System Architecture</h4>
+                      <h4>�️ Technical Stack Details</h4>
+                      <ul>
+                        <li><strong>CI/CD:</strong> Jenkins Pipeline (Groovy DSL)</li>
+                        <li><strong>Infrastructure as Code:</strong> Terraform with modular design</li>
+                        <li><strong>Cloud Platform:</strong> AWS (EC2, VPC, S3, IAM, SES)</li>
+                        <li><strong>Scripting:</strong> PowerShell, Python (boto3), Bash</li>
+                        <li><strong>Database:</strong> Microsoft SQL Server 2022</li>
+                        <li><strong>Protocols:</strong> WinRM for remote Windows automation</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>�🖼️ System Architecture</h4>
                       <img 
                         src="db-restore-testing-system.png" 
                         alt="Database Disaster Recovery Testing System Architecture" 
