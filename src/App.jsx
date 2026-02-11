@@ -129,29 +129,29 @@ function App() {
                 <div className="timeline-content">
                   <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   <h3>Lead DevOps Engineer</h3>
-                  <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
+                  <h4><a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="company-link">Hogarth Worldwide</a> | Road 11, House 76/A [3rd Floor], Banani, Dhaka, Dhaka 1213, BD</h4>
                   <p className="timeline-date">May 2025 - Present</p>
                   <p className="role-overview"><strong>Role Overview:</strong> Own end-to-end DevOps strategy, automation, and cloud infrastructure across production and non-production environments. I design scalable, secure, and repeatable delivery patterns using AWS, Terraform, Jenkins, PowerShell, and Python, consistently replacing manual, high-risk procedures with resilient pipelines. My focus: zero downtime, strong security, measurable efficiency gains, and platform standardization.</p>
                   <p className="section-header"><strong>Key Projects & Achievements</strong></p>
                   <ul className="timeline-highlights">
-                    <li>🚀 Multi-Server Production Hotfix Deployment Automation Pipeline</li>
+                    <li>Multi-Server Production Hotfix Deployment Automation Pipeline</li>
                     <li className="indented-item"><strong>Project Summary:</strong> Built a CI/CD system that automates hotfix deployment to multiple Windows production servers in parallel. What previously took hours of coordinated manual effort now completes in minutes with automatic backup and rollback.</li>
                     <li className="indented-item"><strong>Technical Implementation:</strong> Jenkins Pipeline orchestration in Groovy with conditional stages, PowerShell remoting via PSSession for remote execution, centralized artifact distribution from AWS S3, pre-deployment backup with timestamped versioning, selective deployments (binaries, configs, or both), hardened validation, logging, and failure handling.</li>
                     <li className="indented-item"><strong>Impact:</strong> 75% reduction in deployment time, removed human error from production releases, standardized release mechanics across environments, enabled safe, repeatable emergency fixes.</li>
-                    <li>🔐 Enterprise SSL/TLS Certificate Lifecycle Automation</li>
+                    <li>Enterprise SSL/TLS Certificate Lifecycle Automation</li>
                     <li className="indented-item"><strong>Project Summary:</strong> Designed a fully automated framework for renewing and deploying certificates across IIS, Jenkins (Windows & Linux), and monitoring platforms — with zero downtime and full auditability.</li>
                     <li className="indented-item"><strong>What Made It Complex:</strong> Multiple platforms, formats (PFX, JKS, PEM, KEY), cross-region cloud distribution, strict security controls, and the need for seamless service continuity.</li>
                     <li className="indented-item"><strong>Capabilities Delivered:</strong> Automated expiry monitoring and renewal triggers, DNS validation and issuance through Let's Encrypt, conversion & deployment to each platform automatically, pre-change backups and rapid rollback, secure distribution via time-limited access, HTML reporting & failure diagnostics.</li>
                     <li className="indented-item"><strong>Business Results:</strong> Cut quarterly manual work (~8 hours) to fully unattended, eliminated expiration incidents, improved compliance with automated traceability, enabled frequent, secure rotation policies.</li>
-                    <li>🗄️ Non-Production Environment Refresh Automation (BrandShare)</li>
+                    <li>Non-Production Environment Refresh Automation (BrandShare)</li>
                     <li className="indented-item"><strong>Project Summary:</strong> A Jenkins-driven orchestration that refreshes playground environments with sanitized production data.</li>
                     <li className="indented-item"><strong>Engineering Depth:</strong> Multi-server workflow across web and DB tiers, automated binary and DB backups, intelligent S3 retrieval (weekday/weekend logic), permission preservation & safe restore patterns, data sanitization to prevent accidental outbound communication.</li>
                     <li className="indented-item"><strong>Impact:</strong> 4 hours → 30 minutes (87.5% faster), enabled frequent refreshes for developers, removed fragile, tribal-knowledge procedures.</li>
-                    <li>☁️ Configuration-Driven ECS Microservice Deployment Platform</li>
+                    <li>Configuration-Driven ECS Microservice Deployment Platform</li>
                     <li className="indented-item"><strong>Project Summary:</strong> Consolidated 11 independent pipelines into one using JSON-driven configuration and reusable Terraform modules.</li>
                     <li className="indented-item"><strong>Innovation:</strong> Single orchestrator pipeline, dynamic tfvars generation, per-service state isolation, vulnerability scanning gates, intelligent skip logic when no change detected.</li>
                     <li className="indented-item"><strong>Impact:</strong> 91% complexity reduction, new services onboarded in minutes, independent failure domains, cleaner governance & maintainability.</li>
-                    <li>🧪 Automated Database Disaster Recovery Validation</li>
+                    <li>Automated Database Disaster Recovery Validation</li>
                     <li className="indented-item"><strong>Project Summary:</strong> A weekly, fully automated system that proves backups can actually be restored — not just stored.</li>
                     <li className="indented-item"><strong>Key Mechanics:</strong> Terraform provisions ephemeral environments, Python transfers latest backups cross-account, PowerShell restores via WinRM, automated comparison between restored and live data, email reporting to stakeholders, automatic teardown to control cost.</li>
                     <li className="indented-item"><strong>Impact:</strong> Verification time reduced from days to ~30 minutes, zero manual involvement, continuous readiness assurance.</li>
