@@ -871,6 +871,111 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">🔄</div>
+                    <h3>Automated Database Disaster Recovery Testing Pipeline</h3>
+                    <p>Enterprise-grade automated testing system that validates database backup integrity and disaster recovery procedures on a weekly schedule, ensuring business continuity readiness without manual intervention. Automatically tests complete restore processes and compares restored data against production.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Terraform</span>
+                      <span className="tech-tag">AWS</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">PowerShell</span>
+                      <span className="tech-tag">SQL Server</span>
+                      <span className="tech-tag">boto3</span>
+                      <span className="tech-tag">WinRM</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginBottom: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('dr-testing')}>
+                      {expandedProject === 'dr-testing' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'dr-testing' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="db-restore-testing-system.png" 
+                        alt="Database Disaster Recovery Testing Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('db-restore-testing-system.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'dr-testing' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>📊 Project Overview</h4>
+                      <p><strong>Business Problem Solved:</strong> Organizations often maintain database backups but rarely verify they can be successfully restored until an actual disaster occurs. This project eliminates that risk by automatically testing the complete restore process weekly, comparing restored data against production to ensure data integrity.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🏗️ Technical Architecture</h4>
+                      <ul>
+                        <li><strong>Infrastructure Automation:</strong></li>
+                        <li>Built ephemeral testing environments using Terraform modules (VPC, EC2, Security Groups)</li>
+                        <li>Provisioned Windows Server 2019 + SQL Server 2022 instances on-demand</li>
+                        <li>Implemented automatic teardown to minimize AWS costs (infrastructure exists only during tests)</li>
+                        <li><strong>Cross-Account Backup Management:</strong></li>
+                        <li>Developed Python automation using boto3 to transfer multi-gigabyte database backups between isolated AWS accounts</li>
+                        <li>Implemented IAM role assumption for secure cross-account S3 operations</li>
+                        <li>Automated identification and transfer of latest backup files based on timestamps</li>
+                        <li><strong>Remote Database Restoration:</strong></li>
+                        <li>Created PowerShell automation for remote database restoration via WinRM</li>
+                        <li>Implemented SQLCMD-based restore with dynamic logical file mapping</li>
+                        <li>Built error handling and retry logic for network resilience</li>
+                        <li><strong>Automated Validation & Reporting:</strong></li>
+                        <li>Executed parallel queries on restored test database and live production database</li>
+                        <li>Compared results to verify data consistency</li>
+                        <li>Generated HTML email reports with side-by-side comparison tables sent to operations teams</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🎯 Key Achievements</h4>
+                      <ul>
+                        <li>✅ 100% automated end-to-end testing (zero manual steps)</li>
+                        <li>✅ Weekly execution ensures continuous DR readiness validation</li>
+                        <li>✅ Cost optimized - infrastructure exists only during 30-minute test windows</li>
+                        <li>✅ Cross-account security - production and test environments fully isolated</li>
+                        <li>✅ Automated alerting - immediate email notifications on success or failure</li>
+                        <li>✅ Random database selection - tests different databases each week for comprehensive coverage</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>📈 Business Impact</h4>
+                      <ul>
+                        <li>Reduced disaster recovery verification time from days to 30 minutes</li>
+                        <li>Eliminated manual testing overhead (previously 4-6 hours of manual effort per test)</li>
+                        <li>Provided weekly confidence in backup integrity to stakeholders</li>
+                        <li>Enabled compliance with recovery time objective (RTO) requirements</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🔧 Technical Complexity Highlights</h4>
+                      <ul>
+                        <li>Multi-cloud account orchestration with IAM role chaining</li>
+                        <li>Windows remote automation via WinRM from Linux Jenkins controller</li>
+                        <li>Dynamic SQL Server file mapping for restore operations</li>
+                        <li>Stateful infrastructure management with automatic cleanup</li>
+                        <li>HTML templating and AWS SES integration for professional reporting</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>🖼️ System Architecture</h4>
+                      <img 
+                        src="db-restore-testing-system.png" 
+                        alt="Database Disaster Recovery Testing System Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('db-restore-testing-system.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </section>
         )}
