@@ -440,17 +440,38 @@ nav button.active {
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
 
+.logo-link {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.1);
+}
+
+.logo-link:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
 .timeline-company-logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
-  float: right;
-  margin-left: 15px;
-  margin-bottom: 10px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   padding: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  display: block;
+}
+
+.logo-link:hover .timeline-company-logo {
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4), 0 3px 8px rgba(102, 126, 234, 0.3);
 }
 
 .timeline-content h3 {
