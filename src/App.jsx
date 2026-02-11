@@ -129,7 +129,7 @@ function App() {
                 <div className="timeline-content">
                   <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   <h3>Lead DevOps Engineer</h3>
-                  <h4><a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="company-link">Hogarth Worldwide</a> | Road 11, House 76/A [3rd Floor], Banani, Dhaka, Dhaka 1213, BD</h4>
+                  <h4><a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="company-link">Hogarth Worldwide</a> | Road 11, House 76/A, Banani, Dhaka, Bangaldesh</h4>
                   <p className="timeline-date">May 2025 - Present</p>
                   <p className="role-overview"><strong>Role Overview:</strong> Own end-to-end DevOps strategy, automation, and cloud infrastructure across production and non-production environments. I design scalable, secure, and repeatable delivery patterns using AWS, Terraform, Jenkins, PowerShell, and Python, consistently replacing manual, high-risk procedures with resilient pipelines. My focus: zero downtime, strong security, measurable efficiency gains, and platform standardization.</p>
                   <p className="section-header"><strong>Key Projects & Achievements</strong></p>
