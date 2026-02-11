@@ -156,7 +156,7 @@ function App() {
                     <li>Non-Production Environment Refresh Automation</li>
                     <li className="indented-item"><strong>Project Summary:</strong> A Jenkins-driven orchestration that refreshes playground environments with sanitized production data.</li>
                     <li className="indented-item"><strong>Engineering Depth:</strong> Multi-server workflow across web and DB tiers, automated binary and DB backups, intelligent S3 retrieval (weekday/weekend logic), permission preservation & safe restore patterns, data sanitization to prevent accidental outbound communication.</li>
-                    <li className="indented-item"><strong>Impact:</strong> 4 hours ? 30 minutes (87.5% faster), enabled frequent refreshes for developers, removed fragile, tribal-knowledge procedures.</li>
+                    <li className="indented-item"><strong>Impact:</strong> 4 hours → 30 minutes (87.5% faster), enabled frequent refreshes for developers, removed fragile, tribal-knowledge procedures.</li>
                     <li>Additional Leadership Contributions</li>
                     <li className="indented-item">Building private connectivity patterns using VPC peering and PrivateLink to strengthen security and reduce data-path costs</li>
                     <li className="indented-item">Replaced manual operations checklists (94 tasks) with automated Python reporting integrated with secure credential retrieval</li>
@@ -568,7 +568,7 @@ function App() {
                         <li><strong>Single Groovy Pipeline (906 lines):</strong> Orchestrates multi-service deployments with independent failure tracking, security scanning (Trivy), and deployment summaries</li>
                         <li><strong>Dynamic JSON Configuration (493 lines):</strong> Centralized service definitions serving as single source of truth for 11 microservices with environment-specific settings</li>
                         <li><strong>Reusable Terraform Modules:</strong> Generic ECS service and autoscaling modules that adapt to each service via dynamic variable injection</li>
-                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines ? 1) while improving maintainabilitynew services can be added in 5 minutes via JSON configuration without code changes</li>
+                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines → 1) while improving maintainabilitynew services can be added in 5 minutes via JSON configuration without code changes</li>
                       </ul>
                     </div>
                     <div className="detail-section">
@@ -801,12 +801,12 @@ function App() {
                     <div className="detail-section">
                       <h4>Key Achievements</h4>
                       <ul>
-                        <li>? 100% automated end-to-end testing (zero manual steps)</li>
-                        <li>? Weekly execution ensures continuous DR readiness validation</li>
-                        <li>? Cost optimized - infrastructure exists only during 30-minute test windows</li>
-                        <li>? Cross-account security - production and test environments fully isolated</li>
-                        <li>? Automated alerting - immediate email notifications on success or failure</li>
-                        <li>? Random database selection - tests different databases each week for comprehensive coverage</li>
+                        <li>✅ 100% automated end-to-end testing (zero manual steps)</li>
+                        <li>✅ Weekly execution ensures continuous DR readiness validation</li>
+                        <li>✅ Cost optimized - infrastructure exists only during 30-minute test windows</li>
+                        <li>✅ Cross-account security - production and test environments fully isolated</li>
+                        <li>✅ Automated alerting - immediate email notifications on success or failure</li>
+                        <li>✅ Random database selection - tests different databases each week for comprehensive coverage</li>
                       </ul>
                     </div>
                     <div className="detail-section">
