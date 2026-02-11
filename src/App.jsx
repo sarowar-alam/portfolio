@@ -90,22 +90,22 @@ function App() {
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
               <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
               <div className="skills">
-                <span className="skill skill-bounce">?? AWS</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>??? Terraform</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>?? Jenkins</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>?? Ansible</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>?? Python</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>?? PowerShell</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>?? Docker</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>?? Kubernetes</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>?? Zabbix</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>?? Argo-CD</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>?? Prometheus</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>?? Grafana</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>?? IAM</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>?? CloudFront</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.4s'}}>?? RDS</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.5s'}}>?? Redshift</span>
+                <span className="skill skill-bounce">AWS</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>Terraform</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>Jenkins</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>Ansible</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>Python</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>PowerShell</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>Docker</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>Kubernetes</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>Zabbix</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>Argo-CD</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>Prometheus</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>Grafana</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>IAM</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>CloudFront</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.4s'}}>RDS</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.5s'}}>Redshift</span>
               </div>
               <button className="cta-button" onClick={() => setActiveSection('projects')}>
                 <span>View My Work</span>
@@ -193,14 +193,14 @@ function App() {
                   <p className="timeline-date">Jan 2024 - Apr 2025 · 1 year 4 months</p>
                   <p>Designed and implemented scalable, secure, and automated infrastructure solutions across AWS using Terraform, Jenkins, Ansible, Python, and PowerShell.</p>
                   <ul className="timeline-highlights">
-                    <li>?? Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
-                    <li>?? Automated EC2 provisioning with Jenkins + Terraform + Ansible pipelines</li>
-                    <li>??? Developed parameterized Terraform modules and Jenkins pipelines for ECS deployments and AMI operations</li>
-                    <li>?? Built private networks using VPC peering and Private Link. Standardized IAM roles with permission boundaries</li>
-                    <li>?? Managed RDS (MySQL backups via Lambda), Redshift (auto-patching, IP-bound access)</li>
-                    <li>?? Migrated and enhanced Zabbix with advanced triggers for missed jobs, EC2 health, and S3 syncs</li>
-                    <li>?? Replaced manual checklists (94 items) with Python automation</li>
-                    <li>?? Automated freeware SSL renewals, Route 53 validation, and Windows Certificate Store updates via Jenkins</li>
+                    <li>Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
+                    <li>Automated EC2 provisioning with Jenkins + Terraform + Ansible pipelines</li>
+                    <li>Developed parameterized Terraform modules and Jenkins pipelines for ECS deployments and AMI operations</li>
+                    <li>Built private networks using VPC peering and Private Link. Standardized IAM roles with permission boundaries</li>
+                    <li>Managed RDS (MySQL backups via Lambda), Redshift (auto-patching, IP-bound access)</li>
+                    <li>Migrated and enhanced Zabbix with advanced triggers for missed jobs, EC2 health, and S3 syncs</li>
+                    <li>Replaced manual checklists (94 items) with Python automation</li>
+                    <li>Automated freeware SSL renewals, Route 53 validation, and Windows Certificate Store updates via Jenkins</li>
                   </ul>
                 </div>
               </div>
@@ -226,13 +226,13 @@ function App() {
                   <h4>VML | Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Aug 2021 - May 2023 · 1 year 10 months</p>
                   <ul className="timeline-highlights">
-                    <li>??? Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
-                    <li>?? Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
-                    <li>?? Worked with IBM for creating Local VPN server for remote employees</li>
-                    <li>?? Managed Egnyte storage sync and user/security management</li>
-                    <li>?? Developed Purchase & Inventory Management system, Invoice and Credit Note system using ASP.NET, VB.NET, SQL Server with AD integration</li>
-                    <li>?? Built web-based Access Card Management system for employee attendance tracking with Crystal Reports</li>
-                    <li>?? Created PowerShell scripts for file monitoring alerts on finance file share servers</li>
+                    <li>Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
+                    <li>Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
+                    <li>Worked with IBM for creating Local VPN server for remote employees</li>
+                    <li>Managed Egnyte storage sync and user/security management</li>
+                    <li>Developed Purchase & Inventory Management system, Invoice and Credit Note system using ASP.NET, VB.NET, SQL Server with AD integration</li>
+                    <li>Built web-based Access Card Management system for employee attendance tracking with Crystal Reports</li>
+                    <li>Created PowerShell scripts for file monitoring alerts on finance file share servers</li>
                   </ul>
                 </div>
               </div>
@@ -347,7 +347,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">??</div>
+                    
                     <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
                     <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
                     <div className="tech-stack">
@@ -376,7 +376,7 @@ function App() {
                 {expandedProject === 'cloud-backup' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>?? Technical Overview</h4>
+                      <h4>Technical Overview</h4>
                       <ul>
                         <li><strong>Role:</strong> DevOps Engineer / Python Developer</li>
                         <li><strong>Code:</strong> 2000+ lines of production code</li>
@@ -385,7 +385,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Key Responsibilities & Achievements</h4>
+                      <h4>Key Responsibilities & Achievements</h4>
                       <ul>
                         <li>Architected enterprise-grade backup monitoring validating backup integrity across AWS S3, EC2 AMIs, Windows/Linux servers, and multiple database systems</li>
                         <li>Integrated AWS services (S3, EC2, AWS Backup, SES) across multiple accounts (JustFace, VMLYR, Zanity)</li>
@@ -396,7 +396,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Key Features</h4>
+                      <h4>Key Features</h4>
                       <ul>
                         <li><strong>S3 Object Validation:</strong> Automated detection of latest backup files with size and timestamp verification</li>
                         <li><strong>AMI Backup Verification:</strong> Cross-references running EC2 instances against completed backup jobs</li>
@@ -409,7 +409,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Business Impact</h4>
+                      <h4>Business Impact</h4>
                       <ul>
                         <li>Reduced backup verification time from manual daily checks to automated 15-minute parallel execution</li>
                         <li>Increased reliability by catching backup failures within 24 hours</li>
@@ -419,7 +419,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Architecture & Data Flow</h4>
+                      <h4>Architecture & Data Flow</h4>
                       <img 
                         src="cloud-monitoring.png" 
                         alt="Multi-Cloud Monitoring System Architecture" 
@@ -429,7 +429,7 @@ function App() {
                       />
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Challenges Solved</h4>
+                      <h4>Technical Challenges Solved</h4>
                       <ul>
                         <li>Coordinated authentication across multiple AWS accounts with temporary session tokens</li>
                         <li>Handled mixed Windows/Linux environment with unified Python interface</li>
@@ -445,7 +445,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">??</div>
+                    
                     <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
                     <p>Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. Eliminated manual deployment errors and reduced deployment time from hours to minutes with safe rollback capabilities.</p>
                     <div className="tech-stack">
@@ -474,7 +474,7 @@ function App() {
                 {expandedProject === 'hotfix-pipeline' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>?? Technical Implementation</h4>
+                      <h4>Technical Implementation</h4>
                       <ul>
                         <li><strong>Jenkins Pipeline Orchestration:</strong> Designed using Groovy with conditional stage execution</li>
                         <li><strong>PowerShell Automation:</strong> Remote server management via PSSession</li>
@@ -485,7 +485,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Key Features</h4>
+                      <h4>Key Features</h4>
                       <ul>
                         <li><strong>Multi-Server Orchestration:</strong> Parallel deployment to multiple production servers</li>
                         <li><strong>Selective Deployment:</strong> Choose between binary deployments, configuration updates, or both</li>
@@ -496,7 +496,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Business Impact</h4>
+                      <h4>Business Impact</h4>
                       <ul>
                         <li><strong>75% Reduction</strong> in deployment time (hours to minutes)</li>
                         <li><strong>Zero Human Errors</strong> in production deployments through automation</li>
@@ -506,7 +506,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Technology Stack</h4>
+                      <h4>Technology Stack</h4>
                       <ul>
                         <li>Jenkins Pipeline (Groovy DSL)</li>
                         <li>PowerShell 5.1+ with PSRemoting</li>
@@ -516,7 +516,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Deployment Flow Diagram</h4>
+                      <h4>Deployment Flow Diagram</h4>
                       <img 
                         src="hotfix-flow.png" 
                         alt="Hotfix Deployment Pipeline Architecture" 
@@ -532,7 +532,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">??</div>
+                    
                     <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
                     <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
                     <div className="tech-stack">
@@ -563,7 +563,7 @@ function App() {
                 {expandedProject === 'ecs-deployment' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>?? Technical Innovation</h4>
+                      <h4>Technical Innovation</h4>
                       <ul>
                         <li><strong>Single Groovy Pipeline (906 lines):</strong> Orchestrates multi-service deployments with independent failure tracking, security scanning (Trivy), and deployment summaries</li>
                         <li><strong>Dynamic JSON Configuration (493 lines):</strong> Centralized service definitions serving as single source of truth for 11 microservices with environment-specific settings</li>
@@ -572,7 +572,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Architecture Highlights</h4>
+                      <h4>Architecture Highlights</h4>
                       <ul>
                         <li><strong>Per-Service State Isolation:</strong> Separate Terraform state files enable parallel deployments and independent lifecycle management</li>
                         <li><strong>Configuration-Driven:</strong> Single services-config.json defines all service specifications (CPU/memory allocations, autoscaling thresholds, networking, ALB rules)</li>
@@ -581,7 +581,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Stack</h4>
+                      <h4>Technical Stack</h4>
                       <ul>
                         <li><strong>Infrastructure:</strong> Terraform (AWS Provider 6.0+), S3 backend for state management</li>
                         <li><strong>CI/CD:</strong> Jenkins, Groovy Pipeline DSL with approval gates</li>
@@ -590,7 +590,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Impact & Results</h4>
+                      <h4>Impact & Results</h4>
                       <ul>
                         <li>Manages 11 microservices (API handlers, media generation services, portals) across 2 environments</li>
                         <li>Independent failure isolationone service failure doesn't block others</li>
@@ -601,7 +601,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Deep-Dive</h4>
+                      <h4>Technical Deep-Dive</h4>
                       <ul>
                         <li><strong>State Management Strategy:</strong> Implemented per-service state files to prevent conflicts and enable parallel deployments</li>
                         <li><strong>Dynamic Variable Injection:</strong> Pipeline parses JSON and generates .tfvars files programmatically for each service</li>
@@ -611,7 +611,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? High-Level Flow Diagram</h4>
+                      <h4>High-Level Flow Diagram</h4>
                       <img 
                         src="ecs-deployment-flow.png" 
                         alt="ECS Deployment Pipeline Architecture" 
@@ -621,7 +621,7 @@ function App() {
                       />
                     </div>
                     <div className="detail-section">
-                      <h4>?? Architecture Pattern</h4>
+                      <h4>Architecture Pattern</h4>
                       <p>Multi-tenancy infrastructure design where generic Terraform modules are parameterized through JSON configuration, demonstrating enterprise DevOps practices for scalable microservice management. This pattern enables:</p>
                       <ul>
                         <li>Consistent infrastructure across all services</li>
@@ -638,7 +638,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">??</div>
+                    
                     <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
                     <p>Comprehensive automated certificate management system that eliminates manual SSL/TLS certificate renewal and deployment processes across 10+ production servers spanning multiple platforms (Windows IIS, Jenkins CI/CD, Linux monitoring systems) with zero downtime.</p>
                     <div className="tech-stack">
@@ -669,7 +669,7 @@ function App() {
                 {expandedProject === 'ssl-automation' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>?? Technical Overview</h4>
+                      <h4>Technical Overview</h4>
                       <ul>
                         <li><strong>Role:</strong> DevOps Engineer / Automation Architect</li>
                         <li><strong>Scope:</strong> 10+ production servers across 4 distinct platforms</li>
@@ -679,7 +679,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Key Features & Achievements</h4>
+                      <h4>Key Features & Achievements</h4>
                       <ul>
                         <li><strong>Intelligent Certificate Monitoring:</strong> Automated SSL expiry checking with 15-day threshold alerts, pre-emptive renewal workflow triggering</li>
                         <li><strong>Automated Certificate Provisioning:</strong> Let's Encrypt integration, DNS-based domain validation, automatic backup with rate-limit handling</li>
@@ -690,7 +690,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Highlights</h4>
+                      <h4>Technical Highlights</h4>
                       <ul>
                         <li><strong>Windows IIS Servers:</strong> Certificate store import, HTTPS binding updates, automated cleanup of expired certificates</li>
                         <li><strong>Jenkins (Windows):</strong> PFX to JKS conversion, keystore deployment, service restart coordination with build queue management</li>
@@ -701,7 +701,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Business Impact</h4>
+                      <h4>Business Impact</h4>
                       <ul>
                         <li>Reduced manual effort from 8 hours per quarter to fully automated</li>
                         <li>Eliminated certificate expiration incidents (previously 2-3 per year)</li>
@@ -713,7 +713,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Architecture & Workflow</h4>
+                      <h4>Architecture & Workflow</h4>
                       <img 
                         src="ssl-certificate-automation.png" 
                         alt="SSL Certificate Automation Pipeline Architecture" 
@@ -723,7 +723,7 @@ function App() {
                       />
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Stack Details</h4>
+                      <h4>Technical Stack Details</h4>
                       <ul>
                         <li><strong>Orchestration:</strong> Jenkins CI/CD with Groovy Pipeline DSL</li>
                         <li><strong>Windows Automation:</strong> PowerShell with Posh-ACME module</li>
@@ -740,7 +740,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">??</div>
+                    
                     <h3>Automated Database Disaster Recovery Testing Pipeline</h3>
                     <p>Enterprise-grade automated testing system that validates database backup integrity and disaster recovery procedures on a weekly schedule, ensuring business continuity readiness without manual intervention. Automatically tests complete restore processes and compares restored data against production.</p>
                     <div className="tech-stack">
@@ -774,11 +774,11 @@ function App() {
                 {expandedProject === 'dr-testing' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>?? Project Overview</h4>
+                      <h4>Project Overview</h4>
                       <p><strong>Business Problem Solved:</strong> Organizations often maintain database backups but rarely verify they can be successfully restored until an actual disaster occurs. This project eliminates that risk by automatically testing the complete restore process weekly, comparing restored data against production to ensure data integrity.</p>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Technical Architecture</h4>
+                      <h4>Technical Architecture</h4>
                       <ul>
                         <li><strong>Infrastructure Automation:</strong></li>
                         <li>Built ephemeral testing environments using Terraform modules (VPC, EC2, Security Groups)</li>
@@ -799,7 +799,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Key Achievements</h4>
+                      <h4>Key Achievements</h4>
                       <ul>
                         <li>? 100% automated end-to-end testing (zero manual steps)</li>
                         <li>? Weekly execution ensures continuous DR readiness validation</li>
@@ -810,7 +810,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Business Impact</h4>
+                      <h4>Business Impact</h4>
                       <ul>
                         <li>Reduced disaster recovery verification time from days to 30 minutes</li>
                         <li>Eliminated manual testing overhead (previously 4-6 hours of manual effort per test)</li>
@@ -819,7 +819,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Complexity Highlights</h4>
+                      <h4>Technical Complexity Highlights</h4>
                       <ul>
                         <li>Multi-cloud account orchestration with IAM role chaining</li>
                         <li>Windows remote automation via WinRM from Linux Jenkins controller</li>
@@ -829,7 +829,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? Technical Stack Details</h4>
+                      <h4>Technical Stack Details</h4>
                       <ul>
                         <li><strong>CI/CD:</strong> Jenkins Pipeline (Groovy DSL)</li>
                         <li><strong>Infrastructure as Code:</strong> Terraform with modular design</li>
@@ -840,7 +840,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>??? System Architecture</h4>
+                      <h4>System Architecture</h4>
                       <img 
                         src="db-restore-testing-system.png" 
                         alt="Database Disaster Recovery Testing System Architecture" 
@@ -854,7 +854,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>SQL Backup Restore Automation</h3>
                 <p>Monthly end-to-end MS SQL restore using Terraform and AWS Glacier ? S3 ? EC2 workflows with role-based authentication, saving 6+ hours per operation</p>
                 <div className="tech-stack">
@@ -866,7 +866,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.2s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>Patch Management Automation</h3>
                 <p>Ansible-based OS patch pipelines for Linux & Windows with pre/post AMI backups, rollback readiness, health checks, and automated HTML reports</p>
                 <div className="tech-stack">
@@ -878,7 +878,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.3s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>Cost & Resource Governance</h3>
                 <p>EC2 start/stop scheduling, CloudWatch-based monitoring, auto-tagging, orphaned snapshot cleanup, and AWS cost comparison reports  reducing waste by 40-50%</p>
                 <div className="tech-stack">
@@ -890,7 +890,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.4s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>ECS Zero Task Architecture</h3>
                 <p>Designed ECS with zero tasks by default, SQS-triggered auto-scaling via Lambda and Step Scaling. Dynamic Terraform modules integrated with Jenkins for N number of services</p>
                 <div className="tech-stack">
@@ -902,7 +902,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.5s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>Environment Refresh & Hotfix</h3>
                 <p>One-click deployments for production hotfixes and environment refreshes (binaries + DBs), cutting release cycles by several hours and minimizing human error</p>
                 <div className="tech-stack">
@@ -914,7 +914,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.6s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>CloudFront Access Control</h3>
                 <p>AWS CloudFront function to control access based on HTTP headers (Referer, request-origin). Blocks unauthorized requests with 403 and logs client IPs for audit</p>
                 <div className="tech-stack">
@@ -925,7 +925,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.7s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>Zabbix Migration & Enhancement</h3>
                 <p>Upgraded Zabbix with comprehensive monitoring for server health, scheduled jobs, DB backups, S3 syncs. Custom triggers for missed tasks and integrated marketplace templates</p>
                 <div className="tech-stack">
@@ -937,7 +937,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.9s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>IAM Standardization & Security</h3>
                 <p>Implemented standardized IAM roles with permission boundaries across environments. Created VPC peering, PrivateLink networks, and secure user naming conventions</p>
                 <div className="tech-stack">
@@ -949,7 +949,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '1.0s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">???</div>
+                
                 <h3>RDS & Redshift Management</h3>
                 <p>Managed AWS RDS (MySQL backups via Lambda) and Redshift clusters (auto-patching, IP-bound access). Automated non-prod cluster shutdowns for cost optimization</p>
                 <div className="tech-stack">
@@ -961,7 +961,7 @@ function App() {
               </div>
               <div className="project-card card-animated featured-project">
                 <div className="card-glow"></div>
-                <div className="project-icon">??</div>
+                
                 <h3>Custom Enterprise Systems</h3>
                 <p>Developed Purchase & Inventory, Invoice & Credit Note, and Access Card Attendance systems using ASP.NET, SQL Server with AD integration and Crystal Reports</p>
                 <div className="tech-stack">
@@ -976,7 +976,7 @@ function App() {
                 {expandedProject === 'enterprise-systems' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>?? Systems Overview</h4>
+                      <h4>Systems Overview</h4>
                       <ul>
                         <li><strong>Role:</strong> Developer / System Administrator</li>
                         <li><strong>Company:</strong> Wunderman Thompson / VML</li>
@@ -985,7 +985,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Purchase & Inventory Management System</h4>
+                      <h4>Purchase & Inventory Management System</h4>
                       <ul>
                         <li>Comprehensive purchase order tracking and inventory control</li>
                         <li>Real-time stock level monitoring and automated reorder alerts</li>
@@ -996,7 +996,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Invoice & Credit Note System</h4>
+                      <h4>Invoice & Credit Note System</h4>
                       <ul>
                         <li>Automated invoice generation with customizable templates</li>
                         <li>Credit note processing and tracking for returns/adjustments</li>
@@ -1008,7 +1008,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Access Card Attendance Management System</h4>
+                      <h4>Access Card Attendance Management System</h4>
                       <ul>
                         <li>Web-based employee attendance tracking via access card swipes</li>
                         <li>Real-time attendance monitoring dashboard</li>
@@ -1020,7 +1020,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Technical Features</h4>
+                      <h4>Technical Features</h4>
                       <ul>
                         <li><strong>ASP.NET Framework:</strong> Web-based applications with responsive UI</li>
                         <li><strong>SQL Server:</strong> Robust database design with stored procedures and optimization</li>
@@ -1031,7 +1031,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>?? Business Impact</h4>
+                      <h4>Business Impact</h4>
                       <ul>
                         <li>Eliminated manual paper-based tracking processes</li>
                         <li>Reduced inventory discrepancies by 90%</li>
@@ -1081,10 +1081,10 @@ function App() {
               <div className="repo-card card-animated">
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? Automation Garage</h3>
+                  <h3>Automation Garage</h3>
                   <div className="repo-stats">
                     <span>? 6</span>
-                    <span>?? 10</span>
+                    <span>10</span>
                   </div>
                 </div>
                 <p>Comprehensive automation scripts and Jenkins pipelines for DevOps workflows. Most popular repository!</p>
@@ -1100,10 +1100,10 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>??? 3-Tier App Terraform Jenkins</h3>
+                  <h3>3-Tier App Terraform Jenkins</h3>
                   <div className="repo-stats">
                     <span>? 2</span>
-                    <span>?? 1</span>
+                    <span>1</span>
                   </div>
                 </div>
                 <p>Complete CI/CD pipeline integrating Terraform and Jenkins for automated 3-tier application deployment</p>
@@ -1120,10 +1120,10 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.2s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? 3-Tier Web App Auto Scaling</h3>
+                  <h3>3-Tier Web App Auto Scaling</h3>
                   <div className="repo-stats">
                     <span>? 1</span>
-                    <span>?? 4</span>
+                    <span>4</span>
                   </div>
                 </div>
                 <p>Demonstrates AWS Auto Scaling features with complete 3-tier web application architecture</p>
@@ -1140,9 +1140,9 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.3s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? Terraform ECS Autoscaling AWS</h3>
+                  <h3>Terraform ECS Autoscaling AWS</h3>
                   <div className="repo-stats">
-                    <span>?? 1</span>
+                    <span>1</span>
                   </div>
                 </div>
                 <p>Infrastructure as Code for AWS ECS with comprehensive autoscaling configurations</p>
@@ -1159,7 +1159,7 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.4s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? Docker 3-Tier Applications</h3>
+                  <h3>Docker 3-Tier Applications</h3>
                 </div>
                 <p>Multiple implementations of 3-tier applications using Docker and containerization best practices</p>
                 <div className="tech-stack">
@@ -1175,7 +1175,7 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.5s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? Kubernetes 3-Tier WebApp</h3>
+                  <h3>Kubernetes 3-Tier WebApp</h3>
                 </div>
                 <p>Complete Kubernetes deployment manifests for scalable 3-tier web application architecture</p>
                 <div className="tech-stack">
@@ -1191,9 +1191,9 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.6s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? Automate Certificate Renewal</h3>
+                  <h3>Automate Certificate Renewal</h3>
                   <div className="repo-stats">
-                    <span>?? 1</span>
+                    <span>1</span>
                   </div>
                 </div>
                 <p>Automated SSL/TLS certificate renewal system using Let's Encrypt and Python</p>
@@ -1210,7 +1210,7 @@ function App() {
               <div className="repo-card card-animated" style={{animationDelay: '0.7s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
-                  <h3>?? ArgoCD GitOps Rolling Deployment</h3>
+                  <h3>ArgoCD GitOps Rolling Deployment</h3>
                 </div>
                 <p>GitOps workflow implementation with ArgoCD for continuous deployment and rolling updates</p>
                 <div className="tech-stack">
@@ -1362,7 +1362,7 @@ function App() {
 
         {activeSection === 'education' && (
           <section className="education fade-in">
-            <h2 className="section-title">?? Education & Academic Background</h2>
+            <h2 className="section-title">Education & Academic Background</h2>
             <p className="section-subtitle">Academic foundation spanning Computer Science and Telecommunications Engineering</p>
             <div className="education-timeline">
               <div className="education-card">
@@ -1373,8 +1373,8 @@ function App() {
                   <h3>M.Sc. in Electronics & Telecommunication Engineering</h3>
                   <p className="institution">Department of Electrical & Computer Engineering (ECE)<br/><a href="https://www.northsouth.edu/" target="_blank" rel="noopener noreferrer" className="university-link">North South University</a>, Dhaka</p>
                   <div className="education-details">
-                    <span className="result">?? 27 Credits Completed</span>
-                    <span className="grade">?? First Class</span>
+                    <span className="result">27 Credits Completed</span>
+                    <span className="grade">First Class</span>
                   </div>
                   <a href="https://www.northsouth.edu/academic/grading-policy.html" target="_blank" rel="noopener noreferrer" className="edu-link">
                     View Grading Policy ?
@@ -1390,8 +1390,8 @@ function App() {
                   <h3>B.Sc. (Hons.) in Computer Science</h3>
                   <p className="institution">Department of Electrical & Computer Engineering (ECE)<br/><a href="https://www.northsouth.edu/" target="_blank" rel="noopener noreferrer" className="university-link">North South University</a>, Dhaka</p>
                   <div className="education-details">
-                    <span className="result">?? 120 Credits Completed</span>
-                    <span className="grade">?? First Class</span>
+                    <span className="result">120 Credits Completed</span>
+                    <span className="grade">First Class</span>
                   </div>
                   <a href="https://www.northsouth.edu/academic/grading-policy.html" target="_blank" rel="noopener noreferrer" className="edu-link">
                     View Grading Policy ?
@@ -1407,8 +1407,8 @@ function App() {
                   <h3>Higher Secondary Certificate (H.S.C.)</h3>
                   <p className="institution">Science Group<br/><a href="https://www.abdurroufcollege.ac.bd/" target="_blank" rel="noopener noreferrer" className="university-link">Birshrestha Munshi Abdur Rouf Public College</a><br/><span className="former-name">(formerly Bangladesh Rifles School & College)</span>, Dhaka</p>
                   <div className="education-details">
-                    <span className="board">??? Board: Dhaka</span>
-                    <span className="grade">?? First Division</span>
+                    <span className="board">Board: Dhaka</span>
+                    <span className="grade">First Division</span>
                   </div>
                 </div>
               </div>
@@ -1419,10 +1419,10 @@ function App() {
                 </div>
                 <div className="education-content">
                   <h3>Secondary School Certificate (S.S.C.)</h3>
-                  <p className="institution">Science Group<br/><a href="https://www.tghs.edu.bd/" target="_blank" rel="noopener noreferrer" className="university-link">Tejgaon Government Boys High School</a><br/><span className="bengali-name">??????? ?????? ???? ?????????</span>, Dhaka</p>
+                  <p className="institution">Science Group<br/><a href="https://www.tghs.edu.bd/" target="_blank" rel="noopener noreferrer" className="university-link">Tejgaon Government Boys High School</a>, Dhaka</p>
                   <div className="education-details">
-                    <span className="board">??? Board: Dhaka</span>
-                    <span className="grade">?? First Division with Star Marks</span>
+                    <span className="board">Board: Dhaka</span>
+                    <span className="grade">First Division with Star Marks</span>
                     <span className="achievements">? Three Letters</span>
                   </div>
                 </div>
@@ -1461,7 +1461,7 @@ function App() {
                   </div>
                 </div>
                 <div className="contact-item">
-                  <div className="contact-icon">??</div>
+                  
                   <div>
                     <h4>Email</h4>
                     <p><a href="mailto:sarowar@hotmail.com">sarowar@hotmail.com</a></p>
@@ -1490,7 +1490,7 @@ function App() {
                   </div>
                 </div>
                 <div className="contact-item">
-                  <div className="contact-icon">??</div>
+                  
                   <div>
                     <h4>Location</h4>
                     <p><a href="https://www.google.com/maps/@23.7500658,90.373439,16.75z/data=!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Dhanmondi, Dhaka, Bangladesh</a></p>
