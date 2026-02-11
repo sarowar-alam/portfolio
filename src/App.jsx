@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -152,7 +152,7 @@ function App() {
                   <p className="timeline-date">Jan 2024 - Apr 2025 · 1 year 4 months</p>
                   <p>Designed and implemented scalable, secure, and automated infrastructure solutions across AWS using Terraform, Jenkins, Ansible, Python, and PowerShell.</p>
                   <ul className="timeline-highlights">
-                    <li>� Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
+                    <li>🚀 Built ECS zero-task architecture with SQS-triggered auto-scaling via Lambda and Step Scaling</li>
                     <li>🔧 Automated EC2 provisioning with Jenkins + Terraform + Ansible pipelines</li>
                     <li>🏗️ Developed parameterized Terraform modules and Jenkins pipelines for ECS deployments and AMI operations</li>
                     <li>🔗 Built private networks using VPC peering and Private Link. Standardized IAM roles with permission boundaries</li>
@@ -772,7 +772,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>�️ Technical Stack Details</h4>
+                      <h4>🛠️ Technical Stack Details</h4>
                       <ul>
                         <li><strong>CI/CD:</strong> Jenkins Pipeline (Groovy DSL)</li>
                         <li><strong>Infrastructure as Code:</strong> Terraform with modular design</li>
@@ -783,7 +783,7 @@ function App() {
                       </ul>
                     </div>
                     <div className="detail-section">
-                      <h4>�🖼️ System Architecture</h4>
+                      <h4>🖼️ System Architecture</h4>
                       <img 
                         src="db-restore-testing-system.png" 
                         alt="Database Disaster Recovery Testing System Architecture" 
