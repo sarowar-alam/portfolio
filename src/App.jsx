@@ -130,17 +130,54 @@ function App() {
                   <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   <h3>Lead DevOps Engineer</h3>
                   <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
-                  <p className="timeline-date">May 2025 - Present · 10 months</p>
-                  <p>💼 Designing, implementing, and managing automation frameworks that streamline infrastructure operations, enhance cloud efficiency, and improve reliability across multi-client environments hosted on AWS. Focused on eliminating manual effort through intelligent automation using Jenkins, Terraform, Ansible, and AWS-native services.</p>
+                  <p className="timeline-date">May 2025 - Present</p>
+                  <p className="role-overview"><strong>Role Overview:</strong> Own end-to-end DevOps strategy, automation, and cloud infrastructure across production and non-production environments. I design scalable, secure, and repeatable delivery patterns using AWS, Terraform, Jenkins, PowerShell, and Python, consistently replacing manual, high-risk procedures with resilient pipelines. My focus: zero downtime, strong security, measurable efficiency gains, and platform standardization.</p>
+                  <p className="section-header"><strong>Key Projects & Achievements</strong></p>
                   <ul className="timeline-highlights">
-                    <li>🧠 Built daily Jenkins pipeline aggregating MongoDB, MySQL, MS SQL backup statuses + S3 sync reports into HTML dashboard — reducing manual effort from 1 hour to 5 minutes</li>
-                    <li>💾 Created monthly end-to-end MS SQL restore automation using Terraform and AWS Glacier → S3 → EC2 workflows, saving 5+ hours per operation</li>
-                    <li>🔐 Automated SSL certificate renewal, ACM updates, and deployment to IIS, Jenkins, Zabbix — converting 2-hour manual task into scheduled automation</li>
-                    <li>🩹 Developed Ansible-based OS patch pipelines (Linux & Windows) with pre/post AMI backups and rollback readiness</li>
-                    <li>💰 Reduced AWS costs by 40-50% through EC2 start/stop scheduling, auto-tagging, orphaned snapshot cleanup</li>
-                    <li>🔁 Enabled one-click deployments for production hotfixes and environment refreshes, cutting release cycles by several hours</li>
-                    <li>✨ Reduced operational overhead by 80% through automated monitoring and reporting</li>
+                    <li>🚀 Multi-Server Production Hotfix Deployment Automation Pipeline</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> Built a CI/CD system that automates hotfix deployment to multiple Windows production servers in parallel. What previously took hours of coordinated manual effort now completes in minutes with automatic backup and rollback.</li>
+                    <li className="indented-item"><strong>Technical Implementation:</strong> Jenkins Pipeline orchestration in Groovy with conditional stages, PowerShell remoting via PSSession for remote execution, centralized artifact distribution from AWS S3, pre-deployment backup with timestamped versioning, selective deployments (binaries, configs, or both), hardened validation, logging, and failure handling.</li>
+                    <li className="indented-item"><strong>Impact:</strong> 75% reduction in deployment time, removed human error from production releases, standardized release mechanics across environments, enabled safe, repeatable emergency fixes.</li>
+                    <li>🔐 Enterprise SSL/TLS Certificate Lifecycle Automation</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> Designed a fully automated framework for renewing and deploying certificates across IIS, Jenkins (Windows & Linux), and monitoring platforms — with zero downtime and full auditability.</li>
+                    <li className="indented-item"><strong>What Made It Complex:</strong> Multiple platforms, formats (PFX, JKS, PEM, KEY), cross-region cloud distribution, strict security controls, and the need for seamless service continuity.</li>
+                    <li className="indented-item"><strong>Capabilities Delivered:</strong> Automated expiry monitoring and renewal triggers, DNS validation and issuance through Let's Encrypt, conversion & deployment to each platform automatically, pre-change backups and rapid rollback, secure distribution via time-limited access, HTML reporting & failure diagnostics.</li>
+                    <li className="indented-item"><strong>Business Results:</strong> Cut quarterly manual work (~8 hours) to fully unattended, eliminated expiration incidents, improved compliance with automated traceability, enabled frequent, secure rotation policies.</li>
+                    <li>🗄️ Non-Production Environment Refresh Automation (BrandShare)</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> A Jenkins-driven orchestration that refreshes playground environments with sanitized production data.</li>
+                    <li className="indented-item"><strong>Engineering Depth:</strong> Multi-server workflow across web and DB tiers, automated binary and DB backups, intelligent S3 retrieval (weekday/weekend logic), permission preservation & safe restore patterns, data sanitization to prevent accidental outbound communication.</li>
+                    <li className="indented-item"><strong>Impact:</strong> 4 hours → 30 minutes (87.5% faster), enabled frequent refreshes for developers, removed fragile, tribal-knowledge procedures.</li>
+                    <li>☁️ Configuration-Driven ECS Microservice Deployment Platform</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> Consolidated 11 independent pipelines into one using JSON-driven configuration and reusable Terraform modules.</li>
+                    <li className="indented-item"><strong>Innovation:</strong> Single orchestrator pipeline, dynamic tfvars generation, per-service state isolation, vulnerability scanning gates, intelligent skip logic when no change detected.</li>
+                    <li className="indented-item"><strong>Impact:</strong> 91% complexity reduction, new services onboarded in minutes, independent failure domains, cleaner governance & maintainability.</li>
+                    <li>🧪 Automated Database Disaster Recovery Validation</li>
+                    <li className="indented-item"><strong>Project Summary:</strong> A weekly, fully automated system that proves backups can actually be restored — not just stored.</li>
+                    <li className="indented-item"><strong>Key Mechanics:</strong> Terraform provisions ephemeral environments, Python transfers latest backups cross-account, PowerShell restores via WinRM, automated comparison between restored and live data, email reporting to stakeholders, automatic teardown to control cost.</li>
+                    <li className="indented-item"><strong>Impact:</strong> Verification time reduced from days to ~30 minutes, zero manual involvement, continuous readiness assurance.</li>
+                    <li>Additional Leadership Contributions</li>
+                    <li className="indented-item">Building private connectivity patterns using VPC peering and PrivateLink to strengthen security and reduce data-path costs</li>
+                    <li className="indented-item">Replaced manual operations checklists (94 tasks) with automated Python reporting integrated with secure credential retrieval</li>
+                    <li className="indented-item">Implemented automated lifecycle management for unused compute resources with proactive alerts</li>
                   </ul>
+                  <p className="tools-header"><strong>Core Technologies</strong></p>
+                  <div className="tech-stack" style={{marginTop: '10px'}}>
+                    <span className="tech-tag">AWS</span>
+                    <span className="tech-tag">Terraform</span>
+                    <span className="tech-tag">Jenkins</span>
+                    <span className="tech-tag">Groovy</span>
+                    <span className="tech-tag">PowerShell</span>
+                    <span className="tech-tag">Python</span>
+                    <span className="tech-tag">Windows Server</span>
+                    <span className="tech-tag">Linux</span>
+                    <span className="tech-tag">S3</span>
+                    <span className="tech-tag">IAM</span>
+                    <span className="tech-tag">ECS</span>
+                    <span className="tech-tag">CloudWatch</span>
+                    <span className="tech-tag">WinRM</span>
+                    <span className="tech-tag">Git</span>
+                    <span className="tech-tag">Trivy</span>
+                  </div>
                 </div>
               </div>
               <div className="timeline-item">
