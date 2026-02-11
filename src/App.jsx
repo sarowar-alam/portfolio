@@ -90,22 +90,22 @@ function App() {
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
               <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
               <div className="skills">
-                <span className="skill skill-bounce">AWS</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>Terraform</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>Jenkins</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>Ansible</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>Python</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>PowerShell</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>Docker</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>Kubernetes</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>Zabbix</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>Argo-CD</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>Prometheus</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>Grafana</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>IAM</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>CloudFront</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.4s'}}>RDS</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.5s'}}>Redshift</span>
+                <span className="skill skill-bounce">☁️ AWS</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>🏗️ Terraform</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>🔧 Jenkins</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>⚙️ Ansible</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>🐍 Python</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>⚡ PowerShell</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>🐳 Docker</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>☸️ Kubernetes</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>📊 Zabbix</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>🔄 Argo-CD</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>🔥 Prometheus</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>📈 Grafana</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>🔐 IAM</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>🌐 CloudFront</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.4s'}}>🗄️ RDS</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.5s'}}>📊 Redshift</span>
               </div>
               <button className="cta-button" onClick={() => setActiveSection('projects')}>
                 <span>View My Work</span>
@@ -347,7 +347,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    
+                    <div className="project-icon">☁️</div>
                     <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
                     <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
                     <div className="tech-stack">
@@ -445,7 +445,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    
+                    <div className="project-icon">🚀</div>
                     <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
                     <p>Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. Eliminated manual deployment errors and reduced deployment time from hours to minutes with safe rollback capabilities.</p>
                     <div className="tech-stack">
@@ -532,7 +532,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    
+                    <div className="project-icon">⚙️</div>
                     <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
                     <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
                     <div className="tech-stack">
@@ -638,7 +638,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    
+                    <div className="project-icon">🔐</div>
                     <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
                     <p>Comprehensive automated certificate management system that eliminates manual SSL/TLS certificate renewal and deployment processes across 10+ production servers spanning multiple platforms (Windows IIS, Jenkins CI/CD, Linux monitoring systems) with zero downtime.</p>
                     <div className="tech-stack">
@@ -740,7 +740,7 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    
+                    <div className="project-icon">🧪</div>
                     <h3>Automated Database Disaster Recovery Testing Pipeline</h3>
                     <p>Enterprise-grade automated testing system that validates database backup integrity and disaster recovery procedures on a weekly schedule, ensuring business continuity readiness without manual intervention. Automatically tests complete restore processes and compares restored data against production.</p>
                     <div className="tech-stack">
@@ -854,7 +854,7 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
-                
+                <div className="project-icon">💾</div>
                 <h3>SQL Backup Restore Automation</h3>
                 <p>Monthly end-to-end MS SQL restore using Terraform and AWS Glacier ? S3 ? EC2 workflows with role-based authentication, saving 6+ hours per operation</p>
                 <div className="tech-stack">
@@ -901,9 +901,7 @@ function App() {
                 </div>
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.5s'}}>
-                <div className="card-glow"></div>
-                
-                <h3>Environment Refresh & Hotfix</h3>
+                <div className="card-glow"></div>`n                <div class="project-icon"></div>`n                <h3>Environment Refresh & Hotfix</h3>
                 <p>One-click deployments for production hotfixes and environment refreshes (binaries + DBs), cutting release cycles by several hours and minimizing human error</p>
                 <div className="tech-stack">
                   <span className="tech-tag">Jenkins</span>
@@ -1461,7 +1459,7 @@ function App() {
                   </div>
                 </div>
                 <div className="contact-item">
-                  
+                  <div className="contact-icon">📧</div>
                   <div>
                     <h4>Email</h4>
                     <p><a href="mailto:sarowar@hotmail.com">sarowar@hotmail.com</a></p>
@@ -1490,14 +1488,14 @@ function App() {
                   </div>
                 </div>
                 <div className="contact-item">
-                  
+                  <div className="contact-icon">📍</div>
                   <div>
                     <h4>Location</h4>
                     <p><a href="https://www.google.com/maps/@23.7500658,90.373439,16.75z/data=!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Dhanmondi, Dhaka, Bangladesh</a></p>
                   </div>
                 </div>
                 <div className="contact-item">
-                  <div className="contact-icon">?</div>
+                  <div className="contact-icon">💼</div>
                   <div>
                     <h4>Experience</h4>
                     <p><a href="#" onClick={(e) => { e.preventDefault(); setActiveSection('home'); }} className="experience-link">20+ Years in IT Infrastructure & DevOps</a></p>
