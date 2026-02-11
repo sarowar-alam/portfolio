@@ -127,7 +127,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                  <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
                   <h3>Lead DevOps Engineer</h3>
@@ -185,7 +185,7 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                  <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
                   <h3>Principal DevOps Engineer</h3>
