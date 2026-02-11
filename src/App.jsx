@@ -109,7 +109,7 @@ function App() {
               </div>
               <button className="cta-button" onClick={() => setActiveSection('projects')}>
                 <span>View My Work</span>
-                <span className="arrow">?</span>
+                <span className="arrow">→</span>
               </button>
             </div>
             <div className="hero-illustration">
@@ -359,7 +359,7 @@ function App() {
                       <span className="tech-tag">Jenkins</span>
                     </div>
                     <button className="project-link" onClick={() => toggleProject('cloud-backup')}>
-                      {expandedProject === 'cloud-backup' ? 'Show Less ?' : 'View Details ?'}
+                      {expandedProject === 'cloud-backup' ? 'Show Less ↑' : 'View Details →'}
                     </button>
                   </div>
                   {!expandedProject || expandedProject !== 'cloud-backup' ? (
@@ -457,7 +457,7 @@ function App() {
                       <span className="tech-tag">CI/CD</span>
                     </div>
                     <button className="project-link" onClick={() => toggleProject('hotfix-pipeline')}>
-                      {expandedProject === 'hotfix-pipeline' ? 'Show Less ?' : 'View Details ?'}
+                      {expandedProject === 'hotfix-pipeline' ? 'Show Less ↑' : 'View Details →'}
                     </button>
                   </div>
                   {!expandedProject || expandedProject !== 'hotfix-pipeline' ? (
@@ -546,7 +546,7 @@ function App() {
                       <span className="tech-tag">ALB</span>
                     </div>
                     <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
-                      {expandedProject === 'ecs-deployment' ? 'Show Less ?' : 'View Details ?'}
+                      {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
                     </button>
                   </div>
                   {!expandedProject || expandedProject !== 'ecs-deployment' ? (
@@ -652,7 +652,7 @@ function App() {
                       <span className="tech-tag">OpenSSL</span>
                     </div>
                     <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
-                      {expandedProject === 'ssl-automation' ? 'Show Less ?' : 'View Details ?'}
+                      {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
                     </button>
                   </div>
                   {!expandedProject || expandedProject !== 'ssl-automation' ? (
@@ -754,10 +754,10 @@ function App() {
                       <span className="tech-tag">WinRM</span>
                     </div>
                     <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginBottom: '10px'}}>
-                      View on GitHub ?
+                      View on GitHub →
                     </a>
                     <button className="project-link" onClick={() => toggleProject('dr-testing')}>
-                      {expandedProject === 'dr-testing' ? 'Show Less ?' : 'View Details ?'}
+                      {expandedProject === 'dr-testing' ? 'Show Less ↑' : 'View Details →'}
                     </button>
                   </div>
                   {!expandedProject || expandedProject !== 'dr-testing' ? (
@@ -971,7 +971,7 @@ function App() {
                   <span className="tech-tag">Crystal Reports</span>
                 </div>
                 <button className="project-link" onClick={() => toggleProject('enterprise-systems')}>
-                  {expandedProject === 'enterprise-systems' ? 'Show Less ?' : 'View Details ?'}
+                  {expandedProject === 'enterprise-systems' ? 'Show Less ↑' : 'View Details →'}
                 </button>
                 {expandedProject === 'enterprise-systems' && (
                   <div className="project-details">
@@ -1094,7 +1094,7 @@ function App() {
                   <span className="tech-tag">Automation</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/sarowar" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.1s'}}>
@@ -1114,7 +1114,7 @@ function App() {
                   <span className="tech-tag">AWS</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/3-tier-app-terraform-jenkins" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.2s'}}>
@@ -1134,7 +1134,7 @@ function App() {
                   <span className="tech-tag">Load Balancer</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/3-tier-web-app-auto-scalling" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.3s'}}>
@@ -1153,7 +1153,7 @@ function App() {
                   <span className="tech-tag">Autoscaling</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/terraform-ecs-autoscaling-aws" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.4s'}}>
@@ -1169,7 +1169,7 @@ function App() {
                   <span className="tech-tag">Multi-tier</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/3-tier-with-docker" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.5s'}}>
@@ -1185,7 +1185,7 @@ function App() {
                   <span className="tech-tag">Orchestration</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/k8s-3tier-webapp" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.6s'}}>
@@ -1204,7 +1204,7 @@ function App() {
                   <span className="tech-tag">Automation</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
               <div className="repo-card card-animated" style={{animationDelay: '0.7s'}}>
@@ -1220,14 +1220,14 @@ function App() {
                   <span className="tech-tag">CI/CD</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/argocd-nginx-git-ops-rolling-deployment" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository ?
+                  View Repository →
                 </a>
               </div>
             </div>
             <div className="view-all-repos">
               <a href="https://github.com/sarowar-alam?tab=repositories" target="_blank" rel="noopener noreferrer" className="cta-button">
                 <span>View All Repositories</span>
-                <span className="arrow">?</span>
+                <span className="arrow">→</span>
               </a>
             </div>
           </section>
