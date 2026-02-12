@@ -753,7 +753,7 @@ function App() {
                       <span className="tech-tag">boto3</span>
                       <span className="tech-tag">WinRM</span>
                     </div>
-                    <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginBottom: '10px'}}>
+                    <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
                       View on GitHub →
                     </a>
                     <button className="project-link" onClick={() => toggleProject('dr-testing')}>
@@ -868,6 +868,9 @@ function App() {
                       <span className="tech-tag">openpyxl</span>
                       <span className="tech-tag">Jenkins</span>
                     </div>
+                    <a href="https://github.com/sarowar-alam/AWS-SG-Open-Ports-Auditor.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
                     <button className="project-link" onClick={() => toggleProject('sg-auditor')}>
                       {expandedProject === 'sg-auditor' ? 'Show Less ↑' : 'View Details →'}
                     </button>
