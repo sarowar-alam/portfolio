@@ -267,7 +267,61 @@ function App() {
                   <h3>Senior Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
                   <p className="timeline-date">Sep 2010 - May 2012 · 1 year 9 months</p>
-                  <p>Network infrastructure management and administration.</p>
+                  <p className="role-overview"><strong>Role Overview:</strong> Responsible for enterprise infrastructure operations, virtualization, backup strategy, identity management, and cross-region file synchronization. Supported creative production workflows, ensured high availability of critical systems, and maintained secure, scalable IT services across Windows, Linux, and macOS environments.</p>
+                  <p className="section-header"><strong>Key Contributions & Achievements</strong></p>
+                  <ul className="timeline-highlights">
+                    <li>Virtualization & Data Protection</li>
+                    <li className="indented-item">Administered VMware vCenter environment with five ESX/vSphere hosts and 80+ virtual machines</li>
+                    <li className="indented-item">Monitored VM performance, allocation, and lifecycle using VMware Infrastructure Client</li>
+                    <li className="indented-item">Implemented VM backup strategy with vRanger Pro</li>
+                    <li className="indented-item">Scheduled differential and full backups using Symantec Backup Exec</li>
+                    <li>Identity & Access Management</li>
+                    <li className="indented-item">Created and maintained Active Directory accounts for the corporate domain</li>
+                    <li className="indented-item">Supported authentication-integrated applications using AD membership services</li>
+                    <li>Application Development</li>
+                    <li className="indented-item">Designed and delivered the BDIT Purchase & Inventory Management System for IT and Finance</li>
+                    <li className="indented-item">Built with ASP.NET / VB.NET / SQL Server 2005</li>
+                    <li className="indented-item">Integrated Active Directory authentication and web-based Crystal reporting</li>
+                    <li className="indented-item">Enabled accurate asset tracking and purchasing transparency</li>
+                    <li>Global File Distribution & Linux Infrastructure</li>
+                    <li className="indented-item">Maintained Red Hat Enterprise Linux 5 Xi-net ecosystem (primary, failover, and portal)</li>
+                    <li className="indented-item">Ensured creative asset replication between regional offices</li>
+                    <li className="indented-item">Automated file synchronization between Bangladesh and Denmark via Rsync</li>
+                    <li className="indented-item">Managed FlashNet-based backup processes</li>
+                    <li className="indented-item">Modified and maintained Adobe InDesign automation and relinking scripts</li>
+                    <li>Enterprise Hardware & Network Support</li>
+                    <li className="indented-item">Provided operational support for Rorke Data RAID controllers and tape libraries</li>
+                    <li className="indented-item">Maintained WAN connectivity and Cisco routing infrastructure</li>
+                    <li className="indented-item">Operated Debian-based Squid proxy services</li>
+                    <li>Security & Endpoint Operations</li>
+                    <li className="indented-item">Managed centralized antivirus and anti-spyware using McAfee ePO</li>
+                    <li className="indented-item">Delivered desktop and macOS helpdesk support</li>
+                    <li>Operational Excellence</li>
+                    <li className="indented-item">Maintained three server rooms including hardware readiness and uptime</li>
+                    <li className="indented-item">Developed file server maintenance and automated deletion scripting</li>
+                    <li className="indented-item">Implemented hourly NT backup routines and FTP services</li>
+                    <li className="indented-item">Assisted IT leadership with annual budgeting and capacity planning</li>
+                  </ul>
+                  <p className="tools-header"><strong>Tools & Technologies</strong></p>
+                  <div className="tech-stack" style={{marginTop: '10px'}}>
+                    <span className="tech-tag">VMware vCenter</span>
+                    <span className="tech-tag">ESX/vSphere</span>
+                    <span className="tech-tag">vRanger</span>
+                    <span className="tech-tag">Symantec Backup Exec</span>
+                    <span className="tech-tag">Active Directory</span>
+                    <span className="tech-tag">ASP.NET</span>
+                    <span className="tech-tag">VB.NET</span>
+                    <span className="tech-tag">SQL Server 2005</span>
+                    <span className="tech-tag">Crystal Reports</span>
+                    <span className="tech-tag">Red Hat Enterprise Linux</span>
+                    <span className="tech-tag">Rsync</span>
+                    <span className="tech-tag">FlashNet</span>
+                    <span className="tech-tag">Squid Proxy</span>
+                    <span className="tech-tag">Cisco 2821</span>
+                    <span className="tech-tag">McAfee ePO</span>
+                    <span className="tech-tag">Windows Server</span>
+                    <span className="tech-tag">macOS</span>
+                  </div>
                 </div>
               </div>
               <div className="timeline-item">
@@ -1657,7 +1711,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="cert-link"
                   >
-                    View Credential ?
+                    View Credential →
                   </a>
                 </div>
               </div>
@@ -1680,7 +1734,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="cert-link"
                   >
-                    View Credential ?
+                    View Credential →
                   </a>
                 </div>
               </div>
