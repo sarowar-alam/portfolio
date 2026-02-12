@@ -223,15 +223,64 @@ function App() {
                   <h3>Senior Information Technology Manager</h3>
                   <h4>VML | Dhaka, Bangladesh</h4>
                   <p className="timeline-date">Aug 2021 - May 2023 · 1 year 10 months</p>
+                  <p className="role-overview"><strong>Role Overview:</strong> Managed enterprise virtualization, identity services, global file distribution, and internal business applications supporting both development and production teams. Acted as a bridge between infrastructure, security, and operations while modernizing automation, backup reliability, and asset governance.</p>
+                  <p className="section-header"><strong>Key Contributions & Achievements</strong></p>
                   <ul className="timeline-highlights">
-                    <li>Designed, developed, and maintained VMware vCenter Server with 7 ESX vSphere hosts managing 100+ VMs</li>
-                    <li>Used vRanger Pro for VM backups. Managed AD accounts, GPO-based software deployment (Adobe, browsers, Skype)</li>
-                    <li>Worked with IBM for creating Local VPN server for remote employees</li>
-                    <li>Managed Egnyte storage sync and user/security management</li>
-                    <li>Developed Purchase & Inventory Management system, Invoice and Credit Note system using ASP.NET, VB.NET, SQL Server with AD integration</li>
-                    <li>Built web-based Access Card Management system for employee attendance tracking with Crystal Reports</li>
-                    <li>Created PowerShell scripts for file monitoring alerts on finance file share servers</li>
+                    <li>Virtualization & Platform Operations</li>
+                    <li className="indented-item">Designed, maintained, and troubleshot VMware vCenter with 7 ESX/vSphere hosts supporting 100+ virtual machines</li>
+                    <li className="indented-item">Provided performance monitoring, capacity oversight, and lifecycle management</li>
+                    <li className="indented-item">Protected workloads using vRanger Pro backups</li>
+                    <li>Identity, Endpoint & Policy Management</li>
+                    <li className="indented-item">Created and maintained corporate AD identities via enterprise directory services</li>
+                    <li className="indented-item">Deployed software and enforced standards through Group Policy across the global network (Adobe stack, browsers, collaboration tools, etc.)</li>
+                    <li className="indented-item">Implemented GPO-based restrictions and environment consistency</li>
+                    <li>Secure Remote Work Enablement</li>
+                    <li className="indented-item">Collaborated with IBM to establish a local VPN platform for work-from-home users</li>
+                    <li className="indented-item">Supported secure file collaboration and synchronization via enterprise storage portals</li>
+                    <li className="indented-item">Coordinated with security teams on permissions and access governance</li>
+                    <li>Business Systems Development</li>
+                    <li className="indented-item">Developed the BDIT Purchase & Inventory Management System for procurement and asset visibility</li>
+                    <li className="indented-item">Built Invoice & Credit Note workflows for Finance</li>
+                    <li className="indented-item">Stack: ASP.NET, VB.NET, SQL Server</li>
+                    <li className="indented-item">Integrated Active Directory authentication, Crystal reporting, and access-card attendance tracking</li>
+                    <li className="indented-item">Delivered web-based detail and summary reports for management</li>
+                    <li>Backup, Recovery & Data Integrity</li>
+                    <li className="indented-item">Supervised incremental and full backups using Symantec Backup Exec and SyncBack Pro</li>
+                    <li className="indented-item">Ensured recovery readiness and audit traceability</li>
+                    <li>Global Creative Infrastructure</li>
+                    <li className="indented-item">Maintained Red Hat Enterprise Linux Xi-net landscape (primary, failover, portal)</li>
+                    <li className="indented-item">Automated synchronization of Adobe InDesign files to regional headquarters using Rsync</li>
+                    <li className="indented-item">Managed FlashNet backup routines</li>
+                    <li className="indented-item">Enhanced and maintained scripting for file relinking and automation</li>
+                    <li>Monitoring & Automation</li>
+                    <li className="indented-item">Developed PowerShell monitoring for finance file shares</li>
+                    <li className="indented-item">Implemented real-time alerts for deletions and modifications with full audit details</li>
+                    <li>Support & IT Governance</li>
+                    <li className="indented-item">Delivered macOS helpdesk support</li>
+                    <li className="indented-item">Played a key role in IT procurement</li>
+                    <li className="indented-item">Assisted the IT Director in budgeting through asset and utilization reporting</li>
                   </ul>
+                  <p className="tools-header"><strong>Tools & Technologies</strong></p>
+                  <div className="tech-stack" style={{marginTop: '10px'}}>
+                    <span className="tech-tag">VMware vCenter</span>
+                    <span className="tech-tag">ESX/vSphere</span>
+                    <span className="tech-tag">vRanger</span>
+                    <span className="tech-tag">Active Directory</span>
+                    <span className="tech-tag">Group Policy</span>
+                    <span className="tech-tag">ASP.NET</span>
+                    <span className="tech-tag">VB.NET</span>
+                    <span className="tech-tag">SQL Server</span>
+                    <span className="tech-tag">Crystal Reports</span>
+                    <span className="tech-tag">Red Hat Enterprise Linux</span>
+                    <span className="tech-tag">Rsync</span>
+                    <span className="tech-tag">FlashNet</span>
+                    <span className="tech-tag">PowerShell</span>
+                    <span className="tech-tag">Symantec Backup Exec</span>
+                    <span className="tech-tag">SyncBack Pro</span>
+                    <span className="tech-tag">VPN technologies</span>
+                    <span className="tech-tag">Windows Server</span>
+                    <span className="tech-tag">macOS</span>
+                  </div>
                 </div>
               </div>
               <div className="timeline-item">
