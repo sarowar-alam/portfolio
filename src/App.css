@@ -1469,8 +1469,7 @@ nav button.active {
 
   /* Timeline Responsive - Full Width Mobile */
   .timeline {
-    padding: 0 15px;
-    max-width: 100%;
+    padding: 30px 20px;
   }
 
   .timeline::before {
@@ -1585,8 +1584,6 @@ nav button.active {
 
   .certification-card {
     padding: 30px 20px;
-    min-width: unset;
-    width: 100%;
   }
 
   .cert-badge-img {
