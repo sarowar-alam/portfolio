@@ -1400,75 +1400,6 @@ function App() {
               </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">💾</div>
-                <h3>SQL Backup Restore Automation</h3>
-                <p>Monthly end-to-end MS SQL restore using Terraform and AWS Glacier ? S3 ? EC2 workflows with role-based authentication, saving 6+ hours per operation</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Terraform</span>
-                  <span className="tech-tag">AWS Glacier</span>
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">PowerShell</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.2s'}}>
-                <div className="card-glow"></div>
-                
-                <h3>Patch Management Automation</h3>
-                <p>Ansible-based OS patch pipelines for Linux & Windows with pre/post AMI backups, rollback readiness, health checks, and automated HTML reports</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Ansible</span>
-                  <span className="tech-tag">Jenkins</span>
-                  <span className="tech-tag">AWS AMI</span>
-                  <span className="tech-tag">Groovy</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.3s'}}>
-                <div className="card-glow"></div>
-                
-                <h3>Cost & Resource Governance</h3>
-                <p>EC2 start/stop scheduling, CloudWatch-based monitoring, auto-tagging, orphaned snapshot cleanup, and AWS cost comparison reports  reducing waste by 40-50%</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">AWS Lambda</span>
-                  <span className="tech-tag">CloudWatch</span>
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">DocumentDB</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.4s'}}>
-                <div className="card-glow"></div>
-                
-                <h3>ECS Zero Task Architecture</h3>
-                <p>Designed ECS with zero tasks by default, SQS-triggered auto-scaling via Lambda and Step Scaling. Dynamic Terraform modules integrated with Jenkins for N number of services</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">ECS Fargate</span>
-                  <span className="tech-tag">SQS</span>
-                  <span className="tech-tag">Lambda</span>
-                  <span className="tech-tag">Terraform</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.5s'}}>
-                <div className="card-glow"></div>`n                <div class="project-icon"></div>`n                <h3>Environment Refresh & Hotfix</h3>
-                <p>One-click deployments for production hotfixes and environment refreshes (binaries + DBs), cutting release cycles by several hours and minimizing human error</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Jenkins</span>
-                  <span className="tech-tag">Terraform</span>
-                  <span className="tech-tag">Ansible</span>
-                  <span className="tech-tag">CI/CD</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.6s'}}>
-                <div className="card-glow"></div>
-                
-                <h3>CloudFront Access Control</h3>
-                <p>AWS CloudFront function to control access based on HTTP headers (Referer, request-origin). Blocks unauthorized requests with 403 and logs client IPs for audit</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">CloudFront</span>
-                  <span className="tech-tag">JavaScript</span>
-                  <span className="tech-tag">Security</span>
-                </div>
-              </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.7s'}}>
-                <div className="card-glow"></div>
                 
                 <h3>Zabbix Migration & Enhancement</h3>
                 <p>Upgraded Zabbix with comprehensive monitoring for server health, scheduled jobs, DB backups, S3 syncs. Custom triggers for missed tasks and integrated marketplace templates</p>
@@ -1479,7 +1410,7 @@ function App() {
                   <span className="tech-tag">Alerting</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '0.9s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.2s'}}>
                 <div className="card-glow"></div>
                 
                 <h3>IAM Standardization & Security</h3>
@@ -1491,7 +1422,7 @@ function App() {
                   <span className="tech-tag">Terraform</span>
                 </div>
               </div>
-              <div className="project-card card-animated" style={{animationDelay: '1.0s'}}>
+              <div className="project-card card-animated" style={{animationDelay: '0.3s'}}>
                 <div className="card-glow"></div>
                 
                 <h3>RDS & Redshift Management</h3>
