@@ -1569,13 +1569,147 @@ function App() {
               </a>
             </div>
             <div className="github-repos">
+              {/* Featured Production Projects */}
               <div className="repo-card card-animated">
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>Multi-Server Production Hotfix Deployment</h3>
+                </div>
+                <p>Enterprise-grade Jenkins pipeline automating production hotfix deployments across multi-instance web applications, reducing deployment time from 45+ minutes to 3-5 minutes with zero-downtime</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Groovy</span>
+                  <span className="tech-tag">PowerShell</span>
+                  <span className="tech-tag">AWS S3</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/jenkins-production-hotfix-automation" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.05s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>Multi-Service ECS Deployment Pipeline</h3>
+                </div>
+                <p>Configuration-driven pipeline consolidating 11 separate Jenkins pipelines into one unified solution for managing ECS microservices, achieving 91% complexity reduction</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">AWS ECS</span>
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">Groovy</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/ecs-multi-service-terraform-jenkins-pipeline" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.1s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>Enterprise SSL/TLS Certificate Automation</h3>
+                  <div className="repo-stats">
+                    <span>🍴 1</span>
+                  </div>
+                </div>
+                <p>Automated SSL/TLS certificate renewal and deployment system managing 50+ domains across multiple AWS regions with zero manual intervention</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">Let's Encrypt</span>
+                  <span className="tech-tag">AWS ACM</span>
+                  <span className="tech-tag">Automation</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.15s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>AWS Security Group Open Ports Auditor</h3>
+                </div>
+                <p>Automated security compliance tool monitoring AWS Security Groups across multiple regions, identifying internet-exposed ports with intelligent network topology validation</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">boto3</span>
+                  <span className="tech-tag">AWS EC2</span>
+                  <span className="tech-tag">Security</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/AWS-SG-Open-Ports-Auditor" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.2s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>AWS Orphaned Snapshots Detector</h3>
+                </div>
+                <p>Cost optimization tool identifying orphaned EBS snapshots across all AWS regions, leveraging CloudTrail forensics for ownership attribution and automated reporting</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">boto3</span>
+                  <span className="tech-tag">AWS CloudTrail</span>
+                  <span className="tech-tag">Cost Optimization</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/AWS-Orphaned-Snapshots-Detector" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.25s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>Cost-Optimized ECS Auto-Scaling Platform</h3>
+                </div>
+                <p>Terraform-based ECS auto-scaling solution using SQS queue depth metrics for intelligent container scaling, optimizing compute costs while maintaining performance SLAs</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">AWS ECS</span>
+                  <span className="tech-tag">SQS</span>
+                  <span className="tech-tag">Auto-Scaling</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.3s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>Automated Multi-Region AMI Backup Pipeline</h3>
+                </div>
+                <p>Jenkins-based disaster recovery solution creating and managing multi-region AMI backups with automated lifecycle policies and compliance reporting</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Jenkins</span>
+                  <span className="tech-tag">AWS EC2</span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">Disaster Recovery</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/jenkins-ami-backup-pipeline" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+              <div className="repo-card card-animated" style={{animationDelay: '0.35s'}}>
+                <div className="card-glow"></div>
+                <div className="repo-header">
+                  <h3>Database Disaster Recovery Testing</h3>
+                </div>
+                <p>Automated weekly validation system proving SQL Server backups are restorable, using Terraform for ephemeral infrastructure and PowerShell for cross-account restoration testing</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Terraform</span>
+                  <span className="tech-tag">PowerShell</span>
+                  <span className="tech-tag">SQL Server</span>
+                  <span className="tech-tag">AWS</span>
+                </div>
+                <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  View Repository →
+                </a>
+              </div>
+
+              {/* Teaching & Demo Projects */}
+              <div className="repo-card card-animated" style={{animationDelay: '0.4s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
                   <h3>Automation Garage</h3>
                   <div className="repo-stats">
-                    <span>? 6</span>
-                    <span>10</span>
+                    <span>⭐ 6</span>
+                    <span>🍴 10</span>
                   </div>
                 </div>
                 <p>Comprehensive automation scripts and Jenkins pipelines for DevOps workflows. Most popular repository!</p>
@@ -1588,13 +1722,13 @@ function App() {
                   View Repository →
                 </a>
               </div>
-              <div className="repo-card card-animated" style={{animationDelay: '0.1s'}}>
+              <div className="repo-card card-animated" style={{animationDelay: '0.45s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
                   <h3>3-Tier App Terraform Jenkins</h3>
                   <div className="repo-stats">
-                    <span>? 2</span>
-                    <span>1</span>
+                    <span>⭐ 2</span>
+                    <span>🍴 1</span>
                   </div>
                 </div>
                 <p>Complete CI/CD pipeline integrating Terraform and Jenkins for automated 3-tier application deployment</p>
@@ -1608,13 +1742,13 @@ function App() {
                   View Repository →
                 </a>
               </div>
-              <div className="repo-card card-animated" style={{animationDelay: '0.2s'}}>
+              <div className="repo-card card-animated" style={{animationDelay: '0.5s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
                   <h3>3-Tier Web App Auto Scaling</h3>
                   <div className="repo-stats">
-                    <span>? 1</span>
-                    <span>4</span>
+                    <span>⭐ 1</span>
+                    <span>🍴 4</span>
                   </div>
                 </div>
                 <p>Demonstrates AWS Auto Scaling features with complete 3-tier web application architecture</p>
@@ -1628,12 +1762,12 @@ function App() {
                   View Repository →
                 </a>
               </div>
-              <div className="repo-card card-animated" style={{animationDelay: '0.3s'}}>
+              <div className="repo-card card-animated" style={{animationDelay: '0.55s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
                   <h3>Terraform ECS Autoscaling AWS</h3>
                   <div className="repo-stats">
-                    <span>1</span>
+                    <span>🍴 1</span>
                   </div>
                 </div>
                 <p>Infrastructure as Code for AWS ECS with comprehensive autoscaling configurations</p>
@@ -1647,10 +1781,13 @@ function App() {
                   View Repository →
                 </a>
               </div>
-              <div className="repo-card card-animated" style={{animationDelay: '0.4s'}}>
+              <div className="repo-card card-animated" style={{animationDelay: '0.6s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
                   <h3>Docker 3-Tier Applications</h3>
+                  <div className="repo-stats">
+                    <span>🍴 1</span>
+                  </div>
                 </div>
                 <p>Multiple implementations of 3-tier applications using Docker and containerization best practices</p>
                 <div className="tech-stack">
@@ -1663,7 +1800,7 @@ function App() {
                   View Repository →
                 </a>
               </div>
-              <div className="repo-card card-animated" style={{animationDelay: '0.5s'}}>
+              <div className="repo-card card-animated" style={{animationDelay: '0.65s'}}>
                 <div className="card-glow"></div>
                 <div className="repo-header">
                   <h3>Kubernetes 3-Tier WebApp</h3>
@@ -1676,25 +1813,6 @@ function App() {
                   <span className="tech-tag">Orchestration</span>
                 </div>
                 <a href="https://github.com/sarowar-alam/k8s-3tier-webapp" target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repository →
-                </a>
-              </div>
-              <div className="repo-card card-animated" style={{animationDelay: '0.6s'}}>
-                <div className="card-glow"></div>
-                <div className="repo-header">
-                  <h3>Automate Certificate Renewal</h3>
-                  <div className="repo-stats">
-                    <span>1</span>
-                  </div>
-                </div>
-                <p>Automated SSL/TLS certificate renewal system using Let's Encrypt and Python</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">SSL</span>
-                  <span className="tech-tag">Let's Encrypt</span>
-                  <span className="tech-tag">Automation</span>
-                </div>
-                <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal" target="_blank" rel="noopener noreferrer" className="repo-link">
                   View Repository →
                 </a>
               </div>
