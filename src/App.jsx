@@ -1076,6 +1076,140 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project" style={{animationDelay: '0.07s'}}>
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">⚡</div>
+                    <h3>Cost-Optimized ECS Auto-Scaling Platform</h3>
+                    <p>Intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention while maintaining sub-minute response times to incoming work.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Terraform</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">AWS Lambda</span>
+                      <span className="tech-tag">ECS Fargate</span>
+                      <span className="tech-tag">SQS</span>
+                      <span className="tech-tag">CloudWatch</span>
+                      <span className="tech-tag">EventBridge</span>
+                      <span className="tech-tag">Jenkins</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('ecs-autoscaler')}>
+                      {expandedProject === 'ecs-autoscaler' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ecs-autoscaler' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="Cost-Optimized-ECS-Auto-Scaling.png" 
+                        alt="Cost-Optimized ECS Auto-Scaling Platform Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('Cost-Optimized-ECS-Auto-Scaling.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'ecs-autoscaler' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Executive Summary</h4>
+                      <p>Designed and implemented an intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention in capacity management while maintaining sub-minute response times to incoming work.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architectural Approach</h4>
+                      <ul>
+                        <li><strong>Event-Driven Dual-Trigger Design:</strong> Combining EventBridge scheduled polling with CloudWatch alarm-based shutdown ensures reliable 0↔1 task transitions without application code changes</li>
+                        <li><strong>Terraform Modules via Jenkins Pipeline:</strong> Enable self-service adoption across multiple services using workspace isolation</li>
+                        <li><strong>Bidirectional Automation:</strong> Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience</li>
+                        <li><strong>4-Check Validation Logic:</strong> Start Lambda implements comprehensive validation to prevent false positives</li>
+                        <li><strong>Performance Metrics Capture:</strong> Stop Lambda captures pre-shutdown metrics for capacity right-sizing analysis</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Engineering Decisions</h4>
+                      <p>Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience. Start Lambda implements 4-check validation logic to prevent false positives; stop Lambda captures performance metrics pre-shutdown for capacity right-sizing analysis.</p>
+                      <ul>
+                        <li>Why dual triggers? Single EventBridge schedule can miss shutdown windows; dual approach ensures cost optimization</li>
+                        <li>Why Lambda over Step Functions? Lower latency (sub-second), simpler debugging, lower operational overhead</li>
+                        <li>Why workspace isolation? Enables multi-service deployment without cross-contamination of Terraform state</li>
+                        <li>Why 4-check validation? Prevents costly false starts when SQS has transient messages or service is already running</li>
+                        <li>Why metrics capture? Enables data-driven capacity planning and cost optimization over time</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Infrastructure as Code:</strong> Terraform with modular design, S3 state backend with DynamoDB locking</li>
+                        <li><strong>Compute Platform:</strong> AWS ECS/Fargate for containerized workloads</li>
+                        <li><strong>Automation Layer:</strong> Python 3.12 Lambda functions for start/stop orchestration</li>
+                        <li><strong>Event Sources:</strong> EventBridge Scheduler (polling), CloudWatch Alarms (shutdown trigger)</li>
+                        <li><strong>Queue System:</strong> AWS SQS for work distribution and queue depth monitoring</li>
+                        <li><strong>Monitoring:</strong> CloudWatch metrics, alarms, and logs for operational visibility</li>
+                        <li><strong>CI/CD:</strong> Jenkins pipeline orchestration with parameterized deployments</li>
+                        <li><strong>Security:</strong> IAM automation with least-privilege principles</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Automation Impact</h4>
+                      <ul>
+                        <li>✅ <strong>Cost Reduction:</strong> 70-90% reduction in AWS compute costs for variable-demand workloads</li>
+                        <li>✅ <strong>Operational Efficiency:</strong> Eliminated manual on/off procedures requiring ~15 minutes per service daily</li>
+                        <li>✅ <strong>Specific Savings:</strong> Reduced infrastructure operating cost from $35/month to $9/month per service</li>
+                        <li>✅ <strong>Infrastructure Overhead:</strong> Only ~$2/month (Lambda invocations, alarms, logs)</li>
+                        <li>✅ <strong>Self-Service Deployment:</strong> Enabled zero-touch deployment via parameterized Jenkins pipeline</li>
+                        <li>✅ <strong>Response Time:</strong> Sub-minute response times to incoming work</li>
+                        <li>✅ <strong>Scalability:</strong> Support for multiple services with workspace isolation</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Achievement</h4>
+                      <p><strong>Full-Stack Delivery:</strong> Complete ownership of the entire solution including infrastructure design, Terraform module development, Lambda function implementation, CI/CD pipeline creation, IAM automation, comprehensive documentation (7 guides totaling 4,500+ lines), and production operations runbook.</p>
+                      <p><strong>Knowledge Transfer:</strong> Documented 13 architecture decisions with trade-off analysis for team understanding, maintainability, and future enhancements. Enabled self-service adoption by other teams without requiring DevOps intervention.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Ownership Scope</h4>
+                      <ul>
+                        <li>Designed event-driven dual-trigger architecture for reliable zero-scaling</li>
+                        <li>Built reusable Terraform modules with workspace isolation pattern</li>
+                        <li>Developed Python Lambda functions with 4-check validation logic</li>
+                        <li>Implemented CloudWatch alarm-based shutdown with metrics capture</li>
+                        <li>Created Jenkins CI/CD pipeline with parameterized deployments</li>
+                        <li>Architected IAM policies with least-privilege security model</li>
+                        <li>Authored comprehensive documentation (4,500+ lines across 7 guides)</li>
+                        <li>Documented 13 architecture decisions with trade-off analysis</li>
+                        <li>Built production operations runbook for team autonomy</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Cost-Benefit Analysis</h4>
+                      <p><strong>Before Automation:</strong> $35/month per service (24/7 operation)</p>
+                      <p><strong>After Automation:</strong> $9/month per service (demand-based operation) + $2/month automation overhead = $11/month total</p>
+                      <p><strong>Savings:</strong> $24/month per service (69% reduction) or $288/year per service</p>
+                      <p><strong>ROI:</strong> For 5 services: $1,440/year savings with one-time 2-week engineering investment</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>GitHub Repository</h4>
+                      <p>
+                        <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler.git" target="_blank" rel="noopener noreferrer" className="github-link">
+                          🔗 View on GitHub
+                        </a>
+                      </p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture</h4>
+                      <img 
+                        src="Cost-Optimized-ECS-Auto-Scaling.png" 
+                        alt="Cost-Optimized ECS Auto-Scaling Platform Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('Cost-Optimized-ECS-Auto-Scaling.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">💾</div>
