@@ -1210,6 +1210,144 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project" style={{animationDelay: '0.08s'}}>
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">🔄</div>
+                    <h3>Automated Multi-Region AMI Backup Pipeline</h3>
+                    <p>Enterprise-grade disaster recovery automation for AWS infrastructure spanning three production environments across multiple AWS accounts and regions. Orchestrates zero-downtime backups of 12+ critical EC2 instances, reducing recovery time objectives from hours to minutes.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">boto3</span>
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">AWS EC2</span>
+                      <span className="tech-tag">AWS EBS</span>
+                      <span className="tech-tag">Multi-Region</span>
+                      <span className="tech-tag">Git</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/jenkins-ami-backup-pipeline.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('ami-backup')}>
+                      {expandedProject === 'ami-backup' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ami-backup' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="jenkins-ami-backup-scheduler.png" 
+                        alt="Automated Multi-Region AMI Backup Pipeline Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('jenkins-ami-backup-scheduler.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'ami-backup' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>System Purpose & Business Impact</h4>
+                      <p>Enterprise-grade disaster recovery automation for AWS infrastructure spanning three production environments across multiple AWS accounts and regions (us-west-2, us-east-1, eu-west-1). The system orchestrates zero-downtime backups of 12+ critical EC2 instances, eliminating manual intervention and reducing recovery time objectives from hours to minutes.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architectural Approach</h4>
+                      <p>Event-driven automation pipeline leveraging Jenkins for orchestration and Python/Boto3 for cloud API integration. The solution implements a declarative configuration model where infrastructure teams maintain simple text-based instance inventories under version control, while the automation handles credential management, multi-account switching, error resilience, and comprehensive tagging for cost allocation and compliance.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Engineering Decisions</h4>
+                      <ul>
+                        <li><strong>NoReboot Strategy:</strong> Implemented non-disruptive AMI creation to maintain 100% uptime during backup operations, critical for production workloads</li>
+                        <li><strong>Multi-Account Security Model:</strong> Architected secure credential vault integration with UUID-based mapping, eliminating hardcoded secrets and enabling seamless cross-account operations</li>
+                        <li><strong>Intelligent Error Handling:</strong> Built resilient execution flow that continues processing remaining instances when individual failures occur (duplicate AMI detection, invalid instance IDs), preventing single-point backup failures</li>
+                        <li><strong>Tag-Driven Governance:</strong> Automated application of 7 standardized tags (Owner, CostUnit, Environment, System, Client, CostApp) to both AMIs and snapshots for FinOps, compliance, and lifecycle management</li>
+                        <li><strong>Declarative Configuration:</strong> Version-controlled text-based instance inventories enable infrastructure-as-code approach for backup targets</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Orchestration:</strong> Jenkins with Groovy DSL for pipeline definition and scheduling</li>
+                        <li><strong>Automation Logic:</strong> Python 3 with boto3 SDK for AWS API integration</li>
+                        <li><strong>Cloud Platform:</strong> AWS EC2, EBS across multiple regions (us-west-2, us-east-1, eu-west-1)</li>
+                        <li><strong>Security:</strong> Multi-account IAM with credential vault integration (UUID-based mapping)</li>
+                        <li><strong>Configuration Management:</strong> Git-based version control for instance inventories</li>
+                        <li><strong>Tagging & Governance:</strong> 7 standardized tags for cost allocation and compliance</li>
+                        <li><strong>Multi-Region Support:</strong> Cross-region backup orchestration with region-specific handling</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Automation Impact & Operational Efficiency</h4>
+                      <ul>
+                        <li>✅ <strong>Time Savings:</strong> Eliminated manual AMI creation workflow that previously required 30-45 minutes per environment</li>
+                        <li>✅ <strong>Execution Speed:</strong> Engineers now execute scheduled or on-demand backups via parameterized Jenkins jobs in under 5 minutes</li>
+                        <li>✅ <strong>Preparation Time Reduction:</strong> Reduced pre-maintenance preparation time by 85%</li>
+                        <li>✅ <strong>Zero Downtime:</strong> NoReboot strategy maintains 100% uptime during backup operations</li>
+                        <li>✅ <strong>Error Prevention:</strong> Eliminated error-prone manual processes with consistent naming conventions</li>
+                        <li>✅ <strong>Comprehensive Audit Trails:</strong> Automatic logging and tagging for compliance and cost tracking</li>
+                        <li>✅ <strong>Increased Reliability:</strong> Standardized backups across three business-critical client environments</li>
+                        <li>✅ <strong>RTO Improvement:</strong> Recovery time objectives reduced from hours to minutes</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Multi-Environment Coverage</h4>
+                      <ul>
+                        <li><strong>Production Environments:</strong> Three separate production environments with distinct AWS accounts</li>
+                        <li><strong>Regions:</strong> us-west-2 (primary), us-east-1, eu-west-1 (multi-region disaster recovery)</li>
+                        <li><strong>Instance Coverage:</strong> 12+ critical EC2 instances across all environments</li>
+                        <li><strong>Business-Critical Clients:</strong> Three major client environments with enterprise SLAs</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Scope of Ownership</h4>
+                      <p><strong>End-to-End Responsibility:</strong> From design through production operation, including pipeline architecture, Python automation development, multi-region AWS IAM configuration, Jenkins job implementation, and operational runbook documentation for 24/7 support teams.</p>
+                      <ul>
+                        <li>Designed event-driven automation pipeline architecture</li>
+                        <li>Developed Python automation with boto3 SDK integration</li>
+                        <li>Configured multi-region AWS IAM security model</li>
+                        <li>Implemented Jenkins pipeline with Groovy DSL</li>
+                        <li>Built credential vault integration with UUID mapping</li>
+                        <li>Created intelligent error handling and resilience patterns</li>
+                        <li>Designed tag-driven governance system (7 standardized tags)</li>
+                        <li>Authored operational runbook for 24/7 support teams</li>
+                        <li>Established declarative configuration model with Git version control</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Features</h4>
+                      <ul>
+                        <li>Scheduled and on-demand backup execution via Jenkins</li>
+                        <li>Parameterized job configuration for flexibility</li>
+                        <li>Consistent AMI naming conventions across environments</li>
+                        <li>Automatic tagging for FinOps and compliance (Owner, CostUnit, Environment, System, Client, CostApp)</li>
+                        <li>Multi-account credential management with secure vault integration</li>
+                        <li>Graceful error handling (continues on individual instance failures)</li>
+                        <li>NoReboot AMI creation for zero-downtime backups</li>
+                        <li>Git-based instance inventory management</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>GitHub Repository</h4>
+                      <p>
+                        <a href="https://github.com/sarowar-alam/jenkins-ami-backup-pipeline.git" target="_blank" rel="noopener noreferrer" className="github-link">
+                          🔗 View on GitHub
+                        </a>
+                      </p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture</h4>
+                      <img 
+                        src="jenkins-ami-backup-scheduler.png" 
+                        alt="Automated Multi-Region AMI Backup Pipeline Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('jenkins-ami-backup-scheduler.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">💾</div>
