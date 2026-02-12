@@ -1467,23 +1467,32 @@ nav button.active {
     padding: 0 15px;
   }
 
-  /* Timeline Responsive */
+  /* Timeline Responsive - Full Width Mobile */
   .timeline {
-    padding-left: 20px;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    padding-left: 0;
   }
 
   .timeline-item::before {
-    left: -20px;
+    display: none;
   }
 
   .timeline-dot {
-    left: -26px;
-    width: 12px;
-    height: 12px;
+    display: none;
   }
 
   .timeline-content {
-    padding: 20px 15px;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .timeline-company-logo {
@@ -1510,16 +1519,19 @@ nav button.active {
     margin-left: 15px;
   }
 
-  /* Project Grid Responsive */
+  /* Project Grid Responsive - Full Width */
   .project-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 15px;
+    padding: 10px;
+    max-width: 100%;
   }
 
   .project-card {
-    padding: 25px 20px;
+    padding: 25px 15px;
     overflow: visible !important;
+    width: 100%;
+    max-width: 100%;
   }
 
   .project-card h3 {
@@ -1589,12 +1601,19 @@ nav button.active {
     padding: 6px 12px;
   }
 
-  /* Education Responsive */
+  /* Education Responsive - Full Width */
+  .education-timeline {
+    max-width: 100%;
+    padding: 0;
+  }
+
   .education-card {
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 30px 15px;
     gap: 25px;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .education-logo {
