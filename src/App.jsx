@@ -92,20 +92,18 @@ function App() {
               <div className="skills">
                 <span className="skill skill-bounce">☁️ AWS</span>
                 <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>🏗️ Terraform</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>🔧 Jenkins</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>⚙️ Ansible</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>🐍 Python</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>⚡ PowerShell</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>🐳 Docker</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>☸️ Kubernetes</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>📊 Zabbix</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>🔄 Argo-CD</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>🔥 Prometheus</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>📈 Grafana</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>🔐 IAM</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>🌐 CloudFront</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.4s'}}>🗄️ RDS</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.5s'}}>📊 Redshift</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>☸️ Kubernetes</span>                
+                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>🔧 Jenkins</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>⚙️ Ansible</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>🐍 Python</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>⚡ PowerShell</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>🐳 Docker</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>⚙️ GitHub Actions</span>
+                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>📊 Zabbix</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>🔄 Argo-CD</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>🔥 Prometheus</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>📈 Grafana</span>
+                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>🧙 Loki</span>
               </div>
               <button className="cta-button" onClick={() => setActiveSection('projects')}>
                 <span>View My Work</span>
@@ -1712,7 +1710,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="cert-link"
                   >
-                    View Certificate ?
+                    View Certificate →
                   </a>
                 </div>
               </div>
@@ -1742,7 +1740,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="cert-link"
                   >
-                    View Certificate ?
+                    View Certificate →
                   </a>
                 </div>
               </div>
@@ -1767,7 +1765,7 @@ function App() {
                     <span className="grade">First Class</span>
                   </div>
                   <a href="https://www.northsouth.edu/academic/grading-policy.html" target="_blank" rel="noopener noreferrer" className="edu-link">
-                    View Grading Policy ?
+                    View Grading Policy →
                   </a>
                 </div>
               </div>
@@ -1784,7 +1782,7 @@ function App() {
                     <span className="grade">First Class</span>
                   </div>
                   <a href="https://www.northsouth.edu/academic/grading-policy.html" target="_blank" rel="noopener noreferrer" className="edu-link">
-                    View Grading Policy ?
+                    View Grading Policy →
                   </a>
                 </div>
               </div>
@@ -1813,7 +1811,7 @@ function App() {
                   <div className="education-details">
                     <span className="board">Board: Dhaka</span>
                     <span className="grade">First Division with Star Marks</span>
-                    <span className="achievements">? Three Letters</span>
+                    <span className="achievements">📜 Three Letters</span>
                   </div>
                 </div>
               </div>
@@ -1921,7 +1919,7 @@ function App() {
                   onChange={handleInputChange}
                   required
                 ></textarea>
-                <button type="submit" className="submit-button">Send Message ?</button>
+                <button type="submit" className="submit-button">Send Message →</button>
               </form>
             </div>
           </section>
