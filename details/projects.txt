@@ -49,3 +49,101 @@ Effort: ~80 hours from design to production deployment (2 weeks) with ongoing ma
 
 
 public\aws-sg-auditor.png
+
+
+
+📌 Migration of SQL Server 2016 => SQL Server 2019
+
+Sep 2023 – Sep 2023
+
+For a client we did Migrate to SQL Server 2019. Client had the Databases of 3 different of his clients which includes more than 30 databases.
+ In addition to that we need to migrate all scheduled jobs and maintenance cleanup and backup jobs.
+ There were DTS package format versions job also there to migrate to SQL Server 2019.
+
+
+ 📌 Zabbix server upgrading from 3.x to Zabbix 5.0.37
+ Oct 2023 – Oct 2023
+For a Client this migration happen. Existing server version 3.2.3 to upgraded to Zabbix 5.0 with 60 hosts, more then 20 templates.
+
+
+📌 Upgradation MongoDB server version: 4.2.3 => 6.09 with replicaset
+
+Upgraded the MongoDB server version 4.2.3 to 4.4 then to 5 then to 6.09. It has the replica set with 3 MongoDB and one arbiter. We had to upgrade the DBs step by step and then set the setFeatureCompatibilityVersion from 4.2 to 4.4 to 5.0 to make it happen. 
+Replica set need to redefine as to we had one arbiter which we moved out from the replica set.
+
+
+Upgrade / migrate Amazon S3 Anitvirus fromOlder version to the current 2.15
+Scan your S3 buckets for viruses, worms, and trojans. Powered by Sophos. bucketAV detects malware in real-time, periodically, on-demand, on-access, or via API. Your data never leaves your AWS account.
+
+
+
+AWS Orphaned Snapshots Detector
+Executive Summary
+
+Production-grade cost optimization platform that autonomously identifies orphaned EBS snapshots across 8 AWS regions, delivering 15-30% reduction in snapshot storage costs and eliminating 8-10 hours/month of manual infrastructure auditing.
+
+Business Problem & Solution
+EBS snapshots accumulate as infrastructure evolves, creating forgotten storage assets incurring continuous costs. Engineered automated detection and reporting system that scans multi-region AWS infrastructure weekly, attributes orphaned resources to creators via CloudTrail forensics, and delivers actionable intelligence through formatted stakeholder reports.
+
+Architecture & Key Decisions
+Security-first multi-tier design: Dual IAM role pattern with temporary STS credentials (1-hour TTL) separating read-only scanning from email permissions—implementing zero-trust at architectural level. Set-based detection algorithm efficiently processes thousands of snapshots. CloudTrail event correlation enables ownership attribution with graceful degradation for aged data.
+
+Delivery pipeline: Jenkins CI/CD with Groovy orchestration, scheduled weekly execution, automatic credential lifecycle management, and AWS SES integration for HTML reporting.
+
+Technology Stack
+Python 3.x + boto3, Groovy, Jenkins CI/CD, AWS services (EC2, CloudTrail, SES, STS, IAM). Comprehensive test suite with AWS mocking and local development harness.
+
+Automation Impact
+Eliminated manual process: Quarterly console-based audits requiring engineers to manually cross-reference snapshots against AMIs across regions, search CloudTrail logs, and compile stakeholder reports.
+
+Achieved: Continuous weekly monitoring, 100% regional coverage, automatic creator attribution, zero manual intervention—transforming 8-10 hours/month of manual effort into 5-minute automated execution.
+
+Ownership Scope
+End-to-end individual delivery: requirements gathering with finance stakeholders, security architecture and IAM design, Python development, CI/CD engineering, AWS infrastructure configuration, production deployment, and comprehensive documentation (1,000+ lines) enabling team autonomy. Production system delivered concept-to-deployment in 6 weeks; currently executing weekly with minimal maintenance burden.
+
+
+Executive Summary
+Cost-Optimized ECS Auto-Scaling Platform
+
+Designed and implemented an intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention in capacity management while maintaining sub-minute response times to incoming work.
+
+Architectural Approach: Event-driven dual-trigger design combining EventBridge scheduled polling with CloudWatch alarm-based shutdown. Ensures reliable 0↔1 task transitions without application code changes. Terraform modules deployed via Jenkins pipeline enable self-service adoption across multiple services using workspace isolation.
+
+Engineering Decisions: Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience. Start Lambda implements 4-check validation logic to prevent false positives; stop Lambda captures performance metrics pre-shutdown for capacity right-sizing analysis.
+
+Technology Stack: Terraform (IaC), Python 3.12 Lambda functions, AWS ECS/Fargate, SQS, CloudWatch, EventBridge Scheduler, S3 state backend, Jenkins pipeline orchestration.
+
+Automation Impact:
+
+Eliminated manual on/off procedures requiring ~15 minutes per service daily
+Reduced infrastructure operating cost from $35/month to $9/month per service
+Enabled zero-touch deployment via parameterized Jenkins pipeline
+Infrastructure overhead: ~$2/month (Lambda invocations, alarms, logs)
+Ownership Scope: Full-stack delivery including infrastructure design, Terraform modules, Lambda development, CI/CD pipeline, IAM automation, comprehensive documentation (7 guides totaling 4,500+ lines), and production operations runbook. Documented 13 architecture decisions with trade-off analysis for knowledge transfer and maintainability.
+
+
+Executive Summary: Automated Multi-Region AMI Backup Pipeline
+System Purpose & Business Impact
+
+Enterprise-grade disaster recovery automation for AWS infrastructure spanning three production environments across multiple AWS accounts and regions (us-west-2, us-east-1, eu-west-1). The system orchestrates zero-downtime backups of 12+ critical EC2 instances, eliminating manual intervention and reducing recovery time objectives from hours to minutes.
+
+Architectural Approach
+
+Event-driven automation pipeline leveraging Jenkins for orchestration and Python/Boto3 for cloud API integration. The solution implements a declarative configuration model where infrastructure teams maintain simple text-based instance inventories under version control, while the automation handles credential management, multi-account switching, error resilience, and comprehensive tagging for cost allocation and compliance.
+
+Key Engineering Decisions
+
+NoReboot Strategy: Implemented non-disruptive AMI creation to maintain 100% uptime during backup operations, critical for production workloads
+Multi-Account Security Model: Architected secure credential vault integration with UUID-based mapping, eliminating hardcoded secrets and enabling seamless cross-account operations
+Intelligent Error Handling: Built resilient execution flow that continues processing remaining instances when individual failures occur (duplicate AMI detection, invalid instance IDs), preventing single-point backup failures
+Tag-Driven Governance: Automated application of 7 standardized tags (Owner, CostUnit, Environment, System, Client, CostApp) to both AMIs and snapshots for FinOps, compliance, and lifecycle management
+Automation Impact & Operational Efficiency
+
+Eliminated manual AMI creation workflow that previously required 30-45 minutes per environment and was error-prone. Engineers now execute scheduled or on-demand backups via parameterized Jenkins jobs in under 5 minutes with consistent naming conventions, comprehensive audit trails, and automatic cost tracking. The solution reduced pre-maintenance preparation time by 85% while increasing backup reliability and standardization across three business-critical client environments.
+
+Scope of Ownership
+
+End-to-end responsibility from design through production operation: pipeline architecture, Python automation development, multi-region AWS IAM configuration, Jenkins job implementation, and operational runbook documentation for 24/7 support teams.
+
+Technology Stack: Jenkins (Groovy DSL), Python 3, Boto3 SDK, AWS EC2/EBS, Git, Multi-region cloud infrastructure
+
