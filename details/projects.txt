@@ -1,0 +1,51 @@
+📌 Migrate virtual machines to AWS 
+    Nov 2022 – Dec 2022
+    On site Mainline Enviroment servers been migrated from VMware Environment to AWS ec2 servers through  AWS Server Migration Service..
+    AWS Application Migration Service
+    Move and improve your on-premises and cloud-based applications
+
+
+📌 AWS Security Group Open Ports Auditor 
+August 2023 
+Automated security compliance tool that continuously monitors AWS Security Groups across multiple regions to identify ports exposed to the internet (0.0.0.0/0). The system intelligently traces network topology (security groups → network interfaces → route tables → internet gateways), tests HTTP-to-HTTPS redirect functionality on port 80, maps exposed resources to their EC2 instances or load balancers, and automatically delivers professionally formatted Excel reports with color-coded headers and intelligent sorting to security teams via AWS SES email.
+
+Manual Problems Solved
+⏱️ Time: Eliminated 4 hours/week of repetitive manual security audits where analysts had to click through hundreds of security groups across multiple AWS regions
+🐌 Detection Delay: Reduced from 30-90 days (quarterly audits) to <24 hours with automated weekly scans, catching misconfigurations before they become incidents
+📊 Consistency: Standardized reporting format with automated Excel generation (previously ad-hoc spreadsheets with inconsistent columns and manual data entry errors)
+🔍 Visibility: Automated resource-to-owner mapping by correlating security groups → network interfaces → EC2 instances with name tags, eliminating hours of manual investigation
+🌍 Coverage: Multi-region scanning capability ensures 100% visibility (previously audits covered only one region at a time, missing critical exposures)
+🔐 Validation: Automated HTTP redirect testing verifies port 80 properly redirects to HTTPS, ensuring web security best practices without manual browser testing
+Value Added
+$40K annual savings (eliminated 4 hrs/week × 50 weeks × $200/hr fully loaded security analyst cost)
+95% faster detection of misconfigurations (4 hours → 5 minutes per audit cycle)
+Weekly automated scans vs quarterly manual audits (12x increase in audit frequency)
+100% coverage across all AWS regions and security groups (no blind spots)
+Audit-ready compliance documentation with historical Excel reports for SOC2/ISO27001 evidence
+Risk reduction: Proactive detection prevented potential security incidents that could cost $100K-$1M+ in remediation
+Team productivity: Security analysts freed from repetitive tasks to focus on remediation and strategic security initiatives
+Tech Stack & Architecture
+Python 3.7+: Core automation logic with sophisticated error handling and logging frameworks
+boto3 (AWS SDK): Multi-service API integration with retry logic
+pandas: Data aggregation and transformation from multiple AWS APIs
+openpyxl: Excel generation with professional styling, auto-sizing, and color formatting
+socket: Low-level TCP connections for HTTP redirect validation
+AWS Services: Multi-service orchestration with security best practices
+EC2 APIs: DescribeSecurityGroups, DescribeInstances, DescribeNetworkInterfaces, DescribeRouteTables
+SES: Raw email with MIME multipart attachments and HTML body
+STS: AssumeRole for temporary credentials (1-hour expiry, automatic rotation)
+IAM: Least-privilege roles with separation of concerns (scan vs email permissions)
+CI/CD: Jenkins pipeline with Groovy DSL for scheduled execution, workspace cleanup, and error handling
+Security Architecture: Multi-role IAM design with temporary session tokens (no static access keys), credential isolation between services
+Network Analysis: VPC topology parsing to distinguish truly public resources from private subnet resources
+Key Achievement
+Solo-designed and built end-to-end automation covering the complete lifecycle: architecture design → IAM security model → AWS API integration → network topology analysis → HTTP protocol testing → data processing pipeline → Excel report formatting → email delivery infrastructure. Implemented enterprise-grade patterns including temporary credential rotation, separation of concerns across IAM roles, comprehensive error handling with graceful degradation, and production-ready logging. Delivered measurable ROI with quantified cost savings and efficiency gains within first quarter of deployment.
+
+Effort: ~80 hours from design to production deployment (2 weeks) with ongoing maintenance. Solo ownership of requirements gathering, architecture, development, testing, deployment, and operational support.
+
+
+
+🔗 **GitHub**: [https://github.com/sarowar-alam/AWS-SG-Open-Ports-Auditor.git]
+
+
+public\aws-sg-auditor.png
