@@ -1469,7 +1469,9 @@ nav button.active {
 
   /* Timeline Responsive - Full Width Mobile */
   .timeline {
-    padding: 30px 20px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
   }
 
   .timeline::before {
@@ -1489,9 +1491,7 @@ nav button.active {
   }
 
   .timeline-content {
-    padding: 30px 20px;
-    width: 100%;
-    max-width: 100%;
+    padding: 30px 20px;  
   }
 
   .timeline-company-logo {
