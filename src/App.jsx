@@ -447,7 +447,7 @@ function App() {
                   <div className="project-text-content">
                     <div className="project-icon">🚀</div>
                     <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
-                    <p>Engineered a comprehensive CI/CD pipeline for automating zero-downtime production hotfix deployments across multiple Windows servers. Eliminated manual deployment errors and reduced deployment time from hours to minutes with safe rollback capabilities.</p>
+                    <p>Enterprise-grade Jenkins pipeline that automates production hotfix deployments across multi-instance web applications serving multiple clients. Eliminated manual deployment procedures requiring 45+ minutes, reducing deployment time to 3-5 minutes with zero-downtime and comprehensive safety mechanisms.</p>
                     <div className="tech-stack">
                       <span className="tech-tag">Jenkins Pipeline</span>
                       <span className="tech-tag">Groovy</span>
@@ -456,6 +456,9 @@ function App() {
                       <span className="tech-tag">Windows Server</span>
                       <span className="tech-tag">CI/CD</span>
                     </div>
+                    <a href="https://github.com/sarowar-alam/jenkins-production-hotfix-automation.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
                     <button className="project-link" onClick={() => toggleProject('hotfix-pipeline')}>
                       {expandedProject === 'hotfix-pipeline' ? 'Show Less ↑' : 'View Details →'}
                     </button>
@@ -463,10 +466,10 @@ function App() {
                   {!expandedProject || expandedProject !== 'hotfix-pipeline' ? (
                     <div className="project-thumbnail-container">
                       <img 
-                        src="hotfix-flow.png" 
+                        src="hotfix-flow_2.png" 
                         alt="Hotfix Pipeline Architecture" 
                         className="project-thumbnail" 
-                        onClick={() => setZoomedImage('hotfix-flow.png')}
+                        onClick={() => setZoomedImage('hotfix-flow_2.png')}
                       />
                     </div>
                   ) : null}
@@ -474,54 +477,85 @@ function App() {
                 {expandedProject === 'hotfix-pipeline' && (
                   <div className="project-details">
                     <div className="detail-section">
-                      <h4>Technical Implementation</h4>
+                      <h4>Executive Summary</h4>
+                      <p>Designed and delivered an enterprise-grade Jenkins pipeline to automate production hotfix deployments across multi-instance web applications serving multiple clients. The system eliminated manual deployment procedures that previously required 45+ minutes of coordination, reducing deployment time to 3-5 minutes while introducing zero-downtime capabilities and comprehensive safety mechanisms.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architectural Approach</h4>
+                      <p>Event-driven orchestration with Jenkins as the control plane and PowerShell remoting for execution. Implements a backup-first pattern with mandatory pre-deployment snapshots, enabling 2-minute emergency rollbacks. Supports selective deployment targeting—operators can deploy specific components (binaries, configurations) to specific portals independently, providing granular control over production changes.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Engineering Decisions</h4>
                       <ul>
-                        <li><strong>Jenkins Pipeline Orchestration:</strong> Designed using Groovy with conditional stage execution</li>
-                        <li><strong>PowerShell Automation:</strong> Remote server management via PSSession</li>
-                        <li><strong>AWS S3 Integration:</strong> Centralized deployment package distribution</li>
-                        <li><strong>Automated Backup System:</strong> Pre-deployment backup with date-stamped versioning</li>
-                        <li><strong>Multi-Portal Support:</strong> Deployment with selective targeting capabilities</li>
-                        <li><strong>Error Handling:</strong> Comprehensive input validation and error handling mechanisms</li>
+                        <li><strong>Safety-by-Design:</strong> Deployment stages gated by backup confirmation flags; no production changes without verified backups</li>
+                        <li><strong>Remote Execution Model:</strong> PSRemoting eliminates need for persistent agents on production servers, reducing attack surface</li>
+                        <li><strong>Artifact Centralization:</strong> AWS S3 as single source of truth for versioned deployment packages</li>
+                        <li><strong>Multi-Server Orchestration:</strong> Automated deployment across load-balanced server pairs with consistent state management</li>
+                        <li><strong>Backup-First Pattern:</strong> Mandatory pre-deployment snapshots enable 2-minute emergency rollbacks</li>
+                        <li><strong>Selective Targeting:</strong> Granular control over which components deploy to which portals</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Infrastructure & Delivery</h4>
+                      <p>Production Windows Server environment (2 servers, 7 portal instances) with AWS S3 integration. Pipeline handles full deployment lifecycle: validation, artifact retrieval, automated backup, deployment, and verification. Date-stamped backup retention enables audit trails and compliance requirements.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Orchestration:</strong> Jenkins (Groovy DSL)</li>
+                        <li><strong>Automation:</strong> PowerShell 5.1 with PSRemoting</li>
+                        <li><strong>Artifact Storage:</strong> AWS CLI and S3</li>
+                        <li><strong>Remote Management:</strong> WinRM for Windows Server</li>
+                        <li><strong>Infrastructure:</strong> Production Windows Server (2 servers, 7 portal instances)</li>
+                        <li><strong>Security:</strong> Jenkins Credentials Plugin for secure credential handling</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Automation Impact</h4>
+                      <ul>
+                        <li>✅ <strong>Deployment Speed:</strong> 45+ minutes → 3-5 minutes (90% reduction)</li>
+                        <li>✅ <strong>Zero-Downtime:</strong> Selective deployments without full system downtime</li>
+                        <li>✅ <strong>Emergency Rollback:</strong> 2-minute rollback capability where none existed previously</li>
+                        <li>✅ <strong>Operational Efficiency:</strong> Multi-person operations → single-operator workflows</li>
+                        <li>✅ <strong>Manual Elimination:</strong> Removed manual file copying, configuration updates, and backup procedures</li>
+                        <li>✅ <strong>Continuous Availability:</strong> Selective hotfix deployments support client-facing portal uptime</li>
+                        <li>✅ <strong>Systematic Rollback:</strong> Date-stamped backups enable audit trails and compliance</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Ownership</h4>
+                      <p><strong>Full-Stack Ownership:</strong> From architecture design through production operations. Authored all pipeline logic, PowerShell automation scripts, operational runbooks, and comprehensive documentation suite. Maintained system through 50+ production deployments with zero rollback incidents.</p>
+                      <ul>
+                        <li>Designed event-driven orchestration architecture</li>
+                        <li>Developed backup-first pattern with rollback capabilities</li>
+                        <li>Implemented selective deployment targeting system</li>
+                        <li>Built PowerShell automation scripts for remote execution</li>
+                        <li>Integrated AWS S3 for artifact centralization</li>
+                        <li>Created operational runbooks for production support</li>
+                        <li>Authored comprehensive documentation suite</li>
+                        <li>Maintained 50+ production deployments with zero rollback incidents</li>
                       </ul>
                     </div>
                     <div className="detail-section">
                       <h4>Key Features</h4>
                       <ul>
-                        <li><strong>Multi-Server Orchestration:</strong> Parallel deployment to multiple production servers</li>
-                        <li><strong>Selective Deployment:</strong> Choose between binary deployments, configuration updates, or both</li>
-                        <li><strong>Safety-First Design:</strong> Automated backup before any changes with rollback capability</li>
-                        <li><strong>AWS Integration:</strong> Downloads and extracts deployment packages from S3 buckets</li>
-                        <li><strong>Remote Management:</strong> PowerShell remoting with secure credential handling via Jenkins</li>
-                        <li><strong>Portal-Specific Configs:</strong> Maps and deploys environment-specific configuration files</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Business Impact</h4>
-                      <ul>
-                        <li><strong>75% Reduction</strong> in deployment time (hours to minutes)</li>
-                        <li><strong>Zero Human Errors</strong> in production deployments through automation</li>
-                        <li><strong>Rapid Hotfix Rollout</strong> with built-in safety mechanisms</li>
-                        <li><strong>Standardized Process</strong> across all production environments</li>
-                        <li><strong>Improved Reliability</strong> with automated rollback capabilities</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technology Stack</h4>
-                      <ul>
-                        <li>Jenkins Pipeline (Groovy DSL)</li>
-                        <li>PowerShell 5.1+ with PSRemoting</li>
-                        <li>AWS S3 CLI for package distribution</li>
-                        <li>Windows Server administration</li>
-                        <li>Git version control</li>
+                        <li>Multi-server orchestration across load-balanced server pairs</li>
+                        <li>Selective component deployment (binaries, configurations)</li>
+                        <li>Portal-specific targeting for granular control</li>
+                        <li>Automated backup with date-stamped versioning</li>
+                        <li>2-minute emergency rollback capability</li>
+                        <li>AWS S3 artifact centralization</li>
+                        <li>Remote execution via PSRemoting (no persistent agents)</li>
+                        <li>Comprehensive input validation and error handling</li>
                       </ul>
                     </div>
                     <div className="detail-section">
                       <h4>Deployment Flow Diagram</h4>
                       <img 
-                        src="hotfix-flow.png" 
+                        src="hotfix-flow_2.png" 
                         alt="Hotfix Deployment Pipeline Architecture" 
                         className="project-diagram" 
-                        onClick={() => setZoomedImage('hotfix-flow.png')}
+                        onClick={() => setZoomedImage('hotfix-flow_2.png')}
                         style={{cursor: 'pointer'}}
                       />
                     </div>
