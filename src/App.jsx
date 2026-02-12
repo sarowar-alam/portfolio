@@ -545,6 +545,9 @@ function App() {
                       <span className="tech-tag">Trivy</span>
                       <span className="tech-tag">ALB</span>
                     </div>
+                    <a href="https://github.com/sarowar-alam/ecs-multi-service-terraform-jenkins-pipeline.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
                     <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
                       {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
                     </button>
