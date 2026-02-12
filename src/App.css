@@ -1490,7 +1490,7 @@ nav button.active {
   }
 
   .timeline-content {
-    padding: 25px 20px;
+    padding: 30px 20px;
     width: 100%;
     max-width: 100%;
   }
@@ -1528,7 +1528,7 @@ nav button.active {
   }
 
   .project-card {
-    padding: 25px 15px;
+    padding: 30px 20px;
     overflow: visible !important;
     width: 100%;
     max-width: 100%;
@@ -1672,7 +1672,7 @@ nav button.active {
 
   /* GitHub Section Responsive */
   .repo-card {
-    padding: 25px 20px;
+    padding: 30px 20px;
   }
 
   .repo-header h3 {
