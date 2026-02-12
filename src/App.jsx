@@ -854,21 +854,35 @@ function App() {
               </div>
               <div className="project-card card-animated featured-project" style={{animationDelay: '0.05s'}}>
                 <div className="card-glow"></div>
-                <div className="project-icon">🔐</div>
-                <h3>AWS Security Group Open Ports Auditor</h3>
-                <p>Automated security compliance tool that monitors AWS Security Groups across multiple regions to identify internet-exposed ports (0.0.0.0/0). Intelligently traces network topology, validates HTTP-to-HTTPS redirects, and delivers professionally formatted Excel reports via AWS SES email.</p>
-                <div className="tech-stack">
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">boto3</span>
-                  <span className="tech-tag">AWS EC2</span>
-                  <span className="tech-tag">AWS SES</span>
-                  <span className="tech-tag">pandas</span>
-                  <span className="tech-tag">openpyxl</span>
-                  <span className="tech-tag">Jenkins</span>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">🔐</div>
+                    <h3>AWS Security Group Open Ports Auditor</h3>
+                    <p>Automated security compliance tool that monitors AWS Security Groups across multiple regions to identify internet-exposed ports (0.0.0.0/0). Intelligently traces network topology, validates HTTP-to-HTTPS redirects, and delivers professionally formatted Excel reports via AWS SES email.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">boto3</span>
+                      <span className="tech-tag">AWS EC2</span>
+                      <span className="tech-tag">AWS SES</span>
+                      <span className="tech-tag">pandas</span>
+                      <span className="tech-tag">openpyxl</span>
+                      <span className="tech-tag">Jenkins</span>
+                    </div>
+                    <button className="project-link" onClick={() => toggleProject('sg-auditor')}>
+                      {expandedProject === 'sg-auditor' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'sg-auditor' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="aws-sg-auditor.png" 
+                        alt="AWS Security Group Open Ports Auditor" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('aws-sg-auditor.png')}
+                      />
+                    </div>
+                  ) : null}
                 </div>
-                <button className="project-link" onClick={() => toggleProject('sg-auditor')}>
-                  {expandedProject === 'sg-auditor' ? 'Show Less ↑' : 'View Details →'}
-                </button>
                 {expandedProject === 'sg-auditor' && (
                   <div className="project-details">
                     <div className="detail-section">
