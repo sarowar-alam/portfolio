@@ -962,6 +962,120 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project" style={{animationDelay: '0.06s'}}>
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <div className="project-icon">💰</div>
+                    <h3>AWS Orphaned Snapshots Detector</h3>
+                    <p>Production-grade cost optimization platform that autonomously identifies orphaned EBS snapshots across 8 AWS regions, delivering 15-30% reduction in snapshot storage costs and eliminating 8-10 hours/month of manual infrastructure auditing.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">boto3</span>
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">AWS EC2</span>
+                      <span className="tech-tag">CloudTrail</span>
+                      <span className="tech-tag">AWS SES</span>
+                      <span className="tech-tag">STS</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/AWS-Orphaned-Snapshots-Detector.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('snapshots-detector')}>
+                      {expandedProject === 'snapshots-detector' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'snapshots-detector' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="snapshots-detector.png" 
+                        alt="AWS Orphaned Snapshots Detector Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('snapshots-detector.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'snapshots-detector' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Executive Summary</h4>
+                      <p>Production-grade cost optimization platform that autonomously identifies orphaned EBS snapshots across 8 AWS regions, delivering 15-30% reduction in snapshot storage costs and eliminating 8-10 hours/month of manual infrastructure auditing.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Business Problem & Solution</h4>
+                      <p>EBS snapshots accumulate as infrastructure evolves, creating forgotten storage assets incurring continuous costs. Engineered automated detection and reporting system that scans multi-region AWS infrastructure weekly, attributes orphaned resources to creators via CloudTrail forensics, and delivers actionable intelligence through formatted stakeholder reports.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architecture & Key Decisions</h4>
+                      <ul>
+                        <li><strong>Security-First Multi-Tier Design:</strong> Dual IAM role pattern with temporary STS credentials (1-hour TTL) separating read-only scanning from email permissions—implementing zero-trust at architectural level</li>
+                        <li><strong>Set-Based Detection Algorithm:</strong> Efficiently processes thousands of snapshots across multiple regions</li>
+                        <li><strong>CloudTrail Event Correlation:</strong> Enables ownership attribution with graceful degradation for aged data</li>
+                        <li><strong>Delivery Pipeline:</strong> Jenkins CI/CD with Groovy orchestration, scheduled weekly execution, automatic credential lifecycle management, and AWS SES integration for HTML reporting</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Python 3.x:</strong> Core automation logic with comprehensive error handling</li>
+                        <li><strong>boto3 (AWS SDK):</strong> Multi-service API integration for EC2, CloudTrail, SES, STS operations</li>
+                        <li><strong>Groovy:</strong> Jenkins pipeline orchestration and scheduling</li>
+                        <li><strong>Jenkins CI/CD:</strong> Automated weekly execution with credential management</li>
+                        <li><strong>AWS Services:</strong> EC2 (snapshot analysis), CloudTrail (ownership forensics), SES (email delivery), STS (temporary credentials), IAM (security architecture)</li>
+                        <li><strong>Testing Framework:</strong> Comprehensive test suite with AWS mocking and local development harness</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Automation Impact</h4>
+                      <p><strong>Eliminated Manual Process:</strong> Quarterly console-based audits requiring engineers to manually cross-reference snapshots against AMIs across regions, search CloudTrail logs, and compile stakeholder reports.</p>
+                      <ul>
+                        <li>✅ Continuous weekly monitoring (quarterly → weekly: 12x increase in audit frequency)</li>
+                        <li>✅ 100% regional coverage across 8 AWS regions (no blind spots)</li>
+                        <li>✅ Automatic creator attribution via CloudTrail forensics</li>
+                        <li>✅ Zero manual intervention—transforming 8-10 hours/month of manual effort into 5-minute automated execution</li>
+                        <li>✅ 15-30% reduction in snapshot storage costs</li>
+                        <li>✅ Actionable HTML reports delivered to stakeholders via email</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Achievement</h4>
+                      <p><strong>End-to-End Individual Delivery:</strong> Requirements gathering with finance stakeholders, security architecture and IAM design, Python development, CI/CD engineering, AWS infrastructure configuration, production deployment, and comprehensive documentation (1,000+ lines) enabling team autonomy.</p>
+                      <p><strong>Timeline:</strong> Production system delivered concept-to-deployment in 6 weeks; currently executing weekly with minimal maintenance burden.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Ownership Scope</h4>
+                      <ul>
+                        <li>Solo-designed security architecture with dual IAM role pattern</li>
+                        <li>Built CloudTrail forensics engine for ownership attribution</li>
+                        <li>Implemented set-based detection algorithm for efficiency</li>
+                        <li>Created Jenkins CI/CD pipeline with automated credential management</li>
+                        <li>Delivered HTML email reporting system via AWS SES</li>
+                        <li>Authored comprehensive documentation (1,000+ lines) for team autonomy</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>GitHub Repository</h4>
+                      <p>
+                        <a href="https://github.com/sarowar-alam/AWS-Orphaned-Snapshots-Detector.git" target="_blank" rel="noopener noreferrer" className="github-link">
+                          🔗 View on GitHub
+                        </a>
+                      </p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture</h4>
+                      <img 
+                        src="snapshots-detector.png" 
+                        alt="AWS Orphaned Snapshots Detector Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('snapshots-detector.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">💾</div>
