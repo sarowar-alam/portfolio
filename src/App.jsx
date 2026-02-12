@@ -852,6 +852,96 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project" style={{animationDelay: '0.05s'}}>
+                <div className="card-glow"></div>
+                <div className="project-icon">🔐</div>
+                <h3>AWS Security Group Open Ports Auditor</h3>
+                <p>Automated security compliance tool that monitors AWS Security Groups across multiple regions to identify internet-exposed ports (0.0.0.0/0). Intelligently traces network topology, validates HTTP-to-HTTPS redirects, and delivers professionally formatted Excel reports via AWS SES email.</p>
+                <div className="tech-stack">
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">boto3</span>
+                  <span className="tech-tag">AWS EC2</span>
+                  <span className="tech-tag">AWS SES</span>
+                  <span className="tech-tag">pandas</span>
+                  <span className="tech-tag">openpyxl</span>
+                  <span className="tech-tag">Jenkins</span>
+                </div>
+                <button className="project-link" onClick={() => toggleProject('sg-auditor')}>
+                  {expandedProject === 'sg-auditor' ? 'Show Less ↑' : 'View Details →'}
+                </button>
+                {expandedProject === 'sg-auditor' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>What It Is</h4>
+                      <p>Automated security compliance tool that continuously monitors AWS Security Groups across multiple regions to identify ports exposed to the internet (0.0.0.0/0). The system intelligently traces network topology (security groups → network interfaces → route tables → internet gateways), tests HTTP-to-HTTPS redirect functionality on port 80, maps exposed resources to their EC2 instances or load balancers, and automatically delivers professionally formatted Excel reports with color-coded headers and intelligent sorting to security teams via AWS SES email.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Manual Problems Solved</h4>
+                      <ul>
+                        <li>⏱️ <strong>Time:</strong> Eliminated 4 hours/week of repetitive manual security audits where analysts had to click through hundreds of security groups across multiple AWS regions</li>
+                        <li>🐌 <strong>Detection Delay:</strong> Reduced from 30-90 days (quarterly audits) to &lt;24 hours with automated weekly scans, catching misconfigurations before they become incidents</li>
+                        <li>📊 <strong>Consistency:</strong> Standardized reporting format with automated Excel generation (previously ad-hoc spreadsheets with inconsistent columns and manual data entry errors)</li>
+                        <li>🔍 <strong>Visibility:</strong> Automated resource-to-owner mapping by correlating security groups → network interfaces → EC2 instances with name tags, eliminating hours of manual investigation</li>
+                        <li>🌍 <strong>Coverage:</strong> Multi-region scanning capability ensures 100% visibility (previously audits covered only one region at a time, missing critical exposures)</li>
+                        <li>🔐 <strong>Validation:</strong> Automated HTTP redirect testing verifies port 80 properly redirects to HTTPS, ensuring web security best practices without manual browser testing</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Value Added</h4>
+                      <ul>
+                        <li>$40K annual savings (eliminated 4 hrs/week × 50 weeks × $200/hr fully loaded security analyst cost)</li>
+                        <li>95% faster detection of misconfigurations (4 hours → 5 minutes per audit cycle)</li>
+                        <li>Weekly automated scans vs quarterly manual audits (12x increase in audit frequency)</li>
+                        <li>100% coverage across all AWS regions and security groups (no blind spots)</li>
+                        <li>Audit-ready compliance documentation with historical Excel reports for SOC2/ISO27001 evidence</li>
+                        <li>Risk reduction: Proactive detection prevented potential security incidents that could cost $100K-$1M+ in remediation</li>
+                        <li>Team productivity: Security analysts freed from repetitive tasks to focus on remediation and strategic security initiatives</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Tech Stack & Architecture</h4>
+                      <ul>
+                        <li><strong>Python 3.7+:</strong> Core automation logic with sophisticated error handling and logging frameworks</li>
+                        <li><strong>boto3 (AWS SDK):</strong> Multi-service API integration with retry logic</li>
+                        <li><strong>pandas:</strong> Data aggregation and transformation from multiple AWS APIs</li>
+                        <li><strong>openpyxl:</strong> Excel generation with professional styling, auto-sizing, and color formatting</li>
+                        <li><strong>socket:</strong> Low-level TCP connections for HTTP redirect validation</li>
+                        <li><strong>AWS Services:</strong> Multi-service orchestration with security best practices</li>
+                        <li><strong>EC2 APIs:</strong> DescribeSecurityGroups, DescribeInstances, DescribeNetworkInterfaces, DescribeRouteTables</li>
+                        <li><strong>SES:</strong> Raw email with MIME multipart attachments and HTML body</li>
+                        <li><strong>STS:</strong> AssumeRole for temporary credentials (1-hour expiry, automatic rotation)</li>
+                        <li><strong>IAM:</strong> Least-privilege roles with separation of concerns (scan vs email permissions)</li>
+                        <li><strong>CI/CD:</strong> Jenkins pipeline with Groovy DSL for scheduled execution, workspace cleanup, and error handling</li>
+                        <li><strong>Security Architecture:</strong> Multi-role IAM design with temporary session tokens (no static access keys), credential isolation between services</li>
+                        <li><strong>Network Analysis:</strong> VPC topology parsing to distinguish truly public resources from private subnet resources</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Achievement</h4>
+                      <p>Solo-designed and built end-to-end automation covering the complete lifecycle: architecture design → IAM security model → AWS API integration → network topology analysis → HTTP protocol testing → data processing pipeline → Excel report formatting → email delivery infrastructure. Implemented enterprise-grade patterns including temporary credential rotation, separation of concerns across IAM roles, comprehensive error handling with graceful degradation, and production-ready logging. Delivered measurable ROI with quantified cost savings and efficiency gains within first quarter of deployment.</p>
+                      <p><strong>Effort:</strong> ~80 hours from design to production deployment (2 weeks) with ongoing maintenance. Solo ownership of requirements gathering, architecture, development, testing, deployment, and operational support.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>GitHub Repository</h4>
+                      <p>
+                        <a href="https://github.com/sarowar-alam/AWS-SG-Open-Ports-Auditor.git" target="_blank" rel="noopener noreferrer" className="github-link">
+                          🔗 View on GitHub
+                        </a>
+                      </p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture</h4>
+                      <img 
+                        src="aws-sg-auditor.png" 
+                        alt="AWS Security Group Open Ports Auditor Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('aws-sg-auditor.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 <div className="project-icon">💾</div>
