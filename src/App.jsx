@@ -651,6 +651,9 @@ function App() {
                       <span className="tech-tag">Let's Encrypt</span>
                       <span className="tech-tag">OpenSSL</span>
                     </div>
+                    <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
                     <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
                       {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
                     </button>
