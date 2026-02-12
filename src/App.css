@@ -441,8 +441,8 @@ nav button.active {
 }
 
 .logo-link {
-  float: right;
-  margin-left: 15px;
+  margin-left: auto;
+  margin-right: 15px;
   margin-bottom: 10px;
   display: inline-block;
   transition: transform 0.3s ease;
