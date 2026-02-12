@@ -766,10 +766,10 @@ function App() {
                   {!expandedProject || expandedProject !== 'dr-testing' ? (
                     <div className="project-thumbnail-container">
                       <img 
-                        src="db-restore-testing-system.png" 
+                        src="db-restore-testing-system_3.png" 
                         alt="Database Disaster Recovery Testing Architecture" 
                         className="project-thumbnail" 
-                        onClick={() => setZoomedImage('db-restore-testing-system.png')}
+                        onClick={() => setZoomedImage('db-restore-testing-system_3.png')}
                       />
                     </div>
                   ) : null}
@@ -845,10 +845,10 @@ function App() {
                     <div className="detail-section">
                       <h4>System Architecture</h4>
                       <img 
-                        src="db-restore-testing-system.png" 
+                        src="db-restore-testing-system_3.png" 
                         alt="Database Disaster Recovery Testing System Architecture" 
                         className="project-diagram" 
-                        onClick={() => setZoomedImage('db-restore-testing-system.png')}
+                        onClick={() => setZoomedImage('db-restore-testing-system_3.png')}
                         style={{cursor: 'pointer'}}
                       />
                     </div>
