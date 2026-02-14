@@ -124,7 +124,7 @@ function App() {
             <div className="timeline">
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
@@ -182,7 +182,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
@@ -204,7 +204,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
@@ -216,7 +216,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.vml.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="VML-logo.png" alt="VML" className="timeline-company-logo" />
                   </a>
@@ -285,7 +285,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
@@ -297,7 +297,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
@@ -309,7 +309,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
@@ -375,7 +375,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
@@ -387,7 +387,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
@@ -399,7 +399,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content">
+                <div className="timeline-content hogarth-highlight">
                   <a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="logo-link">
                     <img src="navan-real-estate-logo.png" alt="Navana Real Estate" className="timeline-company-logo" />
                   </a>
@@ -448,7 +448,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">☁️</div>
                     <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
                     <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
                     <div className="tech-stack">
@@ -546,7 +545,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">🚀</div>
                     <h3>Multi-Server Production Hotfix Deployment Automation Pipeline</h3>
                     <p>Enterprise-grade Jenkins pipeline that automates production hotfix deployments across multi-instance web applications serving multiple clients. Eliminated manual deployment procedures requiring 45+ minutes, reducing deployment time to 3-5 minutes with zero-downtime and comprehensive safety mechanisms.</p>
                     <div className="tech-stack">
@@ -667,7 +665,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">⚙️</div>
                     <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
                     <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
                     <div className="tech-stack">
@@ -776,7 +773,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">🔐</div>
                     <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
                     <p>End-to-end certificate automation platform that eliminates manual SSL/TLS certificate management across 10+ production servers spanning AWS and on-premises infrastructure. Autonomously handles certificate validation, renewal, multi-region deployment, and operational notifications—reducing certificate-related incidents from monthly fire drills to zero in 18 months.</p>
                     <div className="tech-stack">
@@ -894,7 +890,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">🧪</div>
                     <h3>Automated Database Disaster Recovery Testing Pipeline</h3>
                     <p>Enterprise-grade automated testing system that validates database backup integrity and disaster recovery procedures on a weekly schedule, ensuring business continuity readiness without manual intervention. Automatically tests complete restore processes and compares restored data against production.</p>
                     <div className="tech-stack">
@@ -1010,7 +1005,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">🔐</div>
                     <h3>AWS Security Group Open Ports Auditor</h3>
                     <p>Automated security compliance tool that monitors AWS Security Groups across multiple regions to identify internet-exposed ports (0.0.0.0/0). Intelligently traces network topology, validates HTTP-to-HTTPS redirects, and delivers professionally formatted Excel reports via AWS SES email.</p>
                     <div className="tech-stack">
@@ -1117,7 +1111,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">💰</div>
                     <h3>AWS Orphaned Snapshots Detector</h3>
                     <p>Production-grade cost optimization platform that autonomously identifies orphaned EBS snapshots across 8 AWS regions, delivering 15-30% reduction in snapshot storage costs and eliminating 8-10 hours/month of manual infrastructure auditing.</p>
                     <div className="tech-stack">
@@ -1231,7 +1224,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">⚡</div>
                     <h3>Cost-Optimized ECS Auto-Scaling Platform</h3>
                     <p>Intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention while maintaining sub-minute response times to incoming work.</p>
                     <div className="tech-stack">
@@ -1365,7 +1357,6 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
-                    <div className="project-icon">🔄</div>
                     <h3>Automated Multi-Region AMI Backup Pipeline</h3>
                     <p>Enterprise-grade disaster recovery automation for AWS infrastructure spanning three production environments across multiple AWS accounts and regions. Orchestrates zero-downtime backups of 12+ critical EC2 instances, reducing recovery time objectives from hours to minutes.</p>
                     <div className="tech-stack">
