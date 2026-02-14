@@ -620,7 +620,6 @@ nav button.active {
 .project-icon {
   font-size: 48px;
   margin-bottom: 20px;
-  animation: rotate 10s linear infinite;
 }
 
 @keyframes rotate {
