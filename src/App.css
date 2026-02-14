@@ -322,37 +322,19 @@ nav button.active {
 }
 
 .floating-circle {
-  position: absolute;
-  border-radius: 50%;
-  animation: floatCircle 6s infinite ease-in-out;
-  pointer-events: none;
+  display: none;
 }
 
 .circle1 {
-  width: 150px;
-  height: 150px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  top: 0;
-  right: 100px;
-  animation-delay: 0s;
+  display: none;
 }
 
 .circle2 {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, #f093fb, #f5576c);
-  bottom: 50px;
-  right: 50px;
-  animation-delay: 2s;
+  display: none;
 }
 
 .circle3 {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  top: 150px;
-  right: 250px;
-  animation-delay: 4s;
+  display: none;
 }
 
 @keyframes floatCircle {
