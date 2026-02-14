@@ -124,7 +124,7 @@ function App() {
             <div className="timeline">
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
+                <div className="timeline-content">
                   <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
@@ -182,7 +182,7 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
+                <div className="timeline-content">
                   <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
@@ -204,8 +204,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Senior DevOps Engineer</h3>
@@ -216,8 +216,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.vml.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.vml.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="VML-logo.png" alt="VML" className="timeline-company-logo" />
                   </a>
                   <h3>Senior Information Technology Manager</h3>
@@ -285,8 +285,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Information Technology Manager</h3>
@@ -297,8 +297,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Senior System Administrator</h3>
@@ -309,8 +309,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Senior Network Administrator</h3>
@@ -375,8 +375,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Network Administrator</h3>
@@ -387,8 +387,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Information Technology Supporter</h3>
@@ -399,8 +399,8 @@ function App() {
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-content hogarth-highlight">
-                  <a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <div className="timeline-content">
+                  <a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
                     <img src="navan-real-estate-logo.png" alt="Navana Real Estate" className="timeline-company-logo" />
                   </a>
                   <h3>Senior Executive  MIS</h3>
