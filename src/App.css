@@ -395,8 +395,8 @@ nav button.active {
 .timeline-content {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  padding: 25px;
-  border-radius: 15px;
+  padding: 40px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s;
 }
