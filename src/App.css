@@ -1346,6 +1346,10 @@ nav button.active {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .portfolio {
+    padding: 20px 0;
+  }
+
   .header {
     flex-direction: column;
     padding: 20px 0;
@@ -1679,6 +1683,10 @@ nav button.active {
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
+  .portfolio {
+    padding: 20px 0;
+  }
+
   .logo-animated {
     font-size: 20px;
   }
