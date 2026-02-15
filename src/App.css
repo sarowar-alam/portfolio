@@ -1443,7 +1443,7 @@ nav button.active {
     margin: 0 auto;
     grid-template-columns: 1fr;
     gap: 25px;
-    padding: 0 15px;
+    padding: 0;
   }
 
   .timeline::before {
