@@ -1490,6 +1490,125 @@ function App() {
                   </div>
                 )}
               </div>
+              <div className="project-card card-animated featured-project" style={{animationDelay: '0.09s'}}>
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <h3>BMI Health Tracker - Production Infrastructure</h3>
+                    <p>Designed and deployed a production-grade, three-tier health tracking application demonstrating pragmatic DevOps architecture on AWS. The system processes BMI/BMR calculations with full historical tracking while maintaining comprehensive observability and sub-3-minute automated deployments.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Docker Compose</span>
+                      <span className="tech-tag">AWS EC2</span>
+                      <span className="tech-tag">React</span>
+                      <span className="tech-tag">Node.js</span>
+                      <span className="tech-tag">PostgreSQL</span>
+                      <span className="tech-tag">Prometheus</span>
+                      <span className="tech-tag">Grafana</span>
+                      <span className="tech-tag">Loki</span>
+                      <span className="tech-tag">GitHub Actions</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/3-tier-docker-compose-monitoring-ubuntu.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('bmi-tracker')}>
+                      {expandedProject === 'bmi-tracker' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'bmi-tracker' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="3-tier-docker-compose.png" 
+                        alt="BMI Health Tracker - Three-Tier Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('3-tier-docker-compose.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'bmi-tracker' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Architectural Philosophy</h4>
+                      <p>Selected Docker Compose over Kubernetes for single-host orchestration, optimizing for operational simplicity without sacrificing production rigor. This decision eliminated orchestration overhead, reduced infrastructure cost to ~$30/month, and maintained deployment velocity suitable for SMB production workloads.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Infrastructure Design</h4>
+                      <p>Nine containerized services across two logical stacks—application tier (React/Nginx frontend, Node.js/Express API, PostgreSQL database) and observability tier (Prometheus, Grafana, Loki, Promtail, cAdvisor, Node Exporter)—running on AWS EC2 (Ubuntu t2.medium). Implemented defense-in-depth network segmentation with three isolated Docker networks preventing direct frontend-to-database access.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>CI/CD Engineering</h4>
+                      <p>Built self-hosted GitHub Actions runner eliminating external registry dependencies and SSH-based deployments. This architectural choice reduced deployment time from 7-10 minutes to 2-3 minutes while removing credential management complexity. Pipeline executes automated health checks, zero-downtime rolling updates, and container cleanup on every push to main.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Automation Impact</h4>
+                      <ul>
+                        <li>✅ Eliminated manual SSH access for deployments (100% Git-driven)</li>
+                        <li>✅ Removed manual Docker command execution (declarative YAML configuration)</li>
+                        <li>✅ Automated database migrations (zero-touch schema updates)</li>
+                        <li>✅ Pre-configured monitoring dashboards (instant observability)</li>
+                        <li>✅ Self-service deployments for development team (no ops bottleneck)</li>
+                        <li>✅ Reduced deployment time from 7-10 minutes to 2-3 minutes (60% reduction)</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Observability Stack</h4>
+                      <p>Implemented full-stack monitoring with Prometheus metrics collection, Grafana visualization (3 pre-built dashboards), and Loki-based centralized logging. Captures container resource utilization, application performance metrics, and aggregated logs across all services with 7-day retention.</p>
+                      <ul>
+                        <li><strong>Prometheus:</strong> Time-series metrics collection from all containers</li>
+                        <li><strong>Grafana:</strong> 3 pre-built dashboards for instant visibility</li>
+                        <li><strong>Loki + Promtail:</strong> Centralized log aggregation across 9 services</li>
+                        <li><strong>cAdvisor:</strong> Container resource utilization metrics</li>
+                        <li><strong>Node Exporter:</strong> Host-level system metrics</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Network Security Architecture</h4>
+                      <ul>
+                        <li><strong>Frontend Network:</strong> Isolates React/Nginx from backend services</li>
+                        <li><strong>Backend Network:</strong> Enables API-to-database communication only</li>
+                        <li><strong>Monitoring Network:</strong> Segregates observability stack from application tier</li>
+                        <li><strong>Defense-in-Depth:</strong> Prevents direct frontend-to-database access</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Application Tier:</strong> React (frontend), Nginx (reverse proxy), Node.js/Express (API), PostgreSQL (database)</li>
+                        <li><strong>Observability:</strong> Prometheus, Grafana, Loki, Promtail, cAdvisor, Node Exporter</li>
+                        <li><strong>Infrastructure:</strong> AWS EC2 (Ubuntu t2.medium), Docker Compose</li>
+                        <li><strong>CI/CD:</strong> Self-hosted GitHub Actions runner</li>
+                        <li><strong>Security:</strong> Three isolated Docker networks, non-root containers, secrets management</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Scope of Ownership</h4>
+                      <p><strong>End-to-End System Ownership:</strong> Architecture design, infrastructure provisioning, application containerization, monitoring implementation, CI/CD pipeline engineering, security hardening (network isolation, non-root containers, secrets management), and production documentation (2,500+ lines).</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Business Value</h4>
+                      <p>Production-ready infrastructure supporting immediate feature deployment, proactive issue detection, and Git-based audit trails—delivering enterprise reliability at startup operational cost (~$30/month).</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>GitHub Repository</h4>
+                      <p>
+                        <a href="https://github.com/sarowar-alam/3-tier-docker-compose-monitoring-ubuntu.git" target="_blank" rel="noopener noreferrer" className="github-link">
+                          🔗 View on GitHub
+                        </a>
+                      </p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture & Data Flow</h4>
+                      <img 
+                        src="3-tier-docker-compose.png" 
+                        alt="BMI Health Tracker - Three-Tier Production Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('3-tier-docker-compose.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="project-card card-animated" style={{animationDelay: '0.1s'}}>
                 <div className="card-glow"></div>
                 
