@@ -266,7 +266,7 @@ nav button.active {
 }
 
 .skill-bounce {
-  animation: bounce 2s infinite;
+  /* Animation removed */
 }
 
 @keyframes bounce {
