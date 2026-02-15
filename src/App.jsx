@@ -448,6 +448,479 @@ function App() {
                 <div className="card-glow"></div>
                 <div className="project-content-layout">
                   <div className="project-text-content">
+                    <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
+                    <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">AWS ECS Fargate</span>
+                      <span className="tech-tag">Terraform</span>
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">CloudWatch</span>
+                      <span className="tech-tag">SQS</span>
+                      <span className="tech-tag">Trivy</span>
+                      <span className="tech-tag">ALB</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/ecs-multi-service-terraform-jenkins-pipeline.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
+                      {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ecs-deployment' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="ecs-deployment-flow.png" 
+                        alt="ECS Deployment Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('ecs-deployment-flow.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'ecs-deployment' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Technical Innovation</h4>
+                      <ul>
+                        <li><strong>Single Groovy Pipeline (906 lines):</strong> Orchestrates multi-service deployments with independent failure tracking, security scanning (Trivy), and deployment summaries</li>
+                        <li><strong>Dynamic JSON Configuration (493 lines):</strong> Centralized service definitions serving as single source of truth for 11 microservices with environment-specific settings</li>
+                        <li><strong>Reusable Terraform Modules:</strong> Generic ECS service and autoscaling modules that adapt to each service via dynamic variable injection</li>
+                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines → 1) while improving maintainabilitynew services can be added in 5 minutes via JSON configuration without code changes</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architecture Highlights</h4>
+                      <ul>
+                        <li><strong>Per-Service State Isolation:</strong> Separate Terraform state files enable parallel deployments and independent lifecycle management</li>
+                        <li><strong>Configuration-Driven:</strong> Single services-config.json defines all service specifications (CPU/memory allocations, autoscaling thresholds, networking, ALB rules)</li>
+                        <li><strong>Dynamic tfvars Generation:</strong> Pipeline extracts service-specific configuration and generates Terraform variables on-the-fly</li>
+                        <li><strong>SQS-Based Autoscaling:</strong> CloudWatch alarms monitor queue depth to trigger step scaling policies per service</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technical Stack</h4>
+                      <ul>
+                        <li><strong>Infrastructure:</strong> Terraform (AWS Provider 6.0+), S3 backend for state management</li>
+                        <li><strong>CI/CD:</strong> Jenkins, Groovy Pipeline DSL with approval gates</li>
+                        <li><strong>AWS Services:</strong> ECS Fargate, Application Load Balancer, CloudWatch, SQS, ECR, IAM</li>
+                        <li><strong>Security:</strong> Trivy vulnerability scanning, IAM role assumption, multi-stage approval workflow</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Impact & Results</h4>
+                      <ul>
+                        <li>Manages 11 microservices (API handlers, media generation services, portals) across 2 environments</li>
+                        <li>Independent failure isolationone service failure doesn't block others</li>
+                        <li>Intelligent deploymentskips services with no infrastructure changes</li>
+                        <li>Production-ready features: circuit breaker rollback, health checks, cost optimization (FARGATE_SPOT)</li>
+                        <li>91% reduction in deployment complexity</li>
+                        <li>New services deployable in 5 minutes via configuration changes only</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technical Deep-Dive</h4>
+                      <ul>
+                        <li><strong>State Management Strategy:</strong> Implemented per-service state files to prevent conflicts and enable parallel deployments</li>
+                        <li><strong>Dynamic Variable Injection:</strong> Pipeline parses JSON and generates .tfvars files programmatically for each service</li>
+                        <li><strong>Failure Isolation:</strong> Services processed independently with deployment summary tracking (deployed/skipped/aborted)</li>
+                        <li><strong>Scalability:</strong> Adding new services requires only JSON configuration changes, no pipeline or Terraform modifications</li>
+                        <li><strong>Security Integration:</strong> Trivy scanner gates deployments with approval workflow for vulnerable images</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>High-Level Flow Diagram</h4>
+                      <img 
+                        src="ecs-deployment-flow.png" 
+                        alt="ECS Deployment Pipeline Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('ecs-deployment-flow.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architecture Pattern</h4>
+                      <p>Multi-tenancy infrastructure design where generic Terraform modules are parameterized through JSON configuration, demonstrating enterprise DevOps practices for scalable microservice management. This pattern enables:</p>
+                      <ul>
+                        <li>Consistent infrastructure across all services</li>
+                        <li>Easy service onboarding with minimal configuration</li>
+                        <li>Centralized change management through version-controlled JSON</li>
+                        <li>Independent service lifecycle management</li>
+                        <li>Infrastructure as Code best practices with DRY principles</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <h3>Automated Database Disaster Recovery Testing Pipeline</h3>
+                    <p>Enterprise-grade automated testing system that validates database backup integrity and disaster recovery procedures on a weekly schedule, ensuring business continuity readiness without manual intervention. Automatically tests complete restore processes and compares restored data against production.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Terraform</span>
+                      <span className="tech-tag">AWS</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">PowerShell</span>
+                      <span className="tech-tag">SQL Server</span>
+                      <span className="tech-tag">boto3</span>
+                      <span className="tech-tag">WinRM</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('dr-testing')}>
+                      {expandedProject === 'dr-testing' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'dr-testing' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="db-restore-testing-system_4.png" 
+                        alt="Database Disaster Recovery Testing Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('db-restore-testing-system_4.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'dr-testing' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Project Overview</h4>
+                      <p><strong>Business Problem Solved:</strong> Organizations often maintain database backups but rarely verify they can be successfully restored until an actual disaster occurs. This project eliminates that risk by automatically testing the complete restore process weekly, comparing restored data against production to ensure data integrity.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technical Architecture</h4>
+                      <ul>
+                        <li><strong>Infrastructure Automation:</strong></li>
+                        <li>Built ephemeral testing environments using Terraform modules (VPC, EC2, Security Groups)</li>
+                        <li>Provisioned Windows Server 2019 + SQL Server 2022 instances on-demand</li>
+                        <li>Implemented automatic teardown to minimize AWS costs (infrastructure exists only during tests)</li>
+                        <li><strong>Cross-Account Backup Management:</strong></li>
+                        <li>Developed Python automation using boto3 to transfer multi-gigabyte database backups between isolated AWS accounts</li>
+                        <li>Implemented IAM role assumption for secure cross-account S3 operations</li>
+                        <li>Automated identification and transfer of latest backup files based on timestamps</li>
+                        <li><strong>Remote Database Restoration:</strong></li>
+                        <li>Created PowerShell automation for remote database restoration via WinRM</li>
+                        <li>Implemented SQLCMD-based restore with dynamic logical file mapping</li>
+                        <li>Built error handling and retry logic for network resilience</li>
+                        <li><strong>Automated Validation & Reporting:</strong></li>
+                        <li>Executed parallel queries on restored test database and live production database</li>
+                        <li>Compared results to verify data consistency</li>
+                        <li>Generated HTML email reports with side-by-side comparison tables sent to operations teams</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Achievements</h4>
+                      <ul>
+                        <li>✅ 100% automated end-to-end testing (zero manual steps)</li>
+                        <li>✅ Weekly execution ensures continuous DR readiness validation</li>
+                        <li>✅ Cost optimized - infrastructure exists only during 30-minute test windows</li>
+                        <li>✅ Cross-account security - production and test environments fully isolated</li>
+                        <li>✅ Automated alerting - immediate email notifications on success or failure</li>
+                        <li>✅ Random database selection - tests different databases each week for comprehensive coverage</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Business Impact</h4>
+                      <ul>
+                        <li>Reduced disaster recovery verification time from days to 30 minutes</li>
+                        <li>Eliminated manual testing overhead (previously 4-6 hours of manual effort per test)</li>
+                        <li>Provided weekly confidence in backup integrity to stakeholders</li>
+                        <li>Enabled compliance with recovery time objective (RTO) requirements</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technical Complexity Highlights</h4>
+                      <ul>
+                        <li>Multi-cloud account orchestration with IAM role chaining</li>
+                        <li>Windows remote automation via WinRM from Linux Jenkins controller</li>
+                        <li>Dynamic SQL Server file mapping for restore operations</li>
+                        <li>Stateful infrastructure management with automatic cleanup</li>
+                        <li>HTML templating and AWS SES integration for professional reporting</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technical Stack Details</h4>
+                      <ul>
+                        <li><strong>CI/CD:</strong> Jenkins Pipeline (Groovy DSL)</li>
+                        <li><strong>Infrastructure as Code:</strong> Terraform with modular design</li>
+                        <li><strong>Cloud Platform:</strong> AWS (EC2, VPC, S3, IAM, SES)</li>
+                        <li><strong>Scripting:</strong> PowerShell, Python (boto3), Bash</li>
+                        <li><strong>Database:</strong> Microsoft SQL Server 2022</li>
+                        <li><strong>Protocols:</strong> WinRM for remote Windows automation</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture</h4>
+                      <img 
+                        src="db-restore-testing-system_4.png" 
+                        alt="Database Disaster Recovery Testing System Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('db-restore-testing-system_4.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
+                    <p>End-to-end certificate automation platform that eliminates manual SSL/TLS certificate management across 10+ production servers spanning AWS and on-premises infrastructure. Autonomously handles certificate validation, renewal, multi-region deployment, and operational notifications—reducing certificate-related incidents from monthly fire drills to zero in 18 months.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Groovy</span>
+                      <span className="tech-tag">PowerShell</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">Jenkins</span>
+                      <span className="tech-tag">Posh-ACME</span>
+                      <span className="tech-tag">AWS ACM</span>
+                      <span className="tech-tag">Let's Encrypt</span>
+                      <span className="tech-tag">OpenSSL</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
+                      {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ssl-automation' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="ssl-certificate-automation_1.png" 
+                        alt="SSL Automation Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('ssl-certificate-automation_1.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'ssl-automation' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Executive Summary</h4>
+                      <p>Designed and implemented an end-to-end certificate automation platform that eliminates manual SSL/TLS certificate management across 10+ production servers spanning AWS and on-premises infrastructure. The system autonomously handles certificate validation, renewal, multi-region deployment, and operational notifications—reducing certificate-related incidents from monthly fire drills to zero in 18 months.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architecture & Approach</h4>
+                      <p>Built as a Jenkins-orchestrated pipeline leveraging PowerShell and Python automation modules in a hybrid cloud model. The platform integrates Let's Encrypt ACME protocol with AWS Route53 for DNS-01 validation, enabling wildcard certificate support without manual DNS changes. Implements push-based deployment with automatic rollback capabilities, treating certificates as versioned artifacts with full audit trails.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Orchestration:</strong> Jenkins Pipeline (Groovy DSL), Git source control</li>
+                        <li><strong>Automation:</strong> PowerShell 5.1+ (Posh-ACME module), Python 3.8+ (boto3, paramiko)</li>
+                        <li><strong>Certificate Authority:</strong> Let's Encrypt (ACME v2 protocol)</li>
+                        <li><strong>AWS Services:</strong> Route53 (DNS validation), ACM (multi-region), S3 (artifact storage), SES (notifications), EC2 (compute)</li>
+                        <li><strong>Target Infrastructure:</strong> Windows Server IIS, Linux (RHEL/Rocky), Zabbix monitoring</li>
+                        <li><strong>Protocols:</strong> WinRM (Windows remote management), SSH (Linux deployment), HTTPS/TLS</li>
+                        <li><strong>Security:</strong> Jenkins Credentials Plugin, AWS IAM, OpenJDK keytool (JKS conversion)</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Engineering Decisions</h4>
+                      <ul>
+                        <li><strong>Idempotency & Safety:</strong> Pre-deployment validation checks with &lt;15 days expiry threshold</li>
+                        <li><strong>Timestamped Backups:</strong> Automatic backup before every operation for rollback capability</li>
+                        <li><strong>Zero-Downtime Deployment:</strong> Sequential service restarts with health checks</li>
+                        <li><strong>Agent-Less Execution:</strong> Remote execution to avoid dependency sprawl across target servers</li>
+                        <li><strong>DNS-01 Validation:</strong> Let's Encrypt with Route53 integration enables wildcard certificates</li>
+                        <li><strong>Versioned Artifacts:</strong> Certificates treated as immutable artifacts with full audit trails</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Impact & Automation</h4>
+                      <ul>
+                        <li>✅ <strong>Operational Efficiency:</strong> Eliminated 40+ hours/quarter of manual certificate operations</li>
+                        <li>✅ <strong>Speed Improvement:</strong> Reduced mean-time-to-renewal from 3-day change request cycles to 12-minute automated deployments</li>
+                        <li>✅ <strong>Incident Prevention:</strong> Prevented 6+ potential outages in first year by catching expiring certificates 15+ days in advance</li>
+                        <li>✅ <strong>Maintenance Windows:</strong> Eliminated coordinated maintenance windows previously required for certificate updates</li>
+                        <li>✅ <strong>Zero Incidents:</strong> Certificate-related incidents reduced from monthly fire drills to zero in 18 months</li>
+                        <li>✅ <strong>Multi-Platform Coverage:</strong> Automated deployment across Windows IIS, Jenkins (Windows/Linux), and Zabbix monitoring</li>
+                        <li>✅ <strong>Wildcard Support:</strong> DNS-01 validation enables wildcard certificates without manual DNS changes</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Ownership</h4>
+                      <p><strong>Single-Handed Delivery:</strong> Complete ownership of architecture design, implementation, production deployment, and ongoing operational support. Established CI/CD patterns, security controls, disaster recovery procedures, and operational runbooks now used as templates for other automation initiatives.</p>
+                      <ul>
+                        <li>Designed Jenkins-orchestrated pipeline architecture</li>
+                        <li>Developed PowerShell and Python automation modules</li>
+                        <li>Integrated Let's Encrypt ACME v2 protocol with Route53</li>
+                        <li>Implemented multi-region AWS ACM synchronization</li>
+                        <li>Built push-based deployment with rollback capabilities</li>
+                        <li>Established security controls and credential management</li>
+                        <li>Created disaster recovery procedures and operational runbooks</li>
+                        <li>Authored comprehensive documentation for team autonomy</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architecture & Workflow</h4>
+                      <img 
+                        src="ssl-certificate-automation_1.png" 
+                        alt="SSL Certificate Automation Pipeline Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('ssl-certificate-automation_1.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technical Stack Details</h4>
+                      <ul>
+                        <li><strong>Orchestration:</strong> Jenkins CI/CD with Groovy Pipeline DSL</li>
+                        <li><strong>Windows Automation:</strong> PowerShell with Posh-ACME module</li>
+                        <li><strong>Linux Automation:</strong> Python 3.x with Paramiko (SSH) and Boto3 (AWS SDK)</li>
+                        <li><strong>Certificate Tools:</strong> OpenSSL, Keytool for format conversion</li>
+                        <li><strong>Cloud Services:</strong> AWS EC2, ACM, S3, SES, Route53</li>
+                        <li><strong>Security:</strong> Jenkins credential store, encrypted storage, file permission enforcement</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated featured-project" style={{animationDelay: '0.07s'}}>
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
+                    <h3>Cost-Optimized ECS Auto-Scaling Platform</h3>
+                    <p>Intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention while maintaining sub-minute response times to incoming work.</p>
+                    <div className="tech-stack">
+                      <span className="tech-tag">Terraform</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">AWS Lambda</span>
+                      <span className="tech-tag">ECS Fargate</span>
+                      <span className="tech-tag">SQS</span>
+                      <span className="tech-tag">CloudWatch</span>
+                      <span className="tech-tag">EventBridge</span>
+                      <span className="tech-tag">Jenkins</span>
+                    </div>
+                    <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
+                      View on GitHub →
+                    </a>
+                    <button className="project-link" onClick={() => toggleProject('ecs-autoscaler')}>
+                      {expandedProject === 'ecs-autoscaler' ? 'Show Less ↑' : 'View Details →'}
+                    </button>
+                  </div>
+                  {!expandedProject || expandedProject !== 'ecs-autoscaler' ? (
+                    <div className="project-thumbnail-container">
+                      <img 
+                        src="Cost-Optimized-ECS-Auto-Scaling.png" 
+                        alt="Cost-Optimized ECS Auto-Scaling Platform Architecture" 
+                        className="project-thumbnail" 
+                        onClick={() => setZoomedImage('Cost-Optimized-ECS-Auto-Scaling.png')}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+                {expandedProject === 'ecs-autoscaler' && (
+                  <div className="project-details">
+                    <div className="detail-section">
+                      <h4>Executive Summary</h4>
+                      <p>Designed and implemented an intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention in capacity management while maintaining sub-minute response times to incoming work.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Architectural Approach</h4>
+                      <ul>
+                        <li><strong>Event-Driven Dual-Trigger Design:</strong> Combining EventBridge scheduled polling with CloudWatch alarm-based shutdown ensures reliable 0↔1 task transitions without application code changes</li>
+                        <li><strong>Terraform Modules via Jenkins Pipeline:</strong> Enable self-service adoption across multiple services using workspace isolation</li>
+                        <li><strong>Bidirectional Automation:</strong> Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience</li>
+                        <li><strong>4-Check Validation Logic:</strong> Start Lambda implements comprehensive validation to prevent false positives</li>
+                        <li><strong>Performance Metrics Capture:</strong> Stop Lambda captures pre-shutdown metrics for capacity right-sizing analysis</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Engineering Decisions</h4>
+                      <p>Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience. Start Lambda implements 4-check validation logic to prevent false positives; stop Lambda captures performance metrics pre-shutdown for capacity right-sizing analysis.</p>
+                      <ul>
+                        <li>Why dual triggers? Single EventBridge schedule can miss shutdown windows; dual approach ensures cost optimization</li>
+                        <li>Why Lambda over Step Functions? Lower latency (sub-second), simpler debugging, lower operational overhead</li>
+                        <li>Why workspace isolation? Enables multi-service deployment without cross-contamination of Terraform state</li>
+                        <li>Why 4-check validation? Prevents costly false starts when SQS has transient messages or service is already running</li>
+                        <li>Why metrics capture? Enables data-driven capacity planning and cost optimization over time</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Technology Stack</h4>
+                      <ul>
+                        <li><strong>Infrastructure as Code:</strong> Terraform with modular design, S3 state backend with DynamoDB locking</li>
+                        <li><strong>Compute Platform:</strong> AWS ECS/Fargate for containerized workloads</li>
+                        <li><strong>Automation Layer:</strong> Python 3.12 Lambda functions for start/stop orchestration</li>
+                        <li><strong>Event Sources:</strong> EventBridge Scheduler (polling), CloudWatch Alarms (shutdown trigger)</li>
+                        <li><strong>Queue System:</strong> AWS SQS for work distribution and queue depth monitoring</li>
+                        <li><strong>Monitoring:</strong> CloudWatch metrics, alarms, and logs for operational visibility</li>
+                        <li><strong>CI/CD:</strong> Jenkins pipeline orchestration with parameterized deployments</li>
+                        <li><strong>Security:</strong> IAM automation with least-privilege principles</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Automation Impact</h4>
+                      <ul>
+                        <li>✅ <strong>Cost Reduction:</strong> 70-90% reduction in AWS compute costs for variable-demand workloads</li>
+                        <li>✅ <strong>Operational Efficiency:</strong> Eliminated manual on/off procedures requiring ~15 minutes per service daily</li>
+                        <li>✅ <strong>Specific Savings:</strong> Reduced infrastructure operating cost from $35/month to $9/month per service</li>
+                        <li>✅ <strong>Infrastructure Overhead:</strong> Only ~$2/month (Lambda invocations, alarms, logs)</li>
+                        <li>✅ <strong>Self-Service Deployment:</strong> Enabled zero-touch deployment via parameterized Jenkins pipeline</li>
+                        <li>✅ <strong>Response Time:</strong> Sub-minute response times to incoming work</li>
+                        <li>✅ <strong>Scalability:</strong> Support for multiple services with workspace isolation</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Key Achievement</h4>
+                      <p><strong>Full-Stack Delivery:</strong> Complete ownership of the entire solution including infrastructure design, Terraform module development, Lambda function implementation, CI/CD pipeline creation, IAM automation, comprehensive documentation (7 guides totaling 4,500+ lines), and production operations runbook.</p>
+                      <p><strong>Knowledge Transfer:</strong> Documented 13 architecture decisions with trade-off analysis for team understanding, maintainability, and future enhancements. Enabled self-service adoption by other teams without requiring DevOps intervention.</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Ownership Scope</h4>
+                      <ul>
+                        <li>Designed event-driven dual-trigger architecture for reliable zero-scaling</li>
+                        <li>Built reusable Terraform modules with workspace isolation pattern</li>
+                        <li>Developed Python Lambda functions with 4-check validation logic</li>
+                        <li>Implemented CloudWatch alarm-based shutdown with metrics capture</li>
+                        <li>Created Jenkins CI/CD pipeline with parameterized deployments</li>
+                        <li>Architected IAM policies with least-privilege security model</li>
+                        <li>Authored comprehensive documentation (4,500+ lines across 7 guides)</li>
+                        <li>Documented 13 architecture decisions with trade-off analysis</li>
+                        <li>Built production operations runbook for team autonomy</li>
+                      </ul>
+                    </div>
+                    <div className="detail-section">
+                      <h4>Cost-Benefit Analysis</h4>
+                      <p><strong>Before Automation:</strong> $35/month per service (24/7 operation)</p>
+                      <p><strong>After Automation:</strong> $9/month per service (demand-based operation) + $2/month automation overhead = $11/month total</p>
+                      <p><strong>Savings:</strong> $24/month per service (69% reduction) or $288/year per service</p>
+                      <p><strong>ROI:</strong> For 5 services: $1,440/year savings with one-time 2-week engineering investment</p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>GitHub Repository</h4>
+                      <p>
+                        <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler.git" target="_blank" rel="noopener noreferrer" className="github-link">
+                          🔗 View on GitHub
+                        </a>
+                      </p>
+                    </div>
+                    <div className="detail-section">
+                      <h4>System Architecture</h4>
+                      <img 
+                        src="Cost-Optimized-ECS-Auto-Scaling.png" 
+                        alt="Cost-Optimized ECS Auto-Scaling Platform Architecture" 
+                        className="project-diagram" 
+                        onClick={() => setZoomedImage('Cost-Optimized-ECS-Auto-Scaling.png')}
+                        style={{cursor: 'pointer'}}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="project-card card-animated featured-project">
+                <div className="card-glow"></div>
+                <div className="project-content-layout">
+                  <div className="project-text-content">
                     <h3>Enterprise Multi-Cloud Backup Verification & Monitoring System</h3>
                     <p>Comprehensive automated backup verification system monitoring 100+ backup entities across hybrid cloud infrastructure, ensuring business continuity and disaster recovery readiness for enterprise production environments.</p>
                     <div className="tech-stack">
@@ -655,346 +1128,6 @@ function App() {
                         alt="Hotfix Deployment Pipeline Architecture" 
                         className="project-diagram" 
                         onClick={() => setZoomedImage('hotfix-flow_2.png')}
-                        style={{cursor: 'pointer'}}
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="project-card card-animated featured-project">
-                <div className="card-glow"></div>
-                <div className="project-content-layout">
-                  <div className="project-text-content">
-                    <h3>Multi-Service ECS Deployment Pipeline: Configuration-Driven Infrastructure Automation</h3>
-                    <p>Architected and implemented a unified deployment pipeline that consolidates 11 separate Jenkins pipelines into a single configuration-driven automation solution for managing Brandshare non-production ECS microservices across AWS environments (STG and Mainline).</p>
-                    <div className="tech-stack">
-                      <span className="tech-tag">AWS ECS Fargate</span>
-                      <span className="tech-tag">Terraform</span>
-                      <span className="tech-tag">Jenkins</span>
-                      <span className="tech-tag">Groovy</span>
-                      <span className="tech-tag">CloudWatch</span>
-                      <span className="tech-tag">SQS</span>
-                      <span className="tech-tag">Trivy</span>
-                      <span className="tech-tag">ALB</span>
-                    </div>
-                    <a href="https://github.com/sarowar-alam/ecs-multi-service-terraform-jenkins-pipeline.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
-                      View on GitHub →
-                    </a>
-                    <button className="project-link" onClick={() => toggleProject('ecs-deployment')}>
-                      {expandedProject === 'ecs-deployment' ? 'Show Less ↑' : 'View Details →'}
-                    </button>
-                  </div>
-                  {!expandedProject || expandedProject !== 'ecs-deployment' ? (
-                    <div className="project-thumbnail-container">
-                      <img 
-                        src="ecs-deployment-flow.png" 
-                        alt="ECS Deployment Architecture" 
-                        className="project-thumbnail" 
-                        onClick={() => setZoomedImage('ecs-deployment-flow.png')}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-                {expandedProject === 'ecs-deployment' && (
-                  <div className="project-details">
-                    <div className="detail-section">
-                      <h4>Technical Innovation</h4>
-                      <ul>
-                        <li><strong>Single Groovy Pipeline (906 lines):</strong> Orchestrates multi-service deployments with independent failure tracking, security scanning (Trivy), and deployment summaries</li>
-                        <li><strong>Dynamic JSON Configuration (493 lines):</strong> Centralized service definitions serving as single source of truth for 11 microservices with environment-specific settings</li>
-                        <li><strong>Reusable Terraform Modules:</strong> Generic ECS service and autoscaling modules that adapt to each service via dynamic variable injection</li>
-                        <li><strong>Key Achievement:</strong> Reduced deployment complexity by 91% (11 pipelines → 1) while improving maintainabilitynew services can be added in 5 minutes via JSON configuration without code changes</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Architecture Highlights</h4>
-                      <ul>
-                        <li><strong>Per-Service State Isolation:</strong> Separate Terraform state files enable parallel deployments and independent lifecycle management</li>
-                        <li><strong>Configuration-Driven:</strong> Single services-config.json defines all service specifications (CPU/memory allocations, autoscaling thresholds, networking, ALB rules)</li>
-                        <li><strong>Dynamic tfvars Generation:</strong> Pipeline extracts service-specific configuration and generates Terraform variables on-the-fly</li>
-                        <li><strong>SQS-Based Autoscaling:</strong> CloudWatch alarms monitor queue depth to trigger step scaling policies per service</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technical Stack</h4>
-                      <ul>
-                        <li><strong>Infrastructure:</strong> Terraform (AWS Provider 6.0+), S3 backend for state management</li>
-                        <li><strong>CI/CD:</strong> Jenkins, Groovy Pipeline DSL with approval gates</li>
-                        <li><strong>AWS Services:</strong> ECS Fargate, Application Load Balancer, CloudWatch, SQS, ECR, IAM</li>
-                        <li><strong>Security:</strong> Trivy vulnerability scanning, IAM role assumption, multi-stage approval workflow</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Impact & Results</h4>
-                      <ul>
-                        <li>Manages 11 microservices (API handlers, media generation services, portals) across 2 environments</li>
-                        <li>Independent failure isolationone service failure doesn't block others</li>
-                        <li>Intelligent deploymentskips services with no infrastructure changes</li>
-                        <li>Production-ready features: circuit breaker rollback, health checks, cost optimization (FARGATE_SPOT)</li>
-                        <li>91% reduction in deployment complexity</li>
-                        <li>New services deployable in 5 minutes via configuration changes only</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technical Deep-Dive</h4>
-                      <ul>
-                        <li><strong>State Management Strategy:</strong> Implemented per-service state files to prevent conflicts and enable parallel deployments</li>
-                        <li><strong>Dynamic Variable Injection:</strong> Pipeline parses JSON and generates .tfvars files programmatically for each service</li>
-                        <li><strong>Failure Isolation:</strong> Services processed independently with deployment summary tracking (deployed/skipped/aborted)</li>
-                        <li><strong>Scalability:</strong> Adding new services requires only JSON configuration changes, no pipeline or Terraform modifications</li>
-                        <li><strong>Security Integration:</strong> Trivy scanner gates deployments with approval workflow for vulnerable images</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>High-Level Flow Diagram</h4>
-                      <img 
-                        src="ecs-deployment-flow.png" 
-                        alt="ECS Deployment Pipeline Architecture" 
-                        className="project-diagram" 
-                        onClick={() => setZoomedImage('ecs-deployment-flow.png')}
-                        style={{cursor: 'pointer'}}
-                      />
-                    </div>
-                    <div className="detail-section">
-                      <h4>Architecture Pattern</h4>
-                      <p>Multi-tenancy infrastructure design where generic Terraform modules are parameterized through JSON configuration, demonstrating enterprise DevOps practices for scalable microservice management. This pattern enables:</p>
-                      <ul>
-                        <li>Consistent infrastructure across all services</li>
-                        <li>Easy service onboarding with minimal configuration</li>
-                        <li>Centralized change management through version-controlled JSON</li>
-                        <li>Independent service lifecycle management</li>
-                        <li>Infrastructure as Code best practices with DRY principles</li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="project-card card-animated featured-project">
-                <div className="card-glow"></div>
-                <div className="project-content-layout">
-                  <div className="project-text-content">
-                    <h3>Enterprise SSL/TLS Certificate Automation & Multi-Platform Deployment System</h3>
-                    <p>End-to-end certificate automation platform that eliminates manual SSL/TLS certificate management across 10+ production servers spanning AWS and on-premises infrastructure. Autonomously handles certificate validation, renewal, multi-region deployment, and operational notifications—reducing certificate-related incidents from monthly fire drills to zero in 18 months.</p>
-                    <div className="tech-stack">
-                      <span className="tech-tag">Groovy</span>
-                      <span className="tech-tag">PowerShell</span>
-                      <span className="tech-tag">Python</span>
-                      <span className="tech-tag">Jenkins</span>
-                      <span className="tech-tag">Posh-ACME</span>
-                      <span className="tech-tag">AWS ACM</span>
-                      <span className="tech-tag">Let's Encrypt</span>
-                      <span className="tech-tag">OpenSSL</span>
-                    </div>
-                    <a href="https://github.com/sarowar-alam/Automate_Certificate_Renewal.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
-                      View on GitHub →
-                    </a>
-                    <button className="project-link" onClick={() => toggleProject('ssl-automation')}>
-                      {expandedProject === 'ssl-automation' ? 'Show Less ↑' : 'View Details →'}
-                    </button>
-                  </div>
-                  {!expandedProject || expandedProject !== 'ssl-automation' ? (
-                    <div className="project-thumbnail-container">
-                      <img 
-                        src="ssl-certificate-automation_1.png" 
-                        alt="SSL Automation Architecture" 
-                        className="project-thumbnail" 
-                        onClick={() => setZoomedImage('ssl-certificate-automation_1.png')}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-                {expandedProject === 'ssl-automation' && (
-                  <div className="project-details">
-                    <div className="detail-section">
-                      <h4>Executive Summary</h4>
-                      <p>Designed and implemented an end-to-end certificate automation platform that eliminates manual SSL/TLS certificate management across 10+ production servers spanning AWS and on-premises infrastructure. The system autonomously handles certificate validation, renewal, multi-region deployment, and operational notifications—reducing certificate-related incidents from monthly fire drills to zero in 18 months.</p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Architecture & Approach</h4>
-                      <p>Built as a Jenkins-orchestrated pipeline leveraging PowerShell and Python automation modules in a hybrid cloud model. The platform integrates Let's Encrypt ACME protocol with AWS Route53 for DNS-01 validation, enabling wildcard certificate support without manual DNS changes. Implements push-based deployment with automatic rollback capabilities, treating certificates as versioned artifacts with full audit trails.</p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technology Stack</h4>
-                      <ul>
-                        <li><strong>Orchestration:</strong> Jenkins Pipeline (Groovy DSL), Git source control</li>
-                        <li><strong>Automation:</strong> PowerShell 5.1+ (Posh-ACME module), Python 3.8+ (boto3, paramiko)</li>
-                        <li><strong>Certificate Authority:</strong> Let's Encrypt (ACME v2 protocol)</li>
-                        <li><strong>AWS Services:</strong> Route53 (DNS validation), ACM (multi-region), S3 (artifact storage), SES (notifications), EC2 (compute)</li>
-                        <li><strong>Target Infrastructure:</strong> Windows Server IIS, Linux (RHEL/Rocky), Zabbix monitoring</li>
-                        <li><strong>Protocols:</strong> WinRM (Windows remote management), SSH (Linux deployment), HTTPS/TLS</li>
-                        <li><strong>Security:</strong> Jenkins Credentials Plugin, AWS IAM, OpenJDK keytool (JKS conversion)</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Key Engineering Decisions</h4>
-                      <ul>
-                        <li><strong>Idempotency & Safety:</strong> Pre-deployment validation checks with &lt;15 days expiry threshold</li>
-                        <li><strong>Timestamped Backups:</strong> Automatic backup before every operation for rollback capability</li>
-                        <li><strong>Zero-Downtime Deployment:</strong> Sequential service restarts with health checks</li>
-                        <li><strong>Agent-Less Execution:</strong> Remote execution to avoid dependency sprawl across target servers</li>
-                        <li><strong>DNS-01 Validation:</strong> Let's Encrypt with Route53 integration enables wildcard certificates</li>
-                        <li><strong>Versioned Artifacts:</strong> Certificates treated as immutable artifacts with full audit trails</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Impact & Automation</h4>
-                      <ul>
-                        <li>✅ <strong>Operational Efficiency:</strong> Eliminated 40+ hours/quarter of manual certificate operations</li>
-                        <li>✅ <strong>Speed Improvement:</strong> Reduced mean-time-to-renewal from 3-day change request cycles to 12-minute automated deployments</li>
-                        <li>✅ <strong>Incident Prevention:</strong> Prevented 6+ potential outages in first year by catching expiring certificates 15+ days in advance</li>
-                        <li>✅ <strong>Maintenance Windows:</strong> Eliminated coordinated maintenance windows previously required for certificate updates</li>
-                        <li>✅ <strong>Zero Incidents:</strong> Certificate-related incidents reduced from monthly fire drills to zero in 18 months</li>
-                        <li>✅ <strong>Multi-Platform Coverage:</strong> Automated deployment across Windows IIS, Jenkins (Windows/Linux), and Zabbix monitoring</li>
-                        <li>✅ <strong>Wildcard Support:</strong> DNS-01 validation enables wildcard certificates without manual DNS changes</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Ownership</h4>
-                      <p><strong>Single-Handed Delivery:</strong> Complete ownership of architecture design, implementation, production deployment, and ongoing operational support. Established CI/CD patterns, security controls, disaster recovery procedures, and operational runbooks now used as templates for other automation initiatives.</p>
-                      <ul>
-                        <li>Designed Jenkins-orchestrated pipeline architecture</li>
-                        <li>Developed PowerShell and Python automation modules</li>
-                        <li>Integrated Let's Encrypt ACME v2 protocol with Route53</li>
-                        <li>Implemented multi-region AWS ACM synchronization</li>
-                        <li>Built push-based deployment with rollback capabilities</li>
-                        <li>Established security controls and credential management</li>
-                        <li>Created disaster recovery procedures and operational runbooks</li>
-                        <li>Authored comprehensive documentation for team autonomy</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Architecture & Workflow</h4>
-                      <img 
-                        src="ssl-certificate-automation_1.png" 
-                        alt="SSL Certificate Automation Pipeline Architecture" 
-                        className="project-diagram" 
-                        onClick={() => setZoomedImage('ssl-certificate-automation_1.png')}
-                        style={{cursor: 'pointer'}}
-                      />
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technical Stack Details</h4>
-                      <ul>
-                        <li><strong>Orchestration:</strong> Jenkins CI/CD with Groovy Pipeline DSL</li>
-                        <li><strong>Windows Automation:</strong> PowerShell with Posh-ACME module</li>
-                        <li><strong>Linux Automation:</strong> Python 3.x with Paramiko (SSH) and Boto3 (AWS SDK)</li>
-                        <li><strong>Certificate Tools:</strong> OpenSSL, Keytool for format conversion</li>
-                        <li><strong>Cloud Services:</strong> AWS EC2, ACM, S3, SES, Route53</li>
-                        <li><strong>Security:</strong> Jenkins credential store, encrypted storage, file permission enforcement</li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="project-card card-animated featured-project">
-                <div className="card-glow"></div>
-                <div className="project-content-layout">
-                  <div className="project-text-content">
-                    <h3>Automated Database Disaster Recovery Testing Pipeline</h3>
-                    <p>Enterprise-grade automated testing system that validates database backup integrity and disaster recovery procedures on a weekly schedule, ensuring business continuity readiness without manual intervention. Automatically tests complete restore processes and compares restored data against production.</p>
-                    <div className="tech-stack">
-                      <span className="tech-tag">Jenkins</span>
-                      <span className="tech-tag">Terraform</span>
-                      <span className="tech-tag">AWS</span>
-                      <span className="tech-tag">Python</span>
-                      <span className="tech-tag">PowerShell</span>
-                      <span className="tech-tag">SQL Server</span>
-                      <span className="tech-tag">boto3</span>
-                      <span className="tech-tag">WinRM</span>
-                    </div>
-                    <a href="https://github.com/sarowar-alam/terraform-sqlserver-restore-pipeline" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
-                      View on GitHub →
-                    </a>
-                    <button className="project-link" onClick={() => toggleProject('dr-testing')}>
-                      {expandedProject === 'dr-testing' ? 'Show Less ↑' : 'View Details →'}
-                    </button>
-                  </div>
-                  {!expandedProject || expandedProject !== 'dr-testing' ? (
-                    <div className="project-thumbnail-container">
-                      <img 
-                        src="db-restore-testing-system_4.png" 
-                        alt="Database Disaster Recovery Testing Architecture" 
-                        className="project-thumbnail" 
-                        onClick={() => setZoomedImage('db-restore-testing-system_4.png')}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-                {expandedProject === 'dr-testing' && (
-                  <div className="project-details">
-                    <div className="detail-section">
-                      <h4>Project Overview</h4>
-                      <p><strong>Business Problem Solved:</strong> Organizations often maintain database backups but rarely verify they can be successfully restored until an actual disaster occurs. This project eliminates that risk by automatically testing the complete restore process weekly, comparing restored data against production to ensure data integrity.</p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technical Architecture</h4>
-                      <ul>
-                        <li><strong>Infrastructure Automation:</strong></li>
-                        <li>Built ephemeral testing environments using Terraform modules (VPC, EC2, Security Groups)</li>
-                        <li>Provisioned Windows Server 2019 + SQL Server 2022 instances on-demand</li>
-                        <li>Implemented automatic teardown to minimize AWS costs (infrastructure exists only during tests)</li>
-                        <li><strong>Cross-Account Backup Management:</strong></li>
-                        <li>Developed Python automation using boto3 to transfer multi-gigabyte database backups between isolated AWS accounts</li>
-                        <li>Implemented IAM role assumption for secure cross-account S3 operations</li>
-                        <li>Automated identification and transfer of latest backup files based on timestamps</li>
-                        <li><strong>Remote Database Restoration:</strong></li>
-                        <li>Created PowerShell automation for remote database restoration via WinRM</li>
-                        <li>Implemented SQLCMD-based restore with dynamic logical file mapping</li>
-                        <li>Built error handling and retry logic for network resilience</li>
-                        <li><strong>Automated Validation & Reporting:</strong></li>
-                        <li>Executed parallel queries on restored test database and live production database</li>
-                        <li>Compared results to verify data consistency</li>
-                        <li>Generated HTML email reports with side-by-side comparison tables sent to operations teams</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Key Achievements</h4>
-                      <ul>
-                        <li>✅ 100% automated end-to-end testing (zero manual steps)</li>
-                        <li>✅ Weekly execution ensures continuous DR readiness validation</li>
-                        <li>✅ Cost optimized - infrastructure exists only during 30-minute test windows</li>
-                        <li>✅ Cross-account security - production and test environments fully isolated</li>
-                        <li>✅ Automated alerting - immediate email notifications on success or failure</li>
-                        <li>✅ Random database selection - tests different databases each week for comprehensive coverage</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Business Impact</h4>
-                      <ul>
-                        <li>Reduced disaster recovery verification time from days to 30 minutes</li>
-                        <li>Eliminated manual testing overhead (previously 4-6 hours of manual effort per test)</li>
-                        <li>Provided weekly confidence in backup integrity to stakeholders</li>
-                        <li>Enabled compliance with recovery time objective (RTO) requirements</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technical Complexity Highlights</h4>
-                      <ul>
-                        <li>Multi-cloud account orchestration with IAM role chaining</li>
-                        <li>Windows remote automation via WinRM from Linux Jenkins controller</li>
-                        <li>Dynamic SQL Server file mapping for restore operations</li>
-                        <li>Stateful infrastructure management with automatic cleanup</li>
-                        <li>HTML templating and AWS SES integration for professional reporting</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technical Stack Details</h4>
-                      <ul>
-                        <li><strong>CI/CD:</strong> Jenkins Pipeline (Groovy DSL)</li>
-                        <li><strong>Infrastructure as Code:</strong> Terraform with modular design</li>
-                        <li><strong>Cloud Platform:</strong> AWS (EC2, VPC, S3, IAM, SES)</li>
-                        <li><strong>Scripting:</strong> PowerShell, Python (boto3), Bash</li>
-                        <li><strong>Database:</strong> Microsoft SQL Server 2022</li>
-                        <li><strong>Protocols:</strong> WinRM for remote Windows automation</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>System Architecture</h4>
-                      <img 
-                        src="db-restore-testing-system_4.png" 
-                        alt="Database Disaster Recovery Testing System Architecture" 
-                        className="project-diagram" 
-                        onClick={() => setZoomedImage('db-restore-testing-system_4.png')}
                         style={{cursor: 'pointer'}}
                       />
                     </div>
@@ -1214,139 +1347,6 @@ function App() {
                         alt="AWS Orphaned Snapshots Detector Architecture" 
                         className="project-diagram" 
                         onClick={() => setZoomedImage('snapshots-detector.png')}
-                        style={{cursor: 'pointer'}}
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="project-card card-animated featured-project" style={{animationDelay: '0.07s'}}>
-                <div className="card-glow"></div>
-                <div className="project-content-layout">
-                  <div className="project-text-content">
-                    <h3>Cost-Optimized ECS Auto-Scaling Platform</h3>
-                    <p>Intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention while maintaining sub-minute response times to incoming work.</p>
-                    <div className="tech-stack">
-                      <span className="tech-tag">Terraform</span>
-                      <span className="tech-tag">Python</span>
-                      <span className="tech-tag">AWS Lambda</span>
-                      <span className="tech-tag">ECS Fargate</span>
-                      <span className="tech-tag">SQS</span>
-                      <span className="tech-tag">CloudWatch</span>
-                      <span className="tech-tag">EventBridge</span>
-                      <span className="tech-tag">Jenkins</span>
-                    </div>
-                    <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler.git" target="_blank" rel="noopener noreferrer" className="project-link" style={{display: 'inline-block', marginRight: '10px'}}>
-                      View on GitHub →
-                    </a>
-                    <button className="project-link" onClick={() => toggleProject('ecs-autoscaler')}>
-                      {expandedProject === 'ecs-autoscaler' ? 'Show Less ↑' : 'View Details →'}
-                    </button>
-                  </div>
-                  {!expandedProject || expandedProject !== 'ecs-autoscaler' ? (
-                    <div className="project-thumbnail-container">
-                      <img 
-                        src="Cost-Optimized-ECS-Auto-Scaling.png" 
-                        alt="Cost-Optimized ECS Auto-Scaling Platform Architecture" 
-                        className="project-thumbnail" 
-                        onClick={() => setZoomedImage('Cost-Optimized-ECS-Auto-Scaling.png')}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-                {expandedProject === 'ecs-autoscaler' && (
-                  <div className="project-details">
-                    <div className="detail-section">
-                      <h4>Executive Summary</h4>
-                      <p>Designed and implemented an intelligent infrastructure automation system that reduces AWS compute costs by 70-90% for variable-demand workloads by automatically scaling ECS services to zero during idle periods. Eliminates manual intervention in capacity management while maintaining sub-minute response times to incoming work.</p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Architectural Approach</h4>
-                      <ul>
-                        <li><strong>Event-Driven Dual-Trigger Design:</strong> Combining EventBridge scheduled polling with CloudWatch alarm-based shutdown ensures reliable 0↔1 task transitions without application code changes</li>
-                        <li><strong>Terraform Modules via Jenkins Pipeline:</strong> Enable self-service adoption across multiple services using workspace isolation</li>
-                        <li><strong>Bidirectional Automation:</strong> Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience</li>
-                        <li><strong>4-Check Validation Logic:</strong> Start Lambda implements comprehensive validation to prevent false positives</li>
-                        <li><strong>Performance Metrics Capture:</strong> Stop Lambda captures pre-shutdown metrics for capacity right-sizing analysis</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Engineering Decisions</h4>
-                      <p>Rejected single-trigger approaches and traditional auto-scaling (which requires ≥1 running task) in favor of bidirectional automation with built-in resilience. Start Lambda implements 4-check validation logic to prevent false positives; stop Lambda captures performance metrics pre-shutdown for capacity right-sizing analysis.</p>
-                      <ul>
-                        <li>Why dual triggers? Single EventBridge schedule can miss shutdown windows; dual approach ensures cost optimization</li>
-                        <li>Why Lambda over Step Functions? Lower latency (sub-second), simpler debugging, lower operational overhead</li>
-                        <li>Why workspace isolation? Enables multi-service deployment without cross-contamination of Terraform state</li>
-                        <li>Why 4-check validation? Prevents costly false starts when SQS has transient messages or service is already running</li>
-                        <li>Why metrics capture? Enables data-driven capacity planning and cost optimization over time</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Technology Stack</h4>
-                      <ul>
-                        <li><strong>Infrastructure as Code:</strong> Terraform with modular design, S3 state backend with DynamoDB locking</li>
-                        <li><strong>Compute Platform:</strong> AWS ECS/Fargate for containerized workloads</li>
-                        <li><strong>Automation Layer:</strong> Python 3.12 Lambda functions for start/stop orchestration</li>
-                        <li><strong>Event Sources:</strong> EventBridge Scheduler (polling), CloudWatch Alarms (shutdown trigger)</li>
-                        <li><strong>Queue System:</strong> AWS SQS for work distribution and queue depth monitoring</li>
-                        <li><strong>Monitoring:</strong> CloudWatch metrics, alarms, and logs for operational visibility</li>
-                        <li><strong>CI/CD:</strong> Jenkins pipeline orchestration with parameterized deployments</li>
-                        <li><strong>Security:</strong> IAM automation with least-privilege principles</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Automation Impact</h4>
-                      <ul>
-                        <li>✅ <strong>Cost Reduction:</strong> 70-90% reduction in AWS compute costs for variable-demand workloads</li>
-                        <li>✅ <strong>Operational Efficiency:</strong> Eliminated manual on/off procedures requiring ~15 minutes per service daily</li>
-                        <li>✅ <strong>Specific Savings:</strong> Reduced infrastructure operating cost from $35/month to $9/month per service</li>
-                        <li>✅ <strong>Infrastructure Overhead:</strong> Only ~$2/month (Lambda invocations, alarms, logs)</li>
-                        <li>✅ <strong>Self-Service Deployment:</strong> Enabled zero-touch deployment via parameterized Jenkins pipeline</li>
-                        <li>✅ <strong>Response Time:</strong> Sub-minute response times to incoming work</li>
-                        <li>✅ <strong>Scalability:</strong> Support for multiple services with workspace isolation</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Key Achievement</h4>
-                      <p><strong>Full-Stack Delivery:</strong> Complete ownership of the entire solution including infrastructure design, Terraform module development, Lambda function implementation, CI/CD pipeline creation, IAM automation, comprehensive documentation (7 guides totaling 4,500+ lines), and production operations runbook.</p>
-                      <p><strong>Knowledge Transfer:</strong> Documented 13 architecture decisions with trade-off analysis for team understanding, maintainability, and future enhancements. Enabled self-service adoption by other teams without requiring DevOps intervention.</p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Ownership Scope</h4>
-                      <ul>
-                        <li>Designed event-driven dual-trigger architecture for reliable zero-scaling</li>
-                        <li>Built reusable Terraform modules with workspace isolation pattern</li>
-                        <li>Developed Python Lambda functions with 4-check validation logic</li>
-                        <li>Implemented CloudWatch alarm-based shutdown with metrics capture</li>
-                        <li>Created Jenkins CI/CD pipeline with parameterized deployments</li>
-                        <li>Architected IAM policies with least-privilege security model</li>
-                        <li>Authored comprehensive documentation (4,500+ lines across 7 guides)</li>
-                        <li>Documented 13 architecture decisions with trade-off analysis</li>
-                        <li>Built production operations runbook for team autonomy</li>
-                      </ul>
-                    </div>
-                    <div className="detail-section">
-                      <h4>Cost-Benefit Analysis</h4>
-                      <p><strong>Before Automation:</strong> $35/month per service (24/7 operation)</p>
-                      <p><strong>After Automation:</strong> $9/month per service (demand-based operation) + $2/month automation overhead = $11/month total</p>
-                      <p><strong>Savings:</strong> $24/month per service (69% reduction) or $288/year per service</p>
-                      <p><strong>ROI:</strong> For 5 services: $1,440/year savings with one-time 2-week engineering investment</p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>GitHub Repository</h4>
-                      <p>
-                        <a href="https://github.com/sarowar-alam/terraform-ecs-sqs-autoscaler.git" target="_blank" rel="noopener noreferrer" className="github-link">
-                          🔗 View on GitHub
-                        </a>
-                      </p>
-                    </div>
-                    <div className="detail-section">
-                      <h4>System Architecture</h4>
-                      <img 
-                        src="Cost-Optimized-ECS-Auto-Scaling.png" 
-                        alt="Cost-Optimized ECS Auto-Scaling Platform Architecture" 
-                        className="project-diagram" 
-                        onClick={() => setZoomedImage('Cost-Optimized-ECS-Auto-Scaling.png')}
                         style={{cursor: 'pointer'}}
                       />
                     </div>
