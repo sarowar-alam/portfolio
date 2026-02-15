@@ -379,32 +379,17 @@ nav button.active {
 }
 
 .timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, #667eea, #764ba2, #f093fb);
+  display: none;
 }
 
 .timeline-item {
   position: relative;
   margin-bottom: 50px;
-  padding-left: 40px;
+  padding-left: 0;
 }
 
 .timeline-dot {
-  position: absolute;
-  left: -9px;
-  top: 5px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border: 3px solid #0a0118;
-  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
-  animation: pulse 2s infinite;
+  display: none;
 }
 
 .timeline-content {
