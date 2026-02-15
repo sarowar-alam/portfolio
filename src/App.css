@@ -1439,7 +1439,7 @@ nav button.active {
 
   /* Timeline Responsive - Full Width Mobile */
   .timeline {
-    max-width: 85%;
+    max-width: 95%;
     margin: 0 auto;
     grid-template-columns: 1fr;
     gap: 25px;
