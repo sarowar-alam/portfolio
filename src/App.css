@@ -256,33 +256,73 @@ nav button.active {
 }
 
 .skill {
-  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 12px 24px;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   transition: all 0.3s;
+  font-weight: 500;
 }
 
-.skill-bounce {
-  /* Animation removed */
+/* Cloud & Infrastructure - Blue */
+.skill-cloud {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.25), rgba(30, 136, 229, 0.25));
+  border-color: rgba(33, 150, 243, 0.4);
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.skill-cloud:hover {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.4), rgba(30, 136, 229, 0.4));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
 }
 
-.skill:hover {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  transform: translateY(-5px) scale(1.05);
-  border-color: transparent;
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+/* Container & Orchestration - Purple */
+.skill-container {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.25), rgba(123, 31, 162, 0.25));
+  border-color: rgba(156, 39, 176, 0.4);
+}
+
+.skill-container:hover {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.4), rgba(123, 31, 162, 0.4));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(156, 39, 176, 0.4);
+}
+
+/* CI/CD & Automation - Orange */
+.skill-cicd {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.25), rgba(251, 140, 0, 0.25));
+  border-color: rgba(255, 152, 0, 0.4);
+}
+
+.skill-cicd:hover {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.4), rgba(251, 140, 0, 0.4));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
+}
+
+/* Scripting & Development - Yellow */
+.skill-scripting {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.25), rgba(255, 179, 0, 0.25));
+  border-color: rgba(255, 193, 7, 0.4);
+}
+
+.skill-scripting:hover {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.4), rgba(255, 179, 0, 0.4));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+/* Monitoring & Observability - Green */
+.skill-monitoring {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.25), rgba(67, 160, 71, 0.25));
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.skill-monitoring:hover {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.4), rgba(67, 160, 71, 0.4));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
 }
 
 .cta-button {

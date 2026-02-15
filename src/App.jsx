@@ -90,20 +90,29 @@ function App() {
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
               <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
               <div className="skills">
-                <span className="skill skill-bounce">☁️ AWS</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.1s'}}>🏗️ Terraform</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.2s'}}>☸️ Kubernetes</span>                
-                <span className="skill skill-bounce" style={{animationDelay: '0.3s'}}>🔧 Jenkins</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.4s'}}>⚙️ Ansible</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.5s'}}>🐍 Python</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.6s'}}>⚡ PowerShell</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.7s'}}>🐳 Docker</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.8s'}}>⚙️ GitHub Actions</span>
-                <span className="skill skill-bounce" style={{animationDelay: '0.9s'}}>📊 Zabbix</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.0s'}}>🔄 Argo-CD</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.1s'}}>🔥 Prometheus</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.2s'}}>📈 Grafana</span>
-                <span className="skill skill-bounce" style={{animationDelay: '1.3s'}}>🧙 Loki</span>
+                {/* Cloud & Infrastructure */}
+                <span className="skill skill-cloud">☁️ AWS</span>
+                <span className="skill skill-cloud">🏗️ Terraform</span>
+                
+                {/* Container & Orchestration */}
+                <span className="skill skill-container">☸️ Kubernetes</span>
+                <span className="skill skill-container">🐳 Docker</span>
+                
+                {/* CI/CD & Automation */}
+                <span className="skill skill-cicd">🔧 Jenkins</span>
+                <span className="skill skill-cicd">⚙️ Ansible</span>
+                <span className="skill skill-cicd">⚙️ GitHub Actions</span>
+                
+                {/* Scripting & Development */}
+                <span className="skill skill-scripting">🐍 Python</span>
+                <span className="skill skill-scripting">⚡ PowerShell</span>
+                
+                {/* Monitoring & Observability */}
+                <span className="skill skill-monitoring">📊 Zabbix</span>
+                <span className="skill skill-monitoring">🔄 Argo-CD</span>
+                <span className="skill skill-monitoring">🔥 Prometheus</span>
+                <span className="skill skill-monitoring">📈 Grafana</span>
+                <span className="skill skill-monitoring">🧙 Loki</span>
               </div>
               <button className="cta-button" onClick={() => setActiveSection('projects')}>
                 <span>View My Work</span>
