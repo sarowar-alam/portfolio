@@ -256,73 +256,66 @@ nav button.active {
 }
 
 .skill {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 12px 24px;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 16px;
   transition: all 0.3s;
   font-weight: 500;
+  cursor: pointer;
 }
 
-/* Cloud & Infrastructure - Blue */
-.skill-cloud {
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.25), rgba(30, 136, 229, 0.25));
-  border-color: rgba(33, 150, 243, 0.4);
+.skill:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  transform: translateY(-5px) scale(1.05);
+  border-color: rgba(102, 126, 234, 0.6);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
-.skill-cloud:hover {
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.4), rgba(30, 136, 229, 0.4));
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+/* Tooltip container */
+.skill::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.85);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  z-index: 100;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
-/* Container & Orchestration - Purple */
-.skill-container {
-  background: linear-gradient(135deg, rgba(156, 39, 176, 0.25), rgba(123, 31, 162, 0.25));
-  border-color: rgba(156, 39, 176, 0.4);
+/* Tooltip arrow */
+.skill::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.85);
+  border: 8px solid transparent;
+  border-top-color: #667eea;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
 }
 
-.skill-container:hover {
-  background: linear-gradient(135deg, rgba(156, 39, 176, 0.4), rgba(123, 31, 162, 0.4));
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(156, 39, 176, 0.4);
-}
-
-/* CI/CD & Automation - Orange */
-.skill-cicd {
-  background: linear-gradient(135deg, rgba(255, 152, 0, 0.25), rgba(251, 140, 0, 0.25));
-  border-color: rgba(255, 152, 0, 0.4);
-}
-
-.skill-cicd:hover {
-  background: linear-gradient(135deg, rgba(255, 152, 0, 0.4), rgba(251, 140, 0, 0.4));
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
-}
-
-/* Scripting & Development - Yellow */
-.skill-scripting {
-  background: linear-gradient(135deg, rgba(255, 193, 7, 0.25), rgba(255, 179, 0, 0.25));
-  border-color: rgba(255, 193, 7, 0.4);
-}
-
-.skill-scripting:hover {
-  background: linear-gradient(135deg, rgba(255, 193, 7, 0.4), rgba(255, 179, 0, 0.4));
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
-}
-
-/* Monitoring & Observability - Green */
-.skill-monitoring {
-  background: linear-gradient(135deg, rgba(76, 175, 80, 0.25), rgba(67, 160, 71, 0.25));
-  border-color: rgba(76, 175, 80, 0.4);
-}
-
-.skill-monitoring:hover {
-  background: linear-gradient(135deg, rgba(76, 175, 80, 0.4), rgba(67, 160, 71, 0.4));
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+.skill:hover::after,
+.skill:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
 }
 
 .cta-button {

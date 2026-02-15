@@ -90,29 +90,20 @@ function App() {
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
               <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
               <div className="skills">
-                {/* Cloud & Infrastructure */}
-                <span className="skill skill-cloud">☁️ AWS</span>
-                <span className="skill skill-cloud">🏗️ Terraform</span>
-                
-                {/* Container & Orchestration */}
-                <span className="skill skill-container">☸️ Kubernetes</span>
-                <span className="skill skill-container">🐳 Docker</span>
-                
-                {/* CI/CD & Automation */}
-                <span className="skill skill-cicd">🔧 Jenkins</span>
-                <span className="skill skill-cicd">⚙️ Ansible</span>
-                <span className="skill skill-cicd">⚙️ GitHub Actions</span>
-                
-                {/* Scripting & Development */}
-                <span className="skill skill-scripting">🐍 Python</span>
-                <span className="skill skill-scripting">⚡ PowerShell</span>
-                
-                {/* Monitoring & Observability */}
-                <span className="skill skill-monitoring">📊 Zabbix</span>
-                <span className="skill skill-monitoring">🔄 Argo-CD</span>
-                <span className="skill skill-monitoring">🔥 Prometheus</span>
-                <span className="skill skill-monitoring">📈 Grafana</span>
-                <span className="skill skill-monitoring">🧙 Loki</span>
+                <span className="skill" data-description="Expert • Production Architect • 6+ years">☁️ AWS</span>
+                <span className="skill" data-description="Expert • IaC Specialist • 5+ years">🏗️ Terraform</span>
+                <span className="skill" data-description="Advanced • Container Orchestration • 4+ years">☸️ Kubernetes</span>
+                <span className="skill" data-description="Expert • CI/CD Automation • 6+ years">🔧 Jenkins</span>
+                <span className="skill" data-description="Advanced • Configuration Management • 4+ years">⚙️ Ansible</span>
+                <span className="skill" data-description="Expert • Automation & Scripting • 10+ years">🐍 Python</span>
+                <span className="skill" data-description="Expert • Windows Automation • 15+ years">⚡ PowerShell</span>
+                <span className="skill" data-description="Expert • Containerization • 5+ years">🐳 Docker</span>
+                <span className="skill" data-description="Advanced • GitOps Workflows • 3+ years">⚙️ GitHub Actions</span>
+                <span className="skill" data-description="Advanced • Infrastructure Monitoring • 5+ years">📊 Zabbix</span>
+                <span className="skill" data-description="Advanced • GitOps Deployment • 2+ years">🔄 Argo-CD</span>
+                <span className="skill" data-description="Advanced • Metrics & Alerting • 3+ years">🔥 Prometheus</span>
+                <span className="skill" data-description="Advanced • Visualization & Dashboards • 3+ years">📈 Grafana</span>
+                <span className="skill" data-description="Intermediate • Log Aggregation • 2+ years">🧙 Loki</span>
               </div>
               <button className="cta-button" onClick={() => setActiveSection('projects')}>
                 <span>View My Work</span>
