@@ -1347,7 +1347,7 @@ nav button.active {
 /* Responsive */
 @media (max-width: 768px) {
   .portfolio {
-    padding: 20px 0;
+    padding: 20px 5px;
   }
 
   .header {
@@ -1684,7 +1684,7 @@ nav button.active {
 /* Small Mobile Devices */
 @media (max-width: 480px) {
   .portfolio {
-    padding: 20px 0;
+    padding: 20px 5px;
   }
 
   .logo-animated {
