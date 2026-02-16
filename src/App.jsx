@@ -119,7 +119,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
+                    <img src="Hogarth.png" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
                   <h3>Lead DevOps Engineer</h3>
                   <h4><a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="company-link">Hogarth Worldwide</a> | Road 11, House 76/A, Banani, Dhaka, Bangaldesh</h4>
@@ -177,7 +177,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.hogarth.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="hogarth-logo.avif" alt="Hogarth Worldwide" className="timeline-company-logo" />
+                    <img src="Hogarth.png" alt="Hogarth Worldwide" className="timeline-company-logo" />
                   </a>
                   <h3>Principal DevOps Engineer</h3>
                   <h4>Hogarth Worldwide | Dhaka, Bangladesh (Hybrid)</h4>
@@ -199,7 +199,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
+                    <img src="WT.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Senior DevOps Engineer</h3>
                   <h4>Wunderman Thompson | Dhaka, Bangladesh</h4>
@@ -211,7 +211,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.vml.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="VML-logo.png" alt="VML" className="timeline-company-logo" />
+                    <img src="VML.png" alt="VML" className="timeline-company-logo" />
                   </a>
                   <h3>Senior Information Technology Manager</h3>
                   <h4>VML | Dhaka, Bangladesh</h4>
@@ -280,7 +280,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
+                    <img src="WT.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Information Technology Manager</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
@@ -292,7 +292,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
+                    <img src="WT.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Senior System Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
@@ -304,7 +304,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
+                    <img src="WT.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Senior Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
@@ -370,7 +370,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
+                    <img src="WT.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Network Administrator</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
@@ -382,7 +382,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://www.wundermanthompson.com/" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="wunderman-thompson-log.png" alt="Wunderman Thompson" className="timeline-company-logo" />
+                    <img src="WT.png" alt="Wunderman Thompson" className="timeline-company-logo" />
                   </a>
                   <h3>Information Technology Supporter</h3>
                   <h4>Wunderman Thompson | Bangladesh</h4>
@@ -394,7 +394,7 @@ function App() {
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="logo-link logo-link-hogarth">
-                    <img src="navan-real-estate-logo.png" alt="Navana Real Estate" className="timeline-company-logo" />
+                    <img src="NREL.png" alt="Navana Real Estate" className="timeline-company-logo" />
                   </a>
                   <h3>Senior Executive  MIS</h3>
                   <h4><a href="https://navanarealestate.com" target="_blank" rel="noopener noreferrer" className="company-link">Navana Real Estate & Construction Ltd.</a> | Gulshan-02, Dhaka, Bangladesh</h4>
@@ -2150,7 +2150,7 @@ function App() {
               <div className="contact-info">
                 <div className="contact-item hogarth-highlight">
                   <img 
-                    src="hogarth-logo.avif" 
+                    src="Hogarth.png" 
                     alt="Hogarth Logo" 
                     className="company-logo"
                   />
