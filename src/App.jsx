@@ -83,8 +83,8 @@ function App() {
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
               <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
               <div className="skills">
-                <span className="skill" data-description="Expert • Production Architect • 6+ years"><img src="AWS.png" alt="AWS" style={{width: '16px', height: '16px', marginRight: '4px', verticalAlign: 'middle'}} /> AWS</span>
-                <span className="skill" data-description="Expert • IaC Specialist • 5+ years">🏗️ Terraform</span>
+                <span className="skill" data-description="Expert • Production Architect • 6+ years"><img src="AWS.png" alt="AWS" style={{width: '18px', height: '18px', marginRight: '2px', verticalAlign: 'middle'}} /> AWS</span>
+                <span className="skill" data-description="Expert • IaC Specialist • 5+ years"><img src="Terraform.png" alt="Terraform" style={{width: '18px', height: '18px', marginRight: '2px', verticalAlign: 'middle'}} /> Terraform</span>
                 <span className="skill" data-description="Advanced • Container Orchestration • 4+ years">☸️ Kubernetes</span>
                 <span className="skill" data-description="Expert • CI/CD Automation • 6+ years">🔧 Jenkins</span>
                 <span className="skill" data-description="Advanced • Configuration Management • 4+ years">⚙️ Ansible</span>
