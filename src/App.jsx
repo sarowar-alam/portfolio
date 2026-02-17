@@ -83,16 +83,16 @@ function App() {
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
               <p className="subtitle">Leading automation & cloud infrastructure at Hogarth Worldwide | Teaching AWS, Kubernetes, Jenkins & DevOps at Ostad | 20+ years in IT</p>
               <div className="skills">
-                <span className="skill" data-description="Expert • Production Architect • 6+ years"><img src="AWS.png" alt="AWS" style={{width: '20px', height: '13px', marginRight: '2px', verticalAlign: 'middle'}} /> AWS</span>
-                <span className="skill" data-description="Expert • IaC Specialist • 5+ years"><img src="Terraform.png" alt="Terraform" style={{width: '20px', height: '20px', marginRight: '2px', verticalAlign: 'middle'}} /> Terraform</span>
-                <span className="skill" data-description="Advanced • Container Orchestration • 4+ years">☸️ Kubernetes</span>
-                <span className="skill" data-description="Expert • CI/CD Automation • 6+ years">🔧 Jenkins</span>
-                <span className="skill" data-description="Advanced • Configuration Management • 4+ years">⚙️ Ansible</span>
+                <span className="skill" data-description="Expert • Production Architect • 4+ years"><img src="AWS.png" alt="AWS" style={{width: '20px', height: '13px', marginRight: '2px', verticalAlign: 'middle'}} /> AWS</span>
+                <span className="skill" data-description="Expert • IaC Specialist • 4+ years"><img src="Terraform.png" alt="Terraform" style={{width: '20px', height: '20px', marginRight: '2px', verticalAlign: 'middle'}} /> Terraform</span>
+                <span className="skill" data-description="Advanced • Container Orchestration • 1+ years">☸️ Kubernetes</span>
+                <span className="skill" data-description="Expert • CI/CD Automation • 4+ years">🔧 Jenkins</span>
+                <span className="skill" data-description="Advanced • Configuration Management • 2+ years">⚙️ Ansible</span>
                 <span className="skill" data-description="Expert • Automation & Scripting • 10+ years">🐍 Python</span>
                 <span className="skill" data-description="Expert • Windows Automation • 15+ years">⚡ PowerShell</span>
-                <span className="skill" data-description="Expert • Containerization • 5+ years">🐳 Docker</span>
+                <span className="skill" data-description="Expert • Containerization • 4+ years">🐳 Docker</span>
                 <span className="skill" data-description="Advanced • GitOps Workflows • 3+ years">⚙️ GitHub Actions</span>
-                <span className="skill" data-description="Advanced • Infrastructure Monitoring • 5+ years">📊 Zabbix</span>
+                <span className="skill" data-description="Advanced • Infrastructure Monitoring • 4+ years">📊 Zabbix</span>
                 <span className="skill" data-description="Advanced • GitOps Deployment • 2+ years">🔄 Argo-CD</span>
                 <span className="skill" data-description="Advanced • Metrics & Alerting • 3+ years">🔥 Prometheus</span>
                 <span className="skill" data-description="Advanced • Visualization & Dashboards • 3+ years">📈 Grafana</span>
@@ -2150,7 +2150,7 @@ function App() {
               <div className="contact-info">
                 <div className="contact-item hogarth-highlight">
                   <img 
-                    src="public/Hogarth.png" 
+                    src="Hogarth.png" 
                     alt="Hogarth Logo" 
                     className="company-logo"
                   />
