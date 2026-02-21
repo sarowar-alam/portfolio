@@ -2068,6 +2068,36 @@ function App() {
                   </a>
                 </div>
               </div>
+              <div className="certification-card">
+                <img src="UC-5ae98069-6c2d-4c70-b419-bf7cc0e66b26.jpg" alt="Zabbix Monitoring Certificate" className="cert-badge-img" />
+                <div className="cert-details">
+                  <h3>Zabbix Application and Network Monitoring</h3>
+                  <p className="cert-issuer">Issued by Udemy</p>
+                  <p className="cert-date">Completed: July 30, 2023</p>
+                  <p>Successfully completed comprehensive Zabbix monitoring training covering 7.5 hours of content with 52 lectures. Gained expertise in Zabbix architecture, monitoring configuration, alerting systems, network discovery, template creation, and performance optimization for enterprise infrastructure monitoring.</p>
+                  <div className="cert-skills">
+                    <span className="skill-tag">Zabbix Monitoring</span>
+                    <span className="skill-tag">Network Monitoring</span>
+                    <span className="skill-tag">Application Monitoring</span>
+                    <span className="skill-tag">Alert Configuration</span>
+                    <span className="skill-tag">Template Management</span>
+                    <span className="skill-tag">Performance Metrics</span>
+                    <span className="skill-tag">Infrastructure Monitoring</span>
+                    <span className="skill-tag">SNMP</span>
+                    <span className="skill-tag">Dashboard Creation</span>
+                    <span className="skill-tag">Trend Analysis</span>
+                  </div>
+                  <div className="cert-instructor">Instructor: Sean Bradley | Rating: 4.7/5 (5,181 ratings)</div>
+                  <a 
+                    href="https://www.udemy.com/certificate/UC-5ae98069-6c2d-4c70-b419-bf7cc0e66b26/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cert-link"
+                  >
+                    View Certificate →
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         )}

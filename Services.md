@@ -170,4 +170,8 @@ End-to-end ownership from design through implementation to ongoing support, with
 - **HashiCorp Terraform Associate** - Udemy (2023)
 
 ### Monitoring & Observability
-- **Zabbix Application and Network Monitoring** - Udemy (2023)
+- **Zabbix Application and Network Monitoring** - Udemy (July 30, 2023)
+  - Instructor: Sean Bradley
+  - 7.5 total hours, 52 lectures
+  - Rating: 4.7/5 (5,181 ratings)
+  - Certificate: UC-5ae98069-6c2d-4c70-b419-bf7cc0e66b26
