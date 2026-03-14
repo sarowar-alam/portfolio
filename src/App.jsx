@@ -77,7 +77,13 @@ function App() {
         {activeSection === 'home' && (
           <section className="hero fade-in">
             <div className="profile-image-container">
-              <img src="SarowarLeft_70.jpg" alt="Md Sarowar Alam" className="profile-image" />
+              <img 
+                src="SarowarLeft_70.jpg" 
+                alt="Md Sarowar Alam" 
+                className="profile-image" 
+                onClick={() => setZoomedImage('SarowarLeft_70.jpg')}
+                style={{cursor: 'pointer'}}
+              />
             </div>
             <div className="hero-content">
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
@@ -2282,10 +2288,14 @@ function App() {
 
       {/* Image Zoom Modal */}
       {zoomedImage && (
-        <div className="image-modal" onClick={() => setZoomedImage(null)}>
+        <div 
+          className="image-modal" 
+          onClick={() => setZoomedImage(null)}
+          onMouseMove={() => setZoomedImage(null)}
+        >
           <div className="modal-content">
             <span className="modal-close">&times;</span>
-            <img src={zoomedImage} alt="Zoomed Architecture Diagram" className="modal-image" />
+            <img src={zoomedImage} alt="Zoomed Image" className="modal-image" />
           </div>
         </div>
       )}
