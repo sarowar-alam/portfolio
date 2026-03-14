@@ -77,7 +77,7 @@ function App() {
         {activeSection === 'home' && (
           <section className="hero fade-in">
             <div className="profile-image-container">
-              <img src="Profile2.png" alt="Md Sarowar Alam" className="profile-image" />
+              <img src="SarowarLeft_70.jpg" alt="Md Sarowar Alam" className="profile-image" />
             </div>
             <div className="hero-content">
               <h2 className="glowing-text">Lead DevOps Engineer</h2>
